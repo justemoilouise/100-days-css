@@ -1,0 +1,24 @@
+{
+  "name": "100-days-css",
+  "version": "1.0.0",
+  "description": "100 days CSS challenges at https://100dayscss.com/",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --mount=/:./src --watch=./src --port=5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://justemoilouise@bitbucket.org/justemoilouise/100-days-css.git"
+  },
+  "keywords": [
+    "css",
+    "challenge",
+    "100dayscss"
+  ],
+  "author": "Louise Ann Apostol",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/justemoilouise/100-days-css#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

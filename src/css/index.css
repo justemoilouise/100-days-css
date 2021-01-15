@@ -1,0 +1,23 @@
+body {
+  margin: 8px;
+  padding: 0;
+  background-color: #DDE1D6;
+}
+
+.challengeCard {
+  display: block;
+  width: 50%;
+  margin: 4px;
+  border: 1px solid #BCBFC4;
+  border-radius: 4px;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}

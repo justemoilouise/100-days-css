@@ -1,0 +1,267 @@
+/** #66 - Radio Button **/
+.challenge66 {
+  background-color: #353b44;
+}
+
+.challenge66 .radioButton {
+  width: 32px;
+  height: 32px;
+  margin: 32px auto;
+  border-radius: 32px;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 4ms ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.challenge66 .radioButton.active {
+  background-color: #ffffff;
+}
+
+.challenge66 .inner {
+  display: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #20d31d;
+  transition: display 4ms ease;
+}
+
+.challenge66 .inner.active {
+  display: block;
+}
+
+.challenge66 .ray {
+  display: none;
+  position: absolute;
+  color: #ffffff;
+  transition: all 8ms ease;
+}
+
+.challenge66 .ray.active {
+  display: block;
+}
+
+.challenge66 .ray0 {
+  left: 40px;
+  transform: scale(1.25);
+}
+
+.challenge66 .ray180 {
+  right: 40px;
+  transform: scale(1.2);
+}
+
+.challenge66 .ray90 {
+  bottom: 35px;
+  transform: scale(1.25) rotate(90deg);
+}
+
+.challenge66 .ray270 {
+  top: 35px;
+  transform: scale(1.25) rotate(90deg);
+}
+
+.challenge66 .ray45 {
+  left: 32px;
+  bottom: 28px;
+  transform: scale(1.25) rotate(-45deg);
+}
+
+.challenge66 .ray135 {
+  right: 32px;
+  bottom: 28px;
+  transform: scale(1.25) rotate(45deg);
+}
+
+.challenge66 .ray225 {
+  left: 32px;
+  top: 28px;
+  transform: scale(1.25) rotate(45deg);
+}
+
+.challenge66 .ray315 {
+  right: 32px;
+  top: 28px;
+  transform: scale(1.25) rotate(-45deg);
+}
+
+/** #70 - Calendar **/
+.challenge70 {
+  background-color: coral;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.challenge70 .block {
+  width: calc(50% - 4px);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid coral;
+  transition: border-color 4ms ease;
+}
+
+.challenge70 .labelDay {
+  font-size: 16px;
+  margin-top: 16px;
+  transition: font-size 4ms ease;
+}
+
+.challenge70 .labelDate {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition: font-size 4ms ease;
+}
+
+.challenge70 .block:hover .labelDay {
+  font-size: 14px;
+}
+
+.challenge70 .block:hover .labelDate {
+  font-size: 44px;
+}
+
+.challenge70 .block:hover {
+  border-color: black;
+}
+
+/** Challenge 78 - Hover effect **/
+.challenge78 {
+  background-color: steelblue;
+}
+
+.challenge78 .block {
+  background-color: white;
+  margin: 32px auto;
+  padding: 16px;
+  width: 25%;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 4ms ease;
+}
+
+.challenge78 .block:hover {
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/** Challenge 74 - Hover effect **/
+.challenge74 {
+  background-color: #8BD322;
+}
+
+.challenge74 .numberBlock {
+  margin: 24px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 250px;
+  font-weight: 550;
+  transition: background-color 0.3s ease-in, color 0.3s ease;
+}
+
+.challenge74 .numberBlock:hover {
+  background-color: white;
+  color: #8BD322;
+}
+
+/** Challenge 82 - Button **/
+.challenge82 {
+  border: none;
+  position: absolute;
+  top: 1;
+  right: 0;
+}
+
+.challenge82 .block {
+  margin: 24px auto;
+  padding: 16px 24px;
+  border-radius: 100px;
+  border: 2px solid white;
+  background-color: white;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.5s ease;
+  width: 60px;
+  text-align: center;
+}
+
+.challenge82 .block.front,
+.challenge82 .block.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+.challenge82 .block.front {
+  z-index: 2;
+}
+
+.challenge82 .block.back {
+  background-color: #20d31d;
+  color: white;
+}
+
+.challenge82 .block:hover {
+  cursor: pointer;
+}
+
+/** Challenge 64 - Hover effect **/
+.challenge64 {
+  border: none;
+  position: absolute;
+  top: 1;
+  right: 0;
+}
+
+.challenge64 .block {
+  padding: 24px;
+  margin: 24px auto;
+  position: absolute;
+  cursor: pointer;
+}
+
+.challenge64 .block.white {
+  background-color: #ffffff;
+  color: purple;
+  top: 0;
+  right: 20;
+  z-index: 5;
+  transition: z-index 4ms ease, top 4ms ease, right 4ms ease;
+  will-change: transform;
+}
+
+.challenge64 .block.purple {
+  background-color: purple;
+  color: white;
+  top: 10;
+  right: 10;
+  transition: z-index 4ms ease, top 4ms ease, right 4ms ease;
+  will-change: transform;
+}
+
+/** Challenge 02 - Hover effect on hamburger icon **/
+.challenge02 {
+  background-color: #B8E963;
+  flex-direction: column;
+  padding: 16px 0px;
+}
+
+.challenge02 .block {
+  width: 24px;
+  height: 4px;
+  margin: 2px auto;
+  background-color: white;
+  border: solid 1px lightgray;
+  transition: transform 4ms ease;
+}
