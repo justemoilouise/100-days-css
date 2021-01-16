@@ -2,17 +2,25 @@ body {
   margin: 8px;
   padding: 0;
   background-color: #DDE1D6;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .challengeCard {
   display: block;
-  width: 50%;
   margin: 4px;
   border: 1px solid #BCBFC4;
   border-radius: 4px;
-}
-
-.flex {
+  position: relative;
   display: flex;
   flex: 1;
 }
