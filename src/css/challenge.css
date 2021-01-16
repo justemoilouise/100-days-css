@@ -132,7 +132,7 @@
 }
 
 .challenge70 .block:hover {
-  border-color: black;
+  border-color: rgb(235, 162, 135);
 }
 
 /** Challenge 78 - Hover effect **/
@@ -160,13 +160,14 @@
 }
 
 .challenge74 .numberBlock {
+  min-width: 24px;
   margin: 24px;
-  padding: 8px 14px;
+  padding: 8px;
   cursor: pointer;
   text-align: center;
   color: white;
   border: 2px solid white;
-  border-radius: 250px;
+  border-radius: 50px;
   font-weight: 550;
   transition: background-color 0.3s ease-in, color 0.3s ease;
 }
@@ -252,7 +253,7 @@
 
 /** Challenge 02 - Hover effect on hamburger icon **/
 .challenge02 {
-  background-color: #B8E963;
+  background-color: #b050bd;
   flex-direction: column;
   padding: 16px 0px;
 }
