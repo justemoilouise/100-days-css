@@ -263,7 +263,7 @@
   height: 4px;
   margin: 2px auto;
   background-color: white;
-  transition: transform 4ms ease;
+  transition: all 0.5s ease;
 }
 
 /** Challenge 40 - Zoom in on image on click **/
