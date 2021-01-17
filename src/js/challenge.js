@@ -73,8 +73,8 @@ export function challenge02() {
 
     setTimeout(function() {
       blockMiddle.style = "transform: rotate(-45deg);";
-      blockTop.style = "transform: translateY(10px) rotate(45deg);";
-      blockBottom.style = "transform: translateY(-10px) rotate(45deg)";
+      blockTop.style = "transform: translateY(8px) rotate(45deg);";
+      blockBottom.style = "transform: translateY(-8px) rotate(45deg)";
     }, 200);
   });
   challenge.addEventListener("mouseout", function(evt) {
@@ -91,8 +91,39 @@ export function challenge02() {
   })
 }
 
+export function challenge40() {
+  let challenge = document.getElementById("challenge40");
+  let middleIndex = Math.floor(challenge.children.length / 2)
+  let middleImg = challenge.children[middleIndex];
+
+  [].forEach.call(challenge.children, function(el) {
+    el.addEventListener("click", function(evt) {
+      evt.preventDefault;
+
+      const { top: currentTop, left: currentLeft, width: currentWidth, height: currentHeight } = evt.target.getBoundingClientRect()
+      const { top: middleTop, left: middleLeft } = middleImg.getBoundingClientRect();
+      const { width: containerWidth, height: containerHeight } = challenge.getBoundingClientRect();
+      const scale = currentWidth > currentHeight
+        ? containerWidth / currentWidth
+        : containerHeight / currentHeight;
+
+      let transform = [];
+      transform.push(`translate(${middleLeft - currentLeft}px, ${middleTop - currentTop}px)`);
+      transform.push(`scale(${scale})`);
+      
+      if (el.classList.contains("active")) {
+        el.classList.remove("active");
+        el.style = null;
+      } else {
+        el.classList.add("active");
+        el.style = "transform: " + transform.join(" "); + ";";
+      }
+    });
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
-    return el.classList.contains(className)
+    return el.classList.contains(className);
   });
 }

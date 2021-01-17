@@ -263,6 +263,24 @@
   height: 4px;
   margin: 2px auto;
   background-color: white;
-  border: solid 1px lightgray;
   transition: transform 4ms ease;
+}
+
+/** Challenge 40 - Zoom in on image on click **/
+.challenge40 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.challenge40 img {
+  object-fit: cover;
+  object-position: center center;
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  transition: all 1s ease;
+}
+
+.challenge40 img.zoomIn {
+  transform: translate(160px, 160px) scale(3);
 }
