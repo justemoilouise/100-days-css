@@ -398,7 +398,38 @@
   transform: rotate(-20deg);
 }
 
-.challenge94 .tree .branch {
+/** Challenge 94 - Red tree with branches **/
+.challenge94UsingBorders {
+  background-color: lightyellow;
+  padding: 48px 48px 96px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.challenge94UsingBorders .tree {
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.challenge94UsingBorders .tree .side {
+  position: relative;
+  border-bottom: 180px solid;
+}
+
+.challenge94UsingBorders .tree .left {
+  border-left: 80px solid transparent;
+  border-bottom-color: seagreen;
+}
+
+.challenge94UsingBorders .tree .right {
+  border-right: 80px solid transparent;
+  border-bottom-color: limegreen;
+}
+
+.challenge94 .tree .branch,
+.challenge94UsingBorders .tree .branch {
   z-index: 5;
   width: 4px;
   background-color: goldenrod;
@@ -407,11 +438,13 @@
   left: calc(50% - 2px);
 }
 
-.challenge94 .tree .b0 {
+.challenge94 .tree .b0,
+.challenge94UsingBorders .tree .b0 {
   height: 180px;
 }
 
-.challenge94 .tree .b0::after {
+.challenge94 .tree .b0::after,
+.challenge94UsingBorders .tree .b0::after {
   content: '';
   background-color: lightsteelblue;
   width: 60px;
@@ -421,36 +454,43 @@
   left: -28px;
 }
 
-.challenge94 .tree .leftBranch {
+.challenge94 .tree .leftBranch,
+.challenge94UsingBorders .tree .leftBranch {
   transform-origin: bottom left;
   transform: rotate(-45deg);
 }
 
-.challenge94 .tree .b1 {
+.challenge94 .tree .b1,
+.challenge94UsingBorders .tree .b1 {
   height: 15px;
 }
 
-.challenge94 .tree .b2 {
+.challenge94 .tree .b2,
+.challenge94UsingBorders .tree .b2 {
   height: 30px;
   top: 50%;
 }
 
-.challenge94 .tree .b3 {
+.challenge94 .tree .b3,
+.challenge94UsingBorders .tree .b3 {
   height: 45px;
   top: 75%;
 }
 
-.challenge94 .tree .rightBranch {
+.challenge94 .tree .rightBranch,
+.challenge94UsingBorders .tree .rightBranch {
   transform-origin: bottom left;
   transform: rotate(45deg);
 }
 
-.challenge94 .tree .b4 {
+.challenge94 .tree .b4,
+.challenge94UsingBorders .tree .b4 {
   height: 25px;
   top: 32%;
 }
 
-.challenge94 .tree .b5 {
+.challenge94 .tree .b5,
+.challenge94UsingBorders .tree .b5 {
   height: 40px;
   top: 64%;
 }
