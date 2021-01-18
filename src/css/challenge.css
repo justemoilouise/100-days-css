@@ -238,7 +238,7 @@
   top: 0;
   right: 20;
   z-index: 5;
-  transition: z-index 4ms ease, top 4ms ease, right 4ms ease;
+  transition: z-index 1s ease, top 1s ease, right 1s ease;
   will-change: transform;
 }
 
@@ -247,7 +247,7 @@
   color: white;
   top: 10;
   right: 10;
-  transition: z-index 4ms ease, top 4ms ease, right 4ms ease;
+  transition: z-index 1s ease, top 1s ease, right 1s ease;
   will-change: transform;
 }
 
@@ -348,4 +348,109 @@
   right: 24px;
   border-radius: 2px;
   box-shadow: -1px 0px 3px black;
+}
+
+/** Challenge 94 - Red tree with branches **/
+.challenge94 {
+  background-color: lightblue;
+  padding: 48px 48px 96px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.challenge94 .tree {
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.challenge94 .tree .side {
+  width: 80px;
+  height: 180px;
+  position: relative;
+}
+
+.challenge94 .tree .side::after {
+  content: '';
+  background-color: lightblue;
+  position: absolute;
+  top: 0;
+  transform: rotate(20deg);
+  width: 80px;
+  height: 200px;
+}
+
+.challenge94 .tree .left {
+  background-color: rgb(192, 33, 33);
+}
+
+.challenge94 .tree .left::after {
+  transform-origin: top right;
+}
+
+.challenge94 .tree .right {
+  background-color: rgb(199, 71, 71);
+}
+
+.challenge94 .tree .right::after {
+  transform-origin: top left;
+  transform: rotate(-20deg);
+}
+
+.challenge94 .tree .branch {
+  z-index: 5;
+  width: 4px;
+  background-color: goldenrod;
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 2px);
+}
+
+.challenge94 .tree .b0 {
+  height: 180px;
+}
+
+.challenge94 .tree .b0::after {
+  content: '';
+  background-color: lightsteelblue;
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: -28px;
+}
+
+.challenge94 .tree .leftBranch {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+}
+
+.challenge94 .tree .b1 {
+  height: 15px;
+}
+
+.challenge94 .tree .b2 {
+  height: 30px;
+  top: 50%;
+}
+
+.challenge94 .tree .b3 {
+  height: 45px;
+  top: 75%;
+}
+
+.challenge94 .tree .rightBranch {
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+
+.challenge94 .tree .b4 {
+  height: 25px;
+  top: 32%;
+}
+
+.challenge94 .tree .b5 {
+  height: 40px;
+  top: 64%;
 }
