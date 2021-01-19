@@ -42,20 +42,20 @@ export function challenge82() {
 
 export function challenge64() {
   let challenge = document.getElementById("challenge64");
-  let blockWhite = findElementByClass(challenge.children, "white");
-  let blockPurple = findElementByClass(challenge.children, "purple");
+  let blockFront = findElementByClass(challenge.children, "front");
+  let blockBack = findElementByClass(challenge.children, "back");
 
   challenge.addEventListener("mouseover", function(evt) {
     evt.preventDefault();
 
-    blockPurple.style = "z-index: 10; transform: translate(-10px, -10px);";
-    blockWhite.style = "transform: translate(10px, 10px);";
+    blockFront.classList.add("movePurple");
+    blockBack.classList.add("moveWhite");
   });
   challenge.addEventListener("mouseout", function(evt) {
     evt.preventDefault();
 
-    blockWhite.style = null;
-    blockPurple.style = null;
+    blockFront.classList.remove("movePurple");
+    blockBack.classList.remove("moveWhite");
   });
 }
 
@@ -118,6 +118,22 @@ export function challenge40() {
         el.classList.add("active");
         el.style = "transform: " + transform.join(" "); + ";";
       }
+    });
+  });
+}
+
+export function challenge74() {
+  let challenge = document.getElementById("challenge74");
+
+  [].forEach.call(challenge.children, function(el) {
+    el.addEventListener("click", function(evt) {
+      evt.preventDefault;
+
+      let currentActiveEl = findElementByClass(challenge.children, "active");
+      if(currentActiveEl) {
+        currentActiveEl.classList.remove("active");
+      }
+      el.classList.add("active");
     });
   });
 }
