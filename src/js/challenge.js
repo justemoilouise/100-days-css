@@ -131,8 +131,13 @@ export function challenge74() {
 
       let currentActiveEl = findElementByClass(challenge.children, "active");
       if(currentActiveEl) {
+        const currentBackgroundEl = findElementByClass(currentActiveEl.children, "rippleBackground");
+        currentBackgroundEl.classList.remove("rippleEffect");
         currentActiveEl.classList.remove("active");
       }
+
+      const backgroundEl = findElementByClass(el.children, "rippleBackground");
+      backgroundEl.classList.add("rippleEffect")
       el.classList.add("active");
     });
   });

@@ -158,30 +158,63 @@
 
 /** Challenge 74 - Hover effect **/
 .challenge74 {
-  background-color: #8BD322;
+  background-color: darkolivegreen;
 }
 
 .challenge74 .numberBlock {
-  min-width: 24px;
-  margin: 24px;
-  padding: 8px;
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 16px;
   cursor: pointer;
-  text-align: center;
-  color: white;
-  border: 2px solid white;
+  background-color: unset;
+  border: 1px solid white;
   border-radius: 50px;
-  font-weight: 550;
-  transition: all 0.25s ease-out;
+  outline: none;
+  transition: all 0.5s ease-out;
 }
 
 .challenge74 .numberBlock:hover {
-  background-color: #66aa00;
+  background-color: rgb(119, 150, 65);
 }
 
-.challenge74 .numberBlock.active {
-  background-color: white;
-  color: #78c504;
+.challenge74 .numberBlock.active span.text {
+  color: darkolivegreen;
 }
+
+.challenge74 .numberBlock span.text {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  font-weight: 550;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.challenge74 .numberBlock .rippleBackground {
+  background-color: white;
+  /* position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.5s ease-out;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px; */
+}
+
+/* .challenge74 .numberBlock span.ripple {
+  transform: scale(1.2);
+  opacity: 1;
+} */
 
 /** Challenge 82 - Button **/
 .challenge82 {
