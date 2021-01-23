@@ -187,6 +187,33 @@ export function challenge47() {
   }
 }
 
+export function challenge51() {
+  let challenge = document.getElementById("challenge51");
+
+  let interval;
+  let timer = findElementByClass(challenge.children, "timer");
+  let button = findElementByClass(challenge.children, "button");
+
+  button.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if(button.classList.contains("play")) {
+      interval = setInterval(function() {
+        const currentTime = parseInt(timer.textContent, 10);
+        timer.textContent = (currentTime + 1).toString().padStart(4, "0");
+      }, 1000);
+
+      button.classList.remove("play");
+      button.classList.add("pause");
+    } else {
+      clearInterval(interval);
+
+      button.classList.remove("pause");
+      button.classList.add("play");
+    }
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
