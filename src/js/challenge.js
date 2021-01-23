@@ -143,6 +143,50 @@ export function challenge74() {
   });
 }
 
+export function challenge47() {
+  let challenge = document.getElementById("challenge47");
+  const pixelWidth = (challenge.clientWidth/20) - 2;
+
+  const cornerIndices = [0, 19, 380, 399];
+  const activeIndices = [129, 130, 148, 149, 150, 151, 167, 168, 169, 170, 171, 172,
+    186, 187, 189, 190, 192, 193, 206, 207, 208, 209, 210, 211, 212, 213, 228, 231,
+    247, 249, 250, 252, 266, 268, 271, 273];
+
+  for(let i = 0; i < 400; i++) {
+    const child = document.createElement("div");
+      child.classList.add("pixel");
+      child.style = `width: ${pixelWidth}px; height: ${pixelWidth}px`;
+
+      if(cornerIndices.includes(i)) {
+        switch (i) {
+          case 0: child.classList.add("cornerTopLeft");
+            break;
+          case 19: child.classList.add("cornerTopRight");
+            break;
+          case 380: child.classList.add("cornerBottomLeft");
+            break;
+          case 399: child.classList.add("cornerBottomRight");
+            break;
+        }
+      }
+
+      if(activeIndices.includes(i)) {
+        child.classList.add("active");
+      }
+
+      child.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        if(child.classList.contains("active")) {
+          child.classList.remove("active");
+        } else {
+          child.classList.add("active");
+        }
+      });
+
+      challenge.appendChild(child);
+  }
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

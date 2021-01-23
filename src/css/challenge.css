@@ -600,3 +600,40 @@
 .challenge43 .bulb:hover .bulbBottom {
   border-top-color: grey;
 }
+
+/** Challenge 47 - Pixel board **/
+.challenge47 {
+  background-color: rgb(230, 76, 76);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge47 .pixel {
+  border: 1px solid rgb(228, 93, 93);
+  cursor: pointer;
+}
+
+.challenge47 .pixel:hover {
+  background-color: rgba(228, 93, 93, 0.842);
+}
+
+.challenge47 .cornerTopLeft {
+  border-top-left-radius: 2px;
+}
+
+.challenge47 .cornerTopRight {
+  border-top-right-radius: 2px;
+}
+
+.challenge47 .cornerBottomLeft {
+  border-bottom-left-radius: 2px;
+}
+
+.challenge47 .cornerBottomRight {
+  border-bottom-right-radius: 2px;
+}
+
+.challenge47 .pixel.active {
+  background-color: white;
+  border-color: white;
+}
