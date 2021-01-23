@@ -214,6 +214,52 @@ export function challenge51() {
   });
 }
 
+export function challenge62() {
+  let challenge = document.getElementById("challenge62");
+
+  const features = {
+    Basic: {
+      users: 5,
+      storage: 20,
+      projects: 2,
+    },
+    Pro: {
+      users: 25,
+      storage: 150,
+      projects: 25,
+    },
+    Premium: {
+      users: 100,
+      storage: 200,
+      projects: 50,
+    }
+  };
+
+  let featurePlanUser = document.getElementById("challenge62_featureUser");
+  let featurePlanStorage = document.getElementById("challenge62_featureStorage");
+  let featurePlanProject = document.getElementById("challenge62_featureProject");
+
+  let cardContainer = findElementByClass(challenge.children, "cardContainer");
+  [].forEach.call(cardContainer.children, function(el) {
+    el.addEventListener("mouseover", function(evt) {
+      evt.preventDefault();
+
+      const planFeature = features[el.getAttribute("name")];
+      featurePlanUser.style.width = `${(planFeature.users / 100) * 100}%`;
+      featurePlanStorage.style.width = `${(planFeature.storage / 200) * 100}%`;
+      featurePlanProject.style.width = `${(planFeature.projects / 50) * 100}%`;
+    });
+
+    el.addEventListener("mouseout", function(evt) {
+      evt.preventDefault();
+
+      featurePlanUser.style.width = 0;
+      featurePlanStorage.style.width = 0;
+      featurePlanProject.style.width = 0;
+    });
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

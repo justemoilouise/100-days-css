@@ -670,3 +670,130 @@
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
+
+/** Challenge 62 - Plans Comparison **/
+.challenge62 {
+  background-color: rosybrown;
+  flex-direction: column;
+}
+
+.challenge62 .cardContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.challenge62 .cardContainer .card {
+  width: 120px;
+  margin: 16px 6px;
+  box-shadow: 1px 1px 8px gray;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge62 .cardContainer .card:hover {
+  transform: scale(1.1);
+}
+
+.challenge62 .cardContainer .card:hover .header {
+  background-color: rgb(201, 65, 65);
+}
+
+.challenge62 .cardContainer .card:hover .details {
+  color: rgb(201, 65, 65);
+}
+
+.challenge62 .cardContainer .card .header {
+  padding: 8px;
+  text-align: center;
+  color: white;
+  background-color: indianred;
+}
+
+.challenge62 .cardContainer .card .details {
+  padding: 8px;
+  text-align: center;
+  color: rgb(32, 32, 32);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.challenge62 .cardContainer .card .details p {
+  margin: 16px 0 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+.challenge62 .cardContainer .card .details span {
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.challenge62 .placeholder {
+  margin-bottom: 8px;
+  height: 4px;
+  border-radius: 16px;
+  background-color: lightgray;
+}
+
+.challenge62 .cardContainer .placeholder.long {
+  width: 80px;
+}
+
+.challenge62 .cardContainer .placeholder.short {
+  width: 56px;
+}
+
+.challenge62 .featuresContainer {
+  width: 400px;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: rgb(32, 32, 32);
+  font-size: 12px;
+  box-shadow: 1px 1px 8px gray;
+}
+
+.challenge62 .featuresContainer .feature {
+  margin: 8px 0;
+  display: grid;
+  grid-template: "a b" auto
+                 "c c" auto / 50% 50%;
+}
+
+.challenge62 .featuresContainer .placeholder {
+  width: 100%;
+  height: 8px;
+}
+
+.challenge62 .featuresContainer .feature .featureLabelMin {
+  grid-area: a;
+}
+
+.challenge62 .featuresContainer .feature .featureLabelMax {
+  grid-area: b;
+  text-align: right;
+}
+
+.challenge62 .featuresContainer .feature .featurePortion {
+  margin-top: 6px;
+  grid-area: c;
+  position: relative;
+}
+
+.challenge62 .featuresContainer .feature .featurePlan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;;
+  height: 8px;
+  background-color: rgb(201, 65, 65);
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
