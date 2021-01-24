@@ -260,6 +260,48 @@ export function challenge62() {
   });
 }
 
+export function challenge07() {
+  let challenge = document.getElementById("challenge07");
+
+  let sidebar = findElementByClass(challenge.children, "sidebar");
+  let mainPanel = findElementByClass(challenge.children, "mainPanel");
+
+  const header = findElementByClass(mainPanel.children, "header");
+  let searchbar = findElementByClass(header.children, "searchBar");
+
+  const sidebarTop = `top: calc(50% - ${sidebar.clientHeight / 2}px)`;
+  sidebar.style = sidebarTop;
+
+  let leftIcon = document.getElementById("challenge07_headerLeftIcon");
+  leftIcon.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if(leftIcon.classList.contains("active")) {
+      leftIcon.classList.remove("active");
+      mainPanel.style = null;
+      sidebar.style = sidebarTop;
+    } else {
+      leftIcon.classList.add("active");
+      mainPanel.style = "transform: translateX(150px)";
+      sidebar.style = `${sidebarTop}; transform: translateX(-16px)`;
+    }
+  });
+
+  let rightIcon = document.getElementById("challenge07_headerRightIcon");
+  rightIcon.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if(rightIcon.classList.contains("active")) {
+      rightIcon.classList.remove("active");
+      searchbar.value = '';
+      searchbar.style = null;
+    } else {
+      rightIcon.classList.add("active");
+      searchbar.style = "opacity: 1; transform: translateX(-96px); z-index: 2;"
+    }
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
