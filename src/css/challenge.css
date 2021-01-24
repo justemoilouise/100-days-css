@@ -1000,3 +1000,78 @@
 .challenge07 .mainPanel .body .item.notification p.content {
   font-size: 16px;
 }
+
+/** Challenge 12 - Quote with tooltip **/
+.challenge12 {
+  padding: 56px 48px;
+  background-color: darkorchid;
+  color: white;
+  font-size: 24px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.challenge12 .content {
+  position: relative;
+}
+
+.challenge12 .content::before {
+  content: ',,';
+  position: absolute;
+  top: -208px;
+  left: -14px;
+  z-index: 1;
+  letter-spacing: -4px;
+  font-size: 180px;
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.challenge12 .content .author {
+  margin-top: 16px;
+  font-size: 16px;
+  font-style: oblique;
+}
+
+.challenge12 .content .highlight {
+  padding: 4px 8px;
+  background-color: rgb(98, 0, 139);
+  cursor: pointer;
+}
+
+.challenge12 .tooltip {
+  width: 60%;
+  font-size: 14px;
+  position: absolute;
+  top: -48px;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.challenge12 .tooltip.active {
+  opacity: 1;
+  top: 4px;
+}
+
+.challenge12 .tooltip .header {
+  background-color: white;
+  color: rgb(98, 0, 139);
+  padding: 12px 24px;
+}
+
+.challenge12 .tooltip .body {
+  padding: 12px 24px;
+  background-color: rgb(98, 0, 139);
+  font-weight: normal;
+}
+
+.challenge12 .tooltip .arrow {
+  width: 1px;
+  border-top: 8px solid rgb(98, 0, 139);
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  margin: 0 auto;
+}

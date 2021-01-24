@@ -302,6 +302,33 @@ export function challenge07() {
   });
 }
 
+export function challenge12() {
+  let challenge = document.getElementById("challenge12");
+
+  let tooltip = findElementByClass(challenge.children, "tooltip");
+  let highlight = document.getElementById("challenge12_highlight");
+
+  const left = tooltip.offsetLeft + (highlight.offsetLeft + (highlight.offsetWidth/2)) - (tooltip.offsetWidth/2);
+  tooltip.style = `left: ${left}px`;
+
+  function addTooltipClass(evt) {
+    evt.preventDefault();
+
+    tooltip.classList.add("active");
+  }
+
+  function removeTooltipClass(evt) {
+    evt.preventDefault();
+
+    tooltip.classList.remove("active");
+  }
+
+  tooltip.addEventListener("mouseover", addTooltipClass);
+  tooltip.addEventListener("mouseout", removeTooltipClass);
+  highlight.addEventListener("mouseover", addTooltipClass);
+  highlight.addEventListener("mouseout", removeTooltipClass);
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
