@@ -1075,3 +1075,98 @@
   border-right: 16px solid transparent;
   margin: 0 auto;
 }
+
+/** Challenge 26 - Quotes **/
+.challenge26 {
+  background-color: darkmagenta;
+}
+
+.challenge26 .card {
+  width: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 6px black;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.challenge26 .card .content {
+  padding: 24px;
+  font-size: 12px;
+  background-color: white;
+  position: relative;
+}
+
+.challenge26 .card .content .marker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  padding: 4px;
+  color: white;
+  z-index: 1;
+}
+
+.challenge26 .card .content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 64px;
+  z-index: 0;
+  background-color: rgb(187, 69, 187);
+  transform-origin: top left;
+  transform: rotate(-45deg);
+}
+
+.challenge26 .card .content h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.challenge26 .card .content p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge26 .card .button {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(73, 0, 73);
+  transition: all 0.25s ease;
+}
+
+.challenge26 .card .button:hover {
+  background-color: rgb(53, 0, 53);
+}
+
+@keyframes challenge26_fadeOut {
+  20% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 0.5;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

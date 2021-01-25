@@ -329,6 +329,70 @@ export function challenge12() {
   highlight.addEventListener("mouseout", removeTooltipClass);
 }
 
+export function challenge26() {
+  const contentArray = [
+    {
+      header: "The couch",
+      content: "If you want to grow, get outside your comfort zone."
+    },
+    {
+      header: "Failing is learning",
+      content: "Pick yourself up, dust yourself off, and start again."
+    },
+    {
+      header: "Flowers and rainbows",
+      content: "Always be yourself, unless you can be a unicorn."
+    },
+  ];
+
+  let challenge = document.getElementById("challenge26");
+  let card = findElementByClass(challenge.children, "card");
+  let button = findElementByClass(card.children, "button");
+
+  function setCardContent() {
+    let content = findElementByClass(card.children, "content");
+  
+    const currentIndex = parseInt(
+      findElementByClass(content.children, "marker").textContent || "0",
+      10);
+    const newContent = contentArray[currentIndex % 3];
+    [].forEach.call(content.children, function(el) {
+      switch(el.tagName) {
+        case "DIV": // marker
+          el.textContent = (currentIndex + 1) > 3 ? 1 : currentIndex + 1;
+          break
+        case "H3": // heading
+          el.textContent = newContent.header;
+          break;
+        case "P": // content
+          el.textContent = newContent.content;
+          break;
+        default: break;
+      }
+    });
+  }
+
+  button.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    card.classList.remove("zoomInFadeIn");
+    card.classList.add("zoomInFadeOut");
+
+    setTimeout(function() {
+      card.classList.add("zeroScale");
+      setCardContent();
+    }, 500);
+
+    setTimeout(function() {
+      card.classList.remove("zeroScale");
+      card.classList.remove("zoomInFadeOut");
+      card.classList.add("zoomInFadeIn");
+    }, 600);
+  });
+
+  setCardContent();
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

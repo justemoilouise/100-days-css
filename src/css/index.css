@@ -46,3 +46,17 @@ main {
   transform: scale(1.2);
   opacity: 1;
 }
+
+.zoomInFadeOut {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.zoomInFadeIn {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.zeroScale {
+  transform: scale(0);
+}
