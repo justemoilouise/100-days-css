@@ -393,6 +393,32 @@ export function challenge26() {
   setCardContent();
 }
 
+export function challenge32() {
+  let challenge = document.getElementById("challenge32");
+  let counter = findElementByClass(challenge.children, "counter");
+  let countNode = findElementByClass(counter.children, "count");
+
+  function animateSetNewValue(value) {
+    countNode.classList.add("zoomInFadeOut");
+    setTimeout(function() {
+      countNode.textContent = value;
+      countNode.classList.remove("zoomInFadeOut");
+    }, 250);
+  }
+
+  let btnMinus = findElementByClass(counter.children, "minus");
+  btnMinus.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    animateSetNewValue(parseInt(countNode.textContent, 10) - 1);
+  });
+
+  let btnPlus = findElementByClass(counter.children, "plus");
+  btnPlus.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    animateSetNewValue(parseInt(countNode.textContent, 10) + 1);
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

@@ -1148,25 +1148,54 @@
   background-color: rgb(53, 0, 53);
 }
 
-@keyframes challenge26_fadeOut {
-  20% {
-    transform: scale(1.1);
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0;
-    transform: scale(1.2);
-  }
-  60% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  80% {
-    opacity: 0.5;
-    transform: scale(0.75);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+/** Challenge 32 - Counter **/
+.challenge32 {
+  background: linear-gradient(45deg, cornflowerblue, skyblue);
+  padding: 48px;
+}
+
+.challenge32 .counter {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 24px;
+  padding: 4px;
+  border-radius: 100px;
+  width: 40%;
+}
+
+.challenge32 .counter button {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.challenge32 .counter button.minus {
+  color: rgb(189, 5, 5);
+}
+
+.challenge32 .counter button.minus:hover {
+  color: white;
+  background-color: rgb(189, 5, 5);
+}
+
+.challenge32 .counter button.plus {
+  color: rgb(5,189, 5);
+}
+
+.challenge32 .counter button.plus:hover {
+  color: white;
+  background-color: rgb(5,189, 5);
+}
+
+.challenge32 .counter .count {
+  transition: all 0.5s ease;
 }
