@@ -123,20 +123,20 @@
   transition: font-size 4ms ease;
 }
 
-/* .challenge70 .block:hover .labelDay {
+.challenge70 .block:hover .labelDay {
   font-size: 14px;
 }
 
 .challenge70 .block:hover .labelDate {
   font-size: 44px;
-} */
+}
 
 .challenge70 .block:hover {
   border-color: rgb(43, 42, 42);
   box-shadow: inset 2px 2px 4px rgba(43, 42, 42, 0.9);
 }
 
-/** Challenge 78 - Hover effect **/
+/** Challenge 78 - Hover shadow and scale effect **/
 .challenge78 {
   background-color: steelblue;
 }
@@ -156,7 +156,7 @@
   transform: scale(1.1);
 }
 
-/** Challenge 74 - Hover effect **/
+/** Challenge 74 - Hover ripple effect **/
 .challenge74 {
   background-color: darkolivegreen;
 }
@@ -211,12 +211,7 @@
   left: 0px; */
 }
 
-/* .challenge74 .numberBlock span.ripple {
-  transform: scale(1.2);
-  opacity: 1;
-} */
-
-/** Challenge 82 - Button **/
+/** Challenge 82 - Button flip **/
 .challenge82 {
   border: none;
   position: absolute;
@@ -443,7 +438,7 @@
   transform: rotate(-20deg);
 }
 
-/** Challenge 94 - Red tree with branches **/
+/** Challenge 94 - Green tree with branches **/
 .challenge94UsingBorders {
   background-color: lightyellow;
   padding: 48px 48px 96px;
@@ -735,18 +730,11 @@
   font-size: 12px;
 }
 
-.challenge62 .placeholder {
-  margin-bottom: 8px;
-  height: 4px;
-  border-radius: 16px;
-  background-color: lightgray;
-}
-
-.challenge62 .cardContainer .placeholder.long {
+.challenge62 .cardContainer .textPlaceholder.long {
   width: 80px;
 }
 
-.challenge62 .cardContainer .placeholder.short {
+.challenge62 .cardContainer .textPlaceholder.short {
   width: 56px;
 }
 
@@ -768,7 +756,7 @@
                  "c c" auto / 50% 50%;
 }
 
-.challenge62 .featuresContainer .placeholder {
+.challenge62 .featuresContainer .textPlaceholder {
   width: 100%;
   height: 8px;
 }
@@ -883,9 +871,7 @@
 }
 
 .challenge07 .mainPanel .header .headerRightIcon {
-  border: 2px solid rgb(195, 188, 236);
-  width: 10px;
-  height: 10px;
+  border-color: rgb(195, 188, 236);
   margin: 0 0 0 12px;
   cursor: pointer;
   position: relative;
@@ -1198,4 +1184,84 @@
 
 .challenge32 .counter .count {
   transition: all 0.5s ease;
+}
+
+/** Challenge 36 - Panel with menu **/
+.challenge36 {
+  background-color: rgb(8, 38, 95);
+  padding: 48px;
+}
+
+.challenge36 .panel {
+  box-shadow: 2px 2px 4px black;
+}
+
+.challenge36 .panel .header {
+  background-color: rgb(32, 89, 196);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.challenge36 .panel .header .iconContainer {
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge36 .panel .header .iconContainer.active {
+  background-color: rgb(136, 172, 240);
+}
+
+.challenge36 .panel .header .icon {
+  border-color: lightgray;
+}
+
+.challenge36 .panel .header .iconContainer.active .icon {
+  border-color: white;
+}
+
+.challenge36 .panel .header .icon:hover {
+  border-color: white;
+}
+
+.challenge36 .panel .header .left {
+  display: flex;
+  align-items: center;
+}
+
+.challenge36 .panel .main {
+  background-color: white;
+  padding: 24px;
+}
+
+.challenge36 .panel .main .content {
+  transition: all 0.4s ease;
+}
+
+.challenge36 .panel .content.changeContent {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.challenge36 .panel .content .heading {
+  text-align: left;
+}
+
+.challenge36 .panel .content .textPlaceholder.long {
+  width: 280px;
+}
+
+.challenge36 .panel .content .textPlaceholder.short {
+  width: 160px;
+}
+
+.challenge36 .panel .content h3 {
+  margin: 0;
+}
+
+.challenge36 .panel .content .paragraph {
+  margin-top: 16px;
 }

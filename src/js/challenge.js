@@ -419,6 +419,38 @@ export function challenge32() {
   });
 }
 
+export function challenge36() {
+  let challenge = document.getElementById("challenge36");
+  let panel = findElementByClass(challenge.children, "panel");
+  let main = findElementByClass(panel.children, "main");
+  let content = findElementByClass(main.children, "content");
+  let heading = findElementByClass(content.children, "heading");
+  let menus = document.getElementById("challenge36_menus");
+
+  let currentActiveMenu = [].filter.call(menus.children, function(menu) {
+    return menu.getAttribute("data-header");
+  })[0];
+  
+  [].forEach.call(menus.children, function(menu) {
+    menu.addEventListener("click", function(evt) {
+      evt.preventDefault();
+
+      if(currentActiveMenu) {
+        currentActiveMenu.classList.remove("active");
+      }
+
+      currentActiveMenu = menu;
+      menu.classList.add("active");
+      content.classList.add("changeContent");
+
+      setTimeout(function() {
+        heading.textContent = menu.getAttribute("data-header");
+        content.classList.remove("changeContent");
+      }, 400);
+    });
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
