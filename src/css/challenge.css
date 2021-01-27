@@ -113,14 +113,14 @@
 .challenge70 .labelDay {
   font-size: 16px;
   margin-top: 16px;
-  transition: font-size 4ms ease;
+  transition: font-size 0.25s ease;
 }
 
 .challenge70 .labelDate {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 16px;
-  transition: font-size 4ms ease;
+  transition: font-size 0.25s ease;
 }
 
 .challenge70 .block:hover .labelDay {
@@ -1264,4 +1264,100 @@
 
 .challenge36 .panel .content .paragraph {
   margin-top: 16px;
+}
+
+/** Challenge 38 - Zooming in/out element on click **/
+.challenge38 {
+  background-color: midnightblue;
+  display: block;
+  overflow: hidden;
+}
+
+.challenge38 .shape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 32px);
+  transition: all 0.75s ease;
+}
+
+.challenge38 .shape .top {
+  border-bottom: 18px solid white;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+}
+
+.challenge38 .shape .bottom {
+  border-top: 18px solid white;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+}
+
+.challenge38 .shape .middle {
+  position: relative;
+  background-color: white;
+  width: 56px;
+  height: 24px;
+  z-index: 0;
+}
+
+.challenge38 .shape .middle::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -24px;
+  width: 36px;
+  height: 40px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: midnightblue;
+}
+
+.challenge38 .shape .middle::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -24px;
+  width: 36px;
+  height: 40px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: midnightblue;
+}
+
+.challenge38 .shape.inner {
+  background-color: white;
+  transform: scale(0);
+  z-index: 2;
+}
+
+.challenge38 .shape.inner .top {
+  border-bottom-color: midnightblue;
+}
+
+.challenge38 .shape.inner .middle {
+  background-color: midnightblue;
+}
+
+.challenge38 .shape.inner .middle::before {
+  background-color: white;
+}
+
+.challenge38 .shape.inner .middle::after {
+  background-color: white;
+}
+
+.challenge38 .shape.inner .bottom {
+  border-top-color: midnightblue;
+}
+
+#challenge38_shape1.zoomIn {
+  transform: scale(15);
+}
+
+#challenge38_shape2.zoomIn {
+  transform: scale(1);
 }

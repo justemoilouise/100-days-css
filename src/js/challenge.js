@@ -451,6 +451,25 @@ export function challenge36() {
   });
 }
 
+export function challenge38() {
+  let shape1 = document.getElementById("challenge38_shape1");
+  let shape2 = document.getElementById("challenge38_shape2");
+
+  shape1.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    shape1.classList.add("zoomIn");
+    shape2.classList.add("zoomIn");
+  });
+
+  shape2.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    shape1.classList.remove("zoomIn");
+    shape2.classList.remove("zoomIn");
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
