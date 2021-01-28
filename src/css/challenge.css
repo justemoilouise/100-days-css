@@ -1361,3 +1361,66 @@
 #challenge38_shape2.zoomIn {
   transform: scale(1);
 }
+
+/** Challenge 39 - Menubar **/
+.challenge39 {
+  background-color: darkolivegreen;
+  padding: 48px;
+  flex-direction: column;
+  color: white;
+}
+
+.challenge39 .menubar {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.challenge39 .menubar.collapse {
+  opacity: 0;
+}
+
+.challenge39 .menubar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge39 .menubar ul li {
+  text-transform: uppercase;
+  margin: 8px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.challenge39 .menubar ul li:hover {
+  color: lightgray;
+}
+
+.challenge39 .line {
+  width: 100%;
+  margin: 16px;
+  height: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge39 .line.top.center {
+  transform: translateY(24px);
+}
+
+.challenge39 .line.top.collapse {
+  width: 10%;
+}
+
+.challenge39 .line.bottom.center {
+  transform: translateY(-24px);
+}
+
+.challenge39 .line.bottom.collapse {
+  width: 10%;
+}

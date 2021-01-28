@@ -470,6 +470,41 @@ export function challenge38() {
   });
 }
 
+export function challenge39() {
+  let challenge = document.getElementById("challenge39");
+
+  function restyle() {
+    [].forEach.call(challenge.children, function(el) {
+      if(el.classList.contains("line")) {
+        if(el.classList.contains("collapse")) {
+          el.classList.remove("center");
+          setTimeout(function() {
+            el.classList.remove("collapse");
+          }, 1000);
+        } else {
+          el.classList.add("collapse");
+          setTimeout(function() {
+            el.classList.add("center");
+          }, 1000);
+        }
+      } else if(el.classList.contains("menubar")) {
+        el.classList.contains("collapse")
+        ? setTimeout(function() {
+          el.classList.remove("collapse");
+        }, 1000)
+        : el.classList.add("collapse");
+      }
+    });
+  }
+
+  [].forEach.call(challenge.children, function(el) {
+    el.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      restyle();
+    });
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
