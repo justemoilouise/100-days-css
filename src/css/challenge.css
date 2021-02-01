@@ -1424,3 +1424,70 @@
 .challenge39 .line.bottom.collapse {
   width: 10%;
 }
+
+/** Challenge 41 - Error pop out **/
+.challenge41 {
+  background-color: darkcyan;
+  padding: 48px 16%;
+}
+
+.challenge41 .popout {
+  background-color: white;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 4px 4px 12px black;
+  transition: all 1s ease;
+}
+
+.challenge41 .popout .content {
+  color: #353b44;
+  margin: auto;
+  padding: 24px 48px;
+}
+
+.challenge41 .popout .content p {
+  margin: 0 12px 4px 12px;
+  font-size: 12px;
+}
+
+.challenge41 .popout .content p.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.challenge41 .popout .content .icon {
+  content: "!";
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: white;
+  position: relative;
+}
+
+.challenge41 .popout .content .icon span {
+  position: relative;
+  z-index: 2;
+}
+
+.challenge41 .popout .content .icon::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 24px);
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 32px solid rgb(238, 59, 59);
+  z-index: 1;
+}
+
+.challenge41 .popout button {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  background-color:rgb(238, 59, 59);
+  width: 100%;
+  cursor: pointer;
+}

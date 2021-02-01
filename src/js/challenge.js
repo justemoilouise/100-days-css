@@ -505,6 +505,18 @@ export function challenge39() {
   });
 }
 
+export function challenge41() {
+  let challenge = document.getElementById("challenge41");
+  let popout = findElementByClass(challenge.children, "popout");
+
+  let btn = document.getElementById("challenge41_button");
+  btn.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    popout.classList.add("zeroScale");
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
