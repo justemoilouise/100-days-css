@@ -517,6 +517,38 @@ export function challenge41() {
   });
 }
 
+export function challenge65() {
+  let challenge = document.getElementById("challenge65");
+
+  const count = 10;
+  const factor = 18;
+  Array.from({length: count}, () => {
+    let node = document.createElement("div");
+    node.classList.add("element");
+    challenge.append(node);
+  });
+
+  function animate() {
+    const rotate = challenge.classList.contains("square");
+    const style = `width: 80px;
+      left: calc(50% - 40px);
+      border-top-left-radius: 80px 160px;
+      border-top-right-radius: 80px 160px;
+      border-bottom-left-radius: 80px 160px;
+      border-bottom-right-radius: 80px 160px;`;
+
+    [].forEach.call(challenge.children, function(node, index) {
+      node.style = rotate
+        ? `${style} transform: rotate(${180 - (index * factor)}deg);`
+        : null;
+    });
+
+    rotate ? challenge.classList.remove("square") : challenge.classList.add("square");
+  }
+
+  setInterval(animate, 3000);
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

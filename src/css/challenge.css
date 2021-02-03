@@ -1491,3 +1491,19 @@
   width: 100%;
   cursor: pointer;
 }
+
+/** Challenge 65 **/
+.challenge65 {
+  background-color: olivedrab;
+  padding: 48px;
+}
+
+.challenge65 .element {
+  width: 160px;
+  height: 160px;
+  border: 1px solid white;
+  position: absolute;
+  top: calc(50% - 80px);
+  left: calc(50% - 80px);
+  transition: all 3s ease;
+}
