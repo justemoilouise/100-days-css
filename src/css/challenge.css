@@ -1492,7 +1492,7 @@
   cursor: pointer;
 }
 
-/** Challenge 65 **/
+/** Challenge 65 - Rotating square to ellipse **/
 .challenge65 {
   background-color: olivedrab;
   padding: 48px;
@@ -1506,4 +1506,35 @@
   top: calc(50% - 80px);
   left: calc(50% - 80px);
   transition: all 3s ease;
+}
+
+/** Challenge 73 - Scrolling text **/
+.challenge73 {
+  background-color: sienna;
+  color: white;
+  text-align: left;
+  text-shadow: 2px 2px 8px black;
+  padding: 56px 48px;
+  word-spacing: 4px;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.challenge73 .sentence {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 48;
+  width: 70%;
+}
+
+.challenge73 .scrollingText {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.challenge73 .scrollingText span {
+  font-weight: bold;
+  transition: transform 1.5s ease;
 }

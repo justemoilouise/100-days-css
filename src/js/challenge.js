@@ -549,6 +549,35 @@ export function challenge65() {
   setInterval(animate, 3000);
 }
 
+export function challenge73() {
+  const text = [ "Jaguar", "Panther", "Leopard", "Tiger" ];
+  let currentIndex = 0;
+
+  let challenge = document.getElementById("challenge73_scrollingText");
+  function setContent() {
+    currentIndex = (currentIndex + 1) > 4 ? 1 : currentIndex + 1;
+    const newContent = text[currentIndex % 4];
+    let node = document.createElement("span");
+    node.textContent = newContent;
+
+    challenge.append(node);
+    
+
+    setTimeout(function () {
+      challenge.children[0].style = `transform: translateY(-48px)`;
+      node.style = `transform: translateY(-48px)`;
+    }, 500);
+
+    setTimeout(function () {
+      if(challenge.children.length > 2) {
+        challenge.removeChild(challenge.children[0]);
+      }
+    }, 2000);
+  }
+
+  setInterval(setContent, 3000);
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
