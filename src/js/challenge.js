@@ -606,6 +606,43 @@ export function challenge72() {
   setInterval(animate, 3000);
 }
 
+export function challenge86() {
+  let challenge = document.getElementById("challenge86");
+
+  const count = 5;
+  Array.from({length: count}, (val, index) => {
+    let pendulumString = document.createElement("div");
+    pendulumString.classList.add('string');
+    let pendulumBall = document.createElement("div");
+    pendulumBall.classList.add('ball');
+
+    let node = document.createElement("div");
+    node.classList.add("pendulum");
+    node.appendChild(pendulumString);
+    node.appendChild(pendulumBall);
+
+    if(index === 0) {
+      node.id = "challenge86_left";
+    } else if(index === count - 1) {
+      node.id = "challenge86_right";
+    }
+    challenge.appendChild(node);
+  });
+
+  setInterval(function() {
+    let left = document.getElementById("challenge86_left");
+    let right = document.getElementById("challenge86_right");
+
+    if(left.classList.contains('left')) {
+      left.classList.remove('left');
+      right.classList.add('right');
+    } else {
+      right.classList.remove('right');
+      left.classList.add('left');
+    }
+  }, 1000);
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

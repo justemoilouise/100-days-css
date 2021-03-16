@@ -1565,7 +1565,7 @@
 
 /** Challenge 88 - Candle **/
 .challenge88 {
-  background-color: midnightblue;
+  background-color: rgb(8, 8, 82);
   padding: 48px;
   flex-direction: column;
 }
@@ -1593,7 +1593,7 @@
 
 .challenge88 .fire {
   background-color: orange;
-  width: 20px;
+  width: 18px;
   height: 28px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -1621,5 +1621,71 @@
   100% {
     border-top-left-radius: 2px;
     border-top-right-radius: 20px;
+  }
+}
+
+/** Challenge 86 - Pendulum **/
+.challenge86 {
+  background-color: rgb(107, 11, 56);
+  padding: 48px;
+  flex-direction: column;
+}
+
+.challenge86 .bar {
+  width: 50%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: grey;
+}
+
+.challenge86 .body {
+  display: flex;
+}
+
+.challenge86 .body .pendulum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+}
+
+.challenge86 .body .pendulum .string {
+  width: 1px;
+  height: 72px;
+  background-color: white;
+}
+
+.challenge86 .body .pendulum .ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.challenge86 .body .pendulum.left {
+  animation: moveLeftPendulum 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.challenge86 .body .pendulum.right {
+  animation: moveRightPendulum 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftPendulum {
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes moveRightPendulum {
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
