@@ -578,6 +578,34 @@ export function challenge73() {
   setInterval(setContent, 3000);
 }
 
+export function challenge72() {
+  let challenge = document.getElementById("challenge72");
+
+  const count = 10;
+  // const factor = 18;
+  Array.from({length: count}, () => {
+    let node = document.createElement("div");
+    node.classList.add("element");
+    challenge.append(node);
+  });
+
+  function animate() {
+    const rotate = challenge.classList.contains("active");
+
+    [].forEach.call(challenge.children, function(node, index) {
+      
+      node.style = rotate
+        ? `transform: rotate3d(${index % 2 === 0 ? 1 : -1}, 1, 0, 360deg);
+            border-color: rgba(255, 255, 255, 0.4);`
+        : null;
+    });
+
+    rotate ? challenge.classList.remove("active") : challenge.classList.add("active");
+  }
+
+  setInterval(animate, 3000);
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
