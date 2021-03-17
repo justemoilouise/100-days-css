@@ -643,6 +643,41 @@ export function challenge86() {
   }, 900);
 }
 
+export function challenge80() {
+  let challenge = document.getElementById("challenge80");
+
+  function filterInactiveNodes(activeId) {
+    return [].filter.call(challenge.children, function(node) {
+      return node.id !== activeId;
+    });
+  }
+
+  [].forEach.call(challenge.children, function(node) {
+    let siblingNodes = filterInactiveNodes(node.id);
+
+    node.addEventListener("mouseover", function(evt) {
+      evt.preventDefault();
+
+      siblingNodes.forEach(function(sibNode) {
+        sibNode.classList.remove("active");
+        sibNode.classList.add("inactive");
+      });
+
+      node.classList.remove("inactive");
+      node.classList.add("active");
+    });
+
+    node.addEventListener("mouseout", function(evt) {
+      evt.preventDefault();
+
+      siblingNodes.forEach(function(sibNode) {
+        sibNode.classList.remove("inactive");
+      });
+      node.classList.remove("active");
+    })
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

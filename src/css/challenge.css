@@ -1689,3 +1689,50 @@
     transform: rotate(0);
   }
 }
+
+/** Challenge 86 - Pendulum **/
+.challenge80 {
+  overflow: hidden;
+}
+
+.challenge80 .column {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: width 0.5s ease;
+}
+
+.challenge80 .column:nth-child(1),
+.challenge80 .column:nth-child(3) {
+  background-color: plum;
+}
+
+.challenge80 .column:nth-child(2),
+.challenge80 .column:nth-child(4) {
+  background-color: purple;
+}
+
+.challenge80 .column p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.challenge80 .column.active {
+  width: 55%;
+}
+
+.challenge80 .column.inactive{
+  width: 15%;
+}
+
+.challenge80 .column.active p {
+  opacity: 1;
+}
