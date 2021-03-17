@@ -139,11 +139,13 @@
 /** Challenge 78 - Hover shadow and scale effect **/
 .challenge78 {
   background-color: steelblue;
+  flex-direction: column;
+  padding: 16px 0;
 }
 
 .challenge78 .block {
   background-color: white;
-  margin: 32px auto;
+  margin: 16px auto;
   padding: 16px;
   width: 25%;
   cursor: pointer;
@@ -152,7 +154,21 @@
 }
 
 .challenge78 .block:hover {
+  transform: scale(1.1);
+}
+
+.challenge78 .block1:hover {
   box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.challenge78 .block2:hover {
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.challenge78 .block3:hover {
+  box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.4);
   transform: scale(1.1);
 }
 
