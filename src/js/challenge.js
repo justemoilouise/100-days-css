@@ -549,62 +549,62 @@ export function challenge65() {
   setInterval(animate, 3000);
 }
 
-export function challenge73() {
-  const text = [ "Jaguar", "Panther", "Leopard", "Tiger" ];
-  let currentIndex = 0;
+// export function challenge73() {
+//   const text = [ "Jaguar", "Panther", "Leopard", "Tiger" ];
+//   let currentIndex = 0;
 
-  let challenge = document.getElementById("challenge73_scrollingText");
-  function setContent() {
-    currentIndex = (currentIndex + 1) > 4 ? 1 : currentIndex + 1;
-    const newContent = text[currentIndex % 4];
-    let node = document.createElement("span");
-    node.textContent = newContent;
+//   let challenge = document.getElementById("challenge73_scrollingText");
+//   function setContent() {
+//     currentIndex = (currentIndex + 1) > 4 ? 1 : currentIndex + 1;
+//     const newContent = text[currentIndex % 4];
+//     let node = document.createElement("span");
+//     node.textContent = newContent;
 
-    challenge.append(node);
+//     challenge.append(node);
     
 
-    setTimeout(function () {
-      challenge.children[0].style = `transform: translateY(-48px)`;
-      node.style = `transform: translateY(-48px)`;
-    }, 500);
+//     setTimeout(function () {
+//       challenge.children[0].style = `transform: translateY(-48px)`;
+//       node.style = `transform: translateY(-48px)`;
+//     }, 500);
 
-    setTimeout(function () {
-      if(challenge.children.length > 2) {
-        challenge.removeChild(challenge.children[0]);
-      }
-    }, 2000);
-  }
+//     setTimeout(function () {
+//       if(challenge.children.length > 2) {
+//         challenge.removeChild(challenge.children[0]);
+//       }
+//     }, 2000);
+//   }
 
-  setInterval(setContent, 3000);
-}
+//   setInterval(setContent, 3000);
+// }
 
-export function challenge72() {
-  let challenge = document.getElementById("challenge72");
+// export function challenge72() {
+//   let challenge = document.getElementById("challenge72");
 
-  const count = 10;
-  // const factor = 18;
-  Array.from({length: count}, () => {
-    let node = document.createElement("div");
-    node.classList.add("element");
-    challenge.append(node);
-  });
+//   const count = 10;
+//   // const factor = 18;
+//   Array.from({length: count}, () => {
+//     let node = document.createElement("div");
+//     node.classList.add("element");
+//     challenge.append(node);
+//   });
 
-  function animate() {
-    const rotate = challenge.classList.contains("active");
+//   function animate() {
+//     const rotate = challenge.classList.contains("active");
 
-    [].forEach.call(challenge.children, function(node, index) {
+//     [].forEach.call(challenge.children, function(node, index) {
       
-      node.style = rotate
-        ? `transform: rotate3d(${index % 2 === 0 ? 1 : -1}, 1, 0, 360deg);
-            border-color: rgba(255, 255, 255, 0.4);`
-        : null;
-    });
+//       node.style = rotate
+//         ? `transform: rotate3d(${index % 2 === 0 ? 1 : -1}, 1, 0, 360deg);
+//             border-color: rgba(255, 255, 255, 0.4);`
+//         : null;
+//     });
 
-    rotate ? challenge.classList.remove("active") : challenge.classList.add("active");
-  }
+//     rotate ? challenge.classList.remove("active") : challenge.classList.add("active");
+//   }
 
-  setInterval(animate, 3000);
-}
+//   setInterval(animate, 3000);
+// }
 
 export function challenge86() {
   let challenge = document.getElementById("challenge86");
@@ -640,7 +640,7 @@ export function challenge86() {
       right.classList.remove('right');
       left.classList.add('left');
     }
-  }, 1000);
+  }, 900);
 }
 
 function findElementByClass(arr, className) {
