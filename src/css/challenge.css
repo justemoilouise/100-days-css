@@ -1752,3 +1752,81 @@
 .challenge80 .column.active p {
   opacity: 1;
 }
+
+/** Challenge 77 - Moving ball **/
+.challenge77 {
+  padding: 72px 48px;
+  background-color: darkslategray;
+}
+
+.challenge77 .wrapper {
+  width: 100%;
+  animation: moveBall 2s ease 0.5s infinite;
+}
+
+@keyframes moveBall {
+  50% {
+    transform: translateX(calc(100% - 36px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.challenge77 .wrapper .ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.challenge77 .ball::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -22px;
+  width: 40px;
+  height: 36px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  background-color: rgba(245, 245, 245, 0.6);
+  box-shadow: rgba(245, 245, 245, 0.6) -8px 0 2px;
+  transform-origin: center right;
+  transform: scaleX(0);
+  animation: moveBallShadowLeft 2s ease 0.5s infinite;
+}
+
+@keyframes moveBallShadowLeft {
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.challenge77 .ball::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 40px;
+  height: 36px;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: rgba(245, 245, 245, 0.6);
+  box-shadow: rgba(245, 245, 245, 0.6) 8px 0 2px;
+  transform-origin: center left;
+  transform: scaleX(0);
+  animation: moveBallShadowRight 2s ease 1.6s infinite;
+}
+
+@keyframes moveBallShadowRight {
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
