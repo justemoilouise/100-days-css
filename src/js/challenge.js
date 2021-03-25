@@ -65,30 +65,31 @@ export function challenge02() {
   let blockMiddle = findElementByClass(challenge.children, "middle");
   let blockBottom = findElementByClass(challenge.children, "bottom");
 
-  challenge.addEventListener("mouseover", function(evt) {
+  challenge.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    blockTop.style = "transform: translateY(10px);";
-    blockBottom.style = "transform: translateY(-10px);";
+    if(challenge.classList.contains("active")) {
+      blockMiddle.style = null;
+      blockTop.style = "transform: translateY(10px);";
+      blockBottom.style = "transform: translateY(-10px);";
 
-    setTimeout(function() {
-      blockMiddle.style = "transform: rotate(-45deg);";
-      blockTop.style = "transform: translateY(8px) rotate(45deg);";
-      blockBottom.style = "transform: translateY(-8px) rotate(45deg)";
-    }, 200);
+      challenge.classList.remove("active");
+      setTimeout(function() {
+        blockTop.style = null;
+        blockBottom.style = null;
+      }, 200);
+    } else {
+      blockTop.style = "transform: translateY(10px);";
+      blockBottom.style = "transform: translateY(-10px);";
+
+      challenge.classList.add("active");
+      setTimeout(function() {
+        blockMiddle.style = "transform: rotate(-45deg);";
+        blockTop.style = "transform: translateY(8px) rotate(45deg);";
+        blockBottom.style = "transform: translateY(-8px) rotate(45deg)";
+      }, 200);
+    }
   });
-  challenge.addEventListener("mouseout", function(evt) {
-    evt.preventDefault();
-
-    blockMiddle.style = null;
-    blockTop.style = "transform: translateY(10px);";
-    blockBottom.style = "transform: translateY(-10px);";
-
-    setTimeout(function() {
-      blockTop.style = null;
-      blockBottom.style = null;
-    }, 200);
-  })
 }
 
 export function challenge40() {
