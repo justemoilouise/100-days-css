@@ -1965,3 +1965,80 @@
     transform: translateY(0);
   }
 }
+
+/** Challenge 04 **/
+.challenge04 {
+  background-color: aquamarine;
+  padding: 48px;
+}
+
+.challenge04 .wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.challenge04 .wrapper .circle {
+  border-radius: 100%;
+  box-shadow: gray 2px 2px 4px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.challenge04 .wrapper .circle.large {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  animation: animateLarge 6s ease 0.2s infinite;
+}
+
+@keyframes animateLarge {
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.challenge04 .wrapper .circle.medium {
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  animation: animateMedium 6s ease 0.6s infinite;
+}
+
+@keyframes animateMedium {
+  40% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.challenge04 .wrapper .circle.small {
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  animation: animateSmall 6s ease 1s infinite;
+}
+
+@keyframes animateSmall {
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
