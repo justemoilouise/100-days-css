@@ -2042,3 +2042,127 @@
   }
 }
 
+/** Challenge #06 - Social Profile **/
+.challenge06 {
+  background: linear-gradient(45deg, darkseagreen 45%, seagreen 100%);
+  padding: 48px;
+}
+
+.challenge06 .card {
+  box-shadow: #000000a1 2px 2px 4px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.challenge06 .card .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  color: olivedrab;
+  text-align: center;
+}
+
+.challenge06 .card .left button {
+  width: 50%;
+  border: 2px solid olivedrab;
+  border-radius: 24px;
+  padding: 8px 16px;
+  margin-top: 12px; 
+  color: olivedrab;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.challenge06 .card .left button:first-child {
+  margin-top: 28px;
+}
+
+.challenge06 .card .left button:hover {
+  background-color: olivedrab;
+  color: rgb(248, 255, 234);
+}
+
+.challenge06 .card .left h3 {
+  margin-bottom: 0;
+}
+
+.challenge06 .card .left p {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.challenge06 img {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+}
+
+.challenge06 .card .left .wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.challenge06 .card .left .wrapper::before,
+.challenge06 .card .left .wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #6b8e23;
+  border-radius: 100%;
+  transition: all 2s ease;
+}
+
+.challenge06 .card .left .wrapper::before {
+  width: 80px;
+  height: 80px;
+  border-left: 0;
+}
+
+.challenge06 .card .left .wrapper::after {
+  width: 88px;
+  height: 88px;
+  border-right: 0;
+}
+
+.challenge06 .card .left .wrapper:hover::before {
+  transform: translate(-50%, -50%) rotateZ(360deg);
+}
+
+.challenge06 .card .left .wrapper:hover::after {
+  transform: translate(-50%, -50%) rotateZ(-360deg);
+}
+
+.challenge06 .card .right {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 2px;
+}
+
+.challenge06 .card .right .statCard {
+  background-color: olivedrab;
+  color:rgb(248, 255, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge06 .card .right p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge06 .card .right p:first-child {
+  font-size: 24px;
+}
+
+
