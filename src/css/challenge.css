@@ -2165,4 +2165,195 @@
   font-size: 24px;
 }
 
+/** Challenge #13 **/
+.challenge13 {
+  overflow: hidden;
+}
 
+.challenge13 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.challenge13 .gridContainer {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
+  padding: 2px;
+}
+
+.challenge13 .gridContainer .imageWrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.challenge13 .gridContainer .imageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.challenge13 .gridContainer .imageWrapper:hover::before {
+  opacity: 0.4;
+}
+
+.challenge13 .gridContainer .imageWrapper::after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #6ca100;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.challenge13 .gridContainer .imageWrapper:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.challenge13 .bannerContainer {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease;
+  z-index: 3;
+}
+
+.challenge13 .detailsContainer {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: #6ca100;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.8s ease;
+  z-index: 3;
+}
+
+.challenge13 .detailsContainer .iconButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.challenge13 .detailsContainer .iconButtonContainer .iconButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: 12px 24px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.challenge13 .detailsContainer .iconButtonContainer .iconButton:hover {
+  background-color: white;
+}
+
+.challenge13 .detailsContainer .iconButtonContainer .iconButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border: 1px solid white;
+  transition: border-color 0.6s ease;
+}
+
+.challenge13 .detailsContainer .iconButtonContainer .iconButton:hover::after {
+  border-color: #6ca100;
+}
+
+.challenge13 .profileImageContainer {
+  position: absolute;
+  top: calc(40% - 48px);
+  left: calc(50% - 48px);
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  border: 4px solid #6ca100;
+  z-index: 4;
+  overflow: hidden;
+  transform: translateY(-250%);
+  transition-delay: 0.4s;
+  transition: transform 1.2s ease;
+}
+
+.challenge13 .profileImageContainer img {
+  width: 96px;
+  height: 96px;
+}
+
+.challenge13 .closeBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background-color: #6ca100;
+  color: white;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 4;
+  cursor: pointer;
+  transition: transform 1.2s ease, background-color 0.4s ease, color 0.4s ease;
+  transition-delay: 0.4s;
+  transform: translateY(-200%);
+}
+
+.challenge13 .closeBtn:hover {
+  background-color: white;
+  color: #6ca100;
+}
+
+.challenge13 .closeBtn::after {
+  content: 'X';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.challenge13 .overlay.visible {
+  transform: translateY(0);
+}

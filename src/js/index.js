@@ -5,7 +5,7 @@ import {
   challenge07, challenge12, challenge26,
   challenge32, challenge36, challenge38,
   challenge39, challenge41, challenge65,
-  challenge86, challenge80,
+  challenge86, challenge80, challenge13,
   // challenge73, challenge72, 
 } from "./challenge.js";
 
@@ -32,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // challenge72();
   challenge86();
   challenge80();
+  challenge13();
 });

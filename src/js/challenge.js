@@ -679,6 +679,32 @@ export function challenge80() {
   });
 }
 
+export function challenge13() {
+  let challenge = document.getElementById("challenge13");
+  let overlayChildren = challenge.getElementsByClassName("overlay");
+
+  const imageChildren = challenge.getElementsByClassName("imageWrapper");
+  [].forEach.call(imageChildren, function(node) {
+    node.addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      [].forEach.call(overlayChildren, function(overlayNode) {
+        overlayNode.classList.add('visible');
+      });
+    });
+  });
+
+  const closeBtn = document.getElementById("challenge13_close");
+  closeBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    closeBtn.classList.remove('visible');
+    [].forEach.call(overlayChildren, function(overlayNode) {
+      overlayNode.classList.remove('visible');
+    });
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
