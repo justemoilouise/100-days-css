@@ -2042,7 +2042,7 @@
   }
 }
 
-/** Challenge #06 - Social Profile **/
+/** Challenge 06 - Social Profile **/
 .challenge06 {
   background: linear-gradient(45deg, darkseagreen 45%, seagreen 100%);
   padding: 48px;
@@ -2165,7 +2165,7 @@
   font-size: 24px;
 }
 
-/** Challenge #13 **/
+/** Challenge 13 **/
 .challenge13 {
   overflow: hidden;
 }
@@ -2356,4 +2356,140 @@
 
 .challenge13 .overlay.visible {
   transform: translateY(0);
+}
+
+/** Challenge 23 - "Collect moment not things" **/
+.challenge23 {
+  background-color: rgb(235, 91, 75);
+  padding: 64px;
+  color: white;
+}
+
+.challenge23 .wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+}
+
+.challenge23 .element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.challenge23 .circle {
+  background-color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  animation: animateElementCircle 0.8s ease 0.2s forwards;
+}
+
+@keyframes animateElementCircle {
+  20% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.challenge23 .line {
+  background-color: white;
+  width: 75%;
+  height: 4px;
+  transform: translate(-50%, -50%) scaleX(0);
+  animation: animateElementLine 0.8s ease 0.8s forwards;
+}
+
+@keyframes animateElementLine {
+  50% {
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleX(0);
+  }
+}
+
+.challenge23 .quote {
+  opacity: 0;
+  text-align: center;
+  animation: animateElementQuote 0.8s ease 1.6s forwards;
+}
+
+@keyframes animateElementQuote {
+  100% {
+    opacity: 1;
+  }
+}
+
+.challenge23 .quote h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+  position: relative;
+}
+
+.challenge23 .quote h1::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  width: 0;
+  height: 100%;
+  border: 4px solid white;
+  border-right: none;
+  transform: scale(0);
+  transform-origin: left center;
+  animation: animateElementQuoteBorder 1.2s ease 2s forwards;
+}
+
+.challenge23 .quote h1::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  width: 0;
+  height: 100%;
+  border: 4px solid white;
+  border-left: none;
+  transform: scale(0);
+  transform-origin: center right;
+  animation: animateElementQuoteBorder 1.2s ease 2s forwards;
+}
+
+@keyframes animateElementQuoteBorder {
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+    width: 24px;
+  }
+}
+
+.challenge23 .quote p {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  opacity: 0;
+  animation: animateElementQuoteText 1.2s ease 2s forwards;
+}
+
+.challenge23 .quote p.top {
+  transform: translateX(-25%);
+}
+
+.challenge23 .quote p.bottom {
+  transform: translateX(25%);
+}
+
+@keyframes animateElementQuoteText {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
