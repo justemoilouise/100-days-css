@@ -705,6 +705,24 @@ export function challenge13() {
   });
 }
 
+export function challenge29() {
+  let challengeContainerInput = document.getElementsByClassName("challenge29_container_input");
+  let challengeContainer = document.getElementById("challenge29_container");
+  let challengeInput = document.getElementById("challenge29_input");
+  challengeInput.addEventListener('keyup', function(evt) {
+    const currentValue = evt.currentTarget.value;
+
+    if(currentValue) {
+      [].forEach.call(challengeContainerInput, function(node) {
+        node.textContent = currentValue;
+      });
+      challengeContainer.classList.add("visible");
+    } else {
+      challengeContainer.classList.remove("visible");
+    }
+  })
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);

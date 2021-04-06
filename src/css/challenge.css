@@ -2493,3 +2493,69 @@
     transform: translateX(0);
   }
 }
+
+/** Challenge 29 - Input with suggestions **/
+.challenge29 {
+  background-color: rgb(133, 45, 35);
+  padding: 64px;
+}
+
+.challenge29 .wrapper {
+  width: 80%;
+  position: relative;
+  box-shadow: 1px 1px 6px black;
+}
+
+.challenge29 .wrapper::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgb(128, 31, 20);
+  z-index: 1;
+}
+
+.challenge29 .wrapper input {
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: none;
+  background-color: white;
+  color: rgb(128, 31, 20);
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  z-index: 1;
+}
+
+.challenge29 .wrapper .container {
+  position: absolute;
+  background-color: white;
+  width: calc(100% - 24px);
+  margin-top: 2px;
+  padding: 6px 12px;
+  box-shadow: 1px 1px 6px black;
+  font-size: 14px;
+  color: lightslategrey;
+  visibility: hidden;
+}
+
+.challenge29 .wrapper .container.visible {
+  visibility: visible;
+}
+
+.challenge29 .wrapper .container div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.challenge29 .wrapper .container div:hover {
+  color: rgb(128, 31, 20);
+}
+
+.challenge29 .wrapper .container .challenge29_container_input {
+  font-weight: bold;
+  font-style: italic;
+}
