@@ -2639,11 +2639,11 @@
   border-radius: 100%;
   background-color: gold;
   margin: 0 16px;
-  animation: animateFood 1.4s linear 0s infinite;
+  animation: animateFood 1.2s linear 0s infinite;
 }
 
 @keyframes animateFood {
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-300%);
   }
 }
