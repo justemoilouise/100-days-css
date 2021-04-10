@@ -2647,3 +2647,83 @@
     transform: translateX(-300%);
   }
 }
+
+/** Challenge 25 - "Map" **/
+.challenge25 {
+  background: linear-gradient(-45deg, skyblue 0%, cornflowerblue 50%, skyblue 100%);
+  padding: 64px;
+}
+
+.challenge25 .map {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.challenge25 .map .mapMarker {
+  position: relative;
+  animation: moveMarker 2s ease 0.2s infinite;
+}
+
+.challenge25 .map .mapMarker::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: cornflowerblue;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+.challenge25 .map .mapMarker .top {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: gold;
+}
+
+.challenge25 .map .mapMarker .bottom {
+  border-top: 40px solid gold;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  position: absolute;
+  top: 30px;
+  border-radius: 75%;
+}
+
+@keyframes moveMarker {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.challenge25 .map .shadow {
+  width: 20px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: rgba(36, 36, 36, 0.5);
+  position: absolute;
+  bottom: 32px;
+  animation: animateShadow 2s ease 0.2s infinite;
+}
+
+@keyframes animateShadow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
