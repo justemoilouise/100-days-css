@@ -709,6 +709,7 @@ export function challenge29() {
   let challengeContainerInput = document.getElementsByClassName("challenge29_container_input");
   let challengeContainer = document.getElementById("challenge29_container");
   let challengeInput = document.getElementById("challenge29_input");
+
   challengeInput.addEventListener('keyup', function(evt) {
     const currentValue = evt.currentTarget.value;
 
@@ -720,7 +721,35 @@ export function challenge29() {
     } else {
       challengeContainer.classList.remove("visible");
     }
-  })
+  });
+}
+
+export function challenge25() {
+  let challenge = document.getElementById("challenge25");
+
+  function addClass() {
+    [].forEach.call(challenge.children, function(node) {
+      node.classList.add("turn");
+    });
+  }
+
+  function removeClass() {
+    [].forEach.call(challenge.children, function(node) {
+      node.classList.remove("turn");
+    });
+  }
+
+  challenge.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    if(challenge.classList.contains("switch")) {
+      removeClass();
+      challenge.classList.remove("switch");
+    } else {
+      addClass();
+      challenge.classList.add("switch");
+    }
+  });
 }
 
 function findElementByClass(arr, className) {
