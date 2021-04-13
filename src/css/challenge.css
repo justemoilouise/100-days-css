@@ -2804,3 +2804,101 @@
   z-index: 2;
   transition-delay: 0.6s;
 }
+
+/** Challenge 33 - Sky **/
+.challenge33 {
+  background-color: skyblue;
+}
+
+.challenge33 .sky {
+  width: 100%;
+  height: 50%;
+  padding: 32px 64px;
+  overflow: hidden;
+  position: relative;
+}
+
+.challenge33 .sky .sun {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: gold;
+}
+
+.challenge33 .sky .cloud {
+  position: relative;
+  display: flex;
+  transform-origin: left;
+}
+
+.challenge33 .sky .cloud .base {
+  width: 80px;
+  height: 20px;
+  border-radius: 16px;
+  background-color: white;
+  position: relative;
+}
+
+.challenge33 .sky .cloud .part.small {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: 6px;
+}
+
+.challenge33 .sky .cloud .part.medium {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  top: -16px;
+  right: 6px;
+}
+
+.challenge33 .sky .cloud .part.large {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  top: -28px;
+  left: 14px;
+}
+
+.challenge33 .sky .cloud.small {
+  transform: scale(1) translateX(50%);
+  animation: moveCloudSmall 45s linear 0.2s infinite alternate;
+}
+
+.challenge33 .sky .cloud.medium {
+  transform: scale(1.4) translate(0, 24px);
+  animation: moveCloudMedium 36s linear 0.2s infinite alternate;
+}
+
+.challenge33 .sky .cloud.large {
+  transform-origin: right;
+  transform: scale(1.8) translate(100%, 100%);
+  animation: moveCloudLarge 40s linear 0.2s infinite alternate;
+}
+
+@keyframes moveCloudSmall {
+  100% {
+    transform: translateX(-64px);
+  }
+}
+
+@keyframes moveCloudMedium {
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes moveCloudLarge {
+  100% {
+    transform: translateX(-100%);
+  }
+}
