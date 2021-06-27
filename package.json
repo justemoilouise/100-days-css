@@ -4,7 +4,7 @@
   "description": "100 days CSS challenges at https://100dayscss.com/",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --mount=/:./src --watch=./src --port=5000"
+    "start": "live-server --mount=/:./ --watch=./ --port=5000"
   },
   "repository": {
     "type": "git",
