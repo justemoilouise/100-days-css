@@ -22,7 +22,6 @@ main {
   border-radius: 4px;
   position: relative;
   display: flex;
-  flex: 1;
 }
 
 .center {

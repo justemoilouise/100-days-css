@@ -615,6 +615,7 @@
   background-color: rgb(230, 76, 76);
   display: flex;
   flex-wrap: wrap;
+  min-width: 644px;
 }
 
 .challenge47 .pixel {
@@ -1851,6 +1852,8 @@
   overflow: hidden;
   flex-direction: column;
   position: relative;
+  min-width: 472px;
+  max-width: 472px;
 }
 
 .challenge69 .eye {
@@ -2246,6 +2249,10 @@
   transform: translateY(-100%);
   transition: transform 0.8s ease;
   z-index: 3;
+}
+
+.challenge13 .bannerContainer img {
+  width: 100%;
 }
 
 .challenge13 .detailsContainer {
