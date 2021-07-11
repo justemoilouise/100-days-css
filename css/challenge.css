@@ -1849,11 +1849,16 @@
 /** Challenge 69 - Blinking eye **/
 .challenge69 {
   background-color: darkgray;
+}
+
+.challenge69 .wrapper {
+  display: flex;
   overflow: hidden;
   flex-direction: column;
   position: relative;
-  min-width: 472px;
-  max-width: 472px;
+  min-width: 475px;
+  max-width: 475px;
+  width: 100%;
 }
 
 .challenge69 .eye {
