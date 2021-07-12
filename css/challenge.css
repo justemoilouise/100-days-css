@@ -2914,3 +2914,93 @@
     transform: translateX(-100%);
   }
 }
+
+/** Challenge 37 - Revolving cards **/
+.challenge37 {
+  background-color: rgb(49, 150, 190);
+  padding: 64px;
+}
+
+.challenge37 .wrapper {
+  width: fit-content;
+  margin: auto;
+  perspective: 80px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+}
+
+.challenge37 .card {
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(43, 42, 42, 0.9);
+  width: 132px;
+  height: 112px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  padding: 56px 16px 0;
+  transform-origin: left;
+  will-change: transform;
+}
+
+.challenge37 .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: tomato;
+  z-index: 1;
+}
+
+.challenge37 .card:nth-child(1) {
+  transform: translate3d(105%, 0, 20px);
+  animation: revolveCard1 5s ease-out 0.2s infinite;
+}
+
+.challenge37 .card:nth-child(2) {
+  transform: translate3d(-100%, 0, 0);
+  animation: revolveCard2 5s ease-in 0.2s infinite;
+}
+
+.challenge37 .card:nth-child(3) {
+  transform: translate3d(0, 0, 0);
+  animation: revolveCard3 5s ease-in-out 0.2s infinite;
+}
+
+@keyframes revolveCard1 {
+  33% {
+    transform: translate3d(200%, 0, 0);
+  }
+  69% {
+    transform: translate3d(0, 0, 0);
+  }
+  99% {
+    transform: translate3d(105%, 0, 20px);
+  }
+}
+
+@keyframes revolveCard2 {
+  33% {
+    transform: translate3d(0, 0, 20px);
+  }
+  69% {
+    transform: translate3d(100%, 0, 0);
+  }
+  99% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes revolveCard3 {
+  33% {
+    transform: translate3d(-200%, 0, 0);
+  }
+  69% {
+    transform: translate3d(-100%, 0, 20px);
+  }
+  99% {
+    transform: translate3d(0, 0, 0);
+  }
+}

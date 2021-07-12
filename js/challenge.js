@@ -752,6 +752,25 @@ export function challenge25() {
   });
 }
 
+export function challenge37() {
+  let challenge = document.getElementById('challenge37_wrapper');
+
+  let textPlaceholderNode = document.createElement("div");
+  textPlaceholderNode.classList.add("textPlaceholder");
+
+  Array.from({length: 3}, () => {
+    let node = document.createElement("div");
+    node.classList.add("card");
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+
+    challenge.appendChild(node);
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
