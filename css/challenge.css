@@ -812,6 +812,7 @@
   display: block;
   position: relative;
   overflow: hidden;
+  min-height: 344px;
 }
 
 .challenge07 .sidebar {
@@ -1299,6 +1300,7 @@
   top: calc(50% - 30px);
   left: calc(50% - 32px);
   transition: all 0.75s ease;
+  will-change: transform;
 }
 
 .challenge38 .shape .top {
@@ -1372,7 +1374,7 @@
 }
 
 #challenge38_shape1.zoomIn {
-  transform: scale(15);
+  transform: scale(25);
 }
 
 #challenge38_shape2.zoomIn {
