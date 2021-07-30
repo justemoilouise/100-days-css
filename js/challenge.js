@@ -771,8 +771,66 @@ export function challenge37() {
   });
 }
 
+export function challenge49() {
+  let challenge = document.getElementById('challenge49');
+  let circle = document.getElementById('challenge49_circle');
+
+  function moveCircle(evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+
+    let boundingRect = circle.getBoundingClientRect();
+    let x = evt.x - boundingRect.x;
+    let y = evt.y - boundingRect.y;
+
+    circle.animate([
+      { transform: `translate(${x}px, ${y}px)` }
+    ], {
+      duration: 500,
+      fill: 'forwards'
+    });
+  }
+
+  challenge.addEventListener('mousemove', throttle(moveCircle, 100));
+  challenge.addEventListener('mouseleave', debounce(function() {
+    circle.animate([
+      { transform: `translate(0, 0)` }
+    ], {
+      duration: 500,
+      fill: 'forwards'
+    });
+  }, 250));
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
   });
+}
+
+const debounce = (func, delay) => {
+  let debounceTimer;
+
+  return function() {
+    const context = this;
+    const args = arguments;
+
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => func.apply(context, args), delay);
+  }
+}
+
+const throttle = (func, limit) => {
+  let inThrottle;
+
+  return function() {
+    const args = arguments;
+    const context = this;
+
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
 }
