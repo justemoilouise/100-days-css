@@ -3055,11 +3055,11 @@
   perspective-origin: 100px 0;
   transform-style: preserve-3d;
   backface-visibility: visible;
-  animation: rotateCircles 2s ease-out 0.1s infinite;
   position: relative;
   width: 96px;
   height: 96px;
   margin: 0 auto;
+  animation: rotateCircles 12s ease-out 0.1s infinite;
 }
 
 .challenge75 .wrapper .circle {
@@ -3083,19 +3083,22 @@
 }
 
 @keyframes rotateCircles {
-  /* 0% {
-    transform: rotateY(360deg);
-  } */
-  100% {
-    transform: rotate(-0.25turn) rotateY(360deg);
+  0% {
+    transform: rotateY(-360deg);
   }
-  /* 66% {
-    transform: rotate(-90deg) rotateY(360deg);
+  10% {
+    transform: rotate(-0.1turn) rotateY(-360deg);
   }
-  80% {
-    transform: rotate(-120deg) rotateY(360deg);
+  30% {
+    transform: rotateX(-40deg) rotateZ(20deg) rotateY(-360deg);
+  }
+  50% {
+    transform: rotate(-0.25turn) rotateY(-360deg);
+  }
+  75% {
+    transform: rotateZ(110deg) rotateX(20deg) rotateY(360deg);
   }
   100% {
     transform: rotate(0deg) rotateY(360deg);
-  } */
+  }
 }
