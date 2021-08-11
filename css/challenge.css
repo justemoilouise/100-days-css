@@ -3056,15 +3056,15 @@
   transform-style: preserve-3d;
   backface-visibility: visible;
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   animation: rotateCircles 12s ease-out 0.1s infinite;
 }
 
 .challenge75 .wrapper .circle {
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -3101,4 +3101,123 @@
   100% {
     transform: rotate(0deg) rotateY(360deg);
   }
+}
+
+/** Pig **/
+.challenge95 {
+  padding: 96px 48px 48px;
+  background-color: darkgreen;
+}
+
+.challenge95 .pig {
+  position: relative;
+}
+
+.challenge95 .pig .ear {
+  border-bottom: 80px solid rgb(250, 159, 174);
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: -16px;
+  border-radius: 12px;
+}
+
+.challenge95 .pig .ear.left {
+  left: 0;
+  transform: rotate(0.2turn);
+}
+
+.challenge95 .pig .ear.left::after {
+  content: '';
+  border-bottom: 72px solid rgb(248, 192, 201);
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: -26px;
+}
+
+.challenge95 .pig .ear.right {
+  right: 0;
+  transform: rotate(-0.2turn);
+}
+
+.challenge95 .pig .ear.right::after {
+  content: '';
+  border-bottom: 72px solid rgb(248, 192, 201);
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  right: -26px;
+}
+
+.challenge95 .pig .face {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  background-color: rgb(250, 159, 174);
+  position: relative;
+}
+
+.challenge95 .pig .face .nose {
+  width: 60px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: rgb(248, 192, 201);
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 30px);
+}
+
+.challenge95 .pig .face .nose::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: rgb(189, 75, 94);
+  position: absolute;
+  left: 12px;
+  top: calc(50% - 8px);
+}
+
+.challenge95 .pig .face .nose::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: rgb(189, 75, 94);
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 8px);
+}
+
+.challenge95 .pig .face .eye {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #FFF;
+  position: absolute;
+  top: 36%;
+}
+
+.challenge95 .pig .face .eye::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #000;
+  position: absolute;
+  top: calc(50% - 3px);
+  left: calc(50% - 3px);
+}
+
+.challenge95 .pig .face .eye.left {
+  left: 32px;
+}
+
+.challenge95 .pig .face .eye.right {
+  right: 32px;
 }
