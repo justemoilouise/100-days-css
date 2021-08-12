@@ -1950,7 +1950,7 @@
 
 @keyframes blinkTop {
   20% {
-    transform: translateY(50px);
+    transform: translateY(100%);
   }
   40% {
     transform: translateY(0);
@@ -1966,7 +1966,7 @@
 
 @keyframes blinkBottom {
   20% {
-    transform: translateY(-50px);
+    transform: translateY(-100%);
   }
   40% {
     transform: translateY(0);
@@ -3220,4 +3220,22 @@
 
 .challenge95 .pig .face .eye.right {
   right: 32px;
+}
+
+.challenge95 .pig .face .eye .lid {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(250, 159, 174);
+  position: absolute;
+  z-index: 1;
+}
+
+.challenge95 .pig .face .eye .lid.top {
+  top: -50%;
+  animation: blinkTop 1s ease 2s infinite;
+}
+
+.challenge95 .pig .face .eye .lid.bottom {
+  top: 100%;
+  animation: blinkBottom 1s ease 2s infinite;
 }
