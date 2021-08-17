@@ -3103,7 +3103,7 @@
   }
 }
 
-/** Pig **/
+/** Challenge 95 - Pig **/
 .challenge95 {
   padding: 96px 48px 48px;
   background-color: darkgreen;
@@ -3238,4 +3238,41 @@
 .challenge95 .pig .face .eye .lid.bottom {
   top: 100%;
   animation: blinkBottom 1s ease 2s infinite;
+}
+
+/** Challenge 96 - Animated Square **/
+.challenge96 {
+  padding: 48px;
+  background-color: cadetblue;
+}
+
+.challenge96 .element {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: relative;
+  animation: animateElement 1.6s ease-in-out 0s infinite forwards;
+}
+
+/* .challenge96 .element::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgba(128, 128, 128, 0.815);
+} */
+
+@keyframes animateElement {
+  35% {
+    transform: rotateZ(360deg);
+  }
+  70% {
+    transform: translateY(80px) scale(1.75, 0.5);
+  }
+  100% {
+    transform: translate(0) scale(1);
+  }
 }
