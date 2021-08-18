@@ -3244,6 +3244,7 @@
 .challenge96 {
   padding: 48px;
   background-color: cadetblue;
+  flex-direction: column;
 }
 
 .challenge96 .element {
@@ -3251,28 +3252,42 @@
   height: 80px;
   background-color: white;
   position: relative;
+  z-index: 1;
   animation: animateElement 1.6s ease-in-out 0s infinite forwards;
 }
-
-/* .challenge96 .element::after {
-  content: '';
-  position: absolute;
-  bottom: -80px;
-  left: calc(50% - 24px);
-  width: 48px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: rgba(128, 128, 128, 0.815);
-} */
 
 @keyframes animateElement {
   35% {
     transform: rotateZ(360deg);
   }
   70% {
-    transform: translateY(80px) scale(1.75, 0.5);
+    transform: translateY(108px) scale(1.75, 0.5);
   }
   100% {
     transform: translate(0) scale(1);
+  }
+}
+
+.challenge96 .shadow {
+  content: '';
+  margin-top: 80px;
+  width: 48px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: rgba(117, 116, 116, 0.89);
+  position: relative;
+  z-index: 0;
+  animation: animateElementShadow 1.6s ease-out 0s infinite forwards;
+}
+
+@keyframes animateElementShadow {
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(3.5, 1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
