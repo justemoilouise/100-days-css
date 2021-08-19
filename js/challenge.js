@@ -802,6 +802,20 @@ export function challenge49() {
   }, 250));
 }
 
+export function challenge99() {
+  let challenge = document.getElementById('challenge99');
+
+  challenge.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    if(challenge.classList.contains('animate')) {
+      challenge.classList.remove('animate');
+    } else {
+      challenge.classList.add('animate');
+    }
+  });
+}
+
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
