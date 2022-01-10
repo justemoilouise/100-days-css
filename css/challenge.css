@@ -3298,22 +3298,18 @@
   padding: 144px 48px;
   background-color: slateblue;
   cursor: pointer;
-  transform-origin: center;
-  will-change: background-color;
-  transition: all 1s ease-out;
-}
-
-.challenge99.animate {
-  background-color: darkslateblue;
+  overflow: hidden;
 }
 
 .challenge99 .element {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 100%;
   background-color: #FFF;
   transition: all 0.4s linear;
   will-change: transform, border-radius;
+  z-index: 1;
 }
 
 .challenge99.animate .element {
@@ -3322,7 +3318,7 @@
   box-shadow: #000 0px -4px 6px;
 }
 
-.challenge99 .backgroundElement {
+.challenge99 .rippleElement {
   position: absolute;
   top: calc(50% - 20px);
   left: calc(50% - 20px);
@@ -3331,9 +3327,26 @@
   border-radius: 100%;
   border: 1px solid #FFF;
   transition: all 0.4s ease-in;
+  z-index: 2;
+}
+
+.challenge99.animate .rippleElement {
+  transform: scale(4);
+  opacity: 0;
+}
+
+.challenge99 .backgroundElement {
+  position: absolute;
+  z-index: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: darkslateblue;
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.4s linear;
 }
 
 .challenge99.animate .backgroundElement {
-  transform: scale(4);
-  opacity: 0;
+  transform: scale(20);
 }
