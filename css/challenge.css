@@ -1,3 +1,66 @@
+/** Challenge 01 - Gradient + Text **/
+.challenge01 {
+  background: linear-gradient(45deg, darkslateblue, cyan);
+  padding: 48px;
+  flex-direction: column;
+  color: white;
+  text-transform: uppercase;
+}
+
+.challenge01 .text {
+  display: inline-flex;
+}
+
+.challenge01 .text1 {
+  font-size: 52px;
+  font-weight: 900;
+}
+
+.challenge01 .number {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  padding-left: 12px;
+}
+
+.challenge01 .number > div:not(:last-child) {
+  margin-left: -12px;
+}
+
+.challenge01 .number .one {
+  background-color: white;
+  box-shadow: #0000005e 2px 1px 6px;
+  border-radius: 4px;
+  width: 20px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.challenge01 .number .one::before {
+  content: '';
+  background-color: white;
+  box-shadow: #0000005e 2px 1px 6px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 32px;
+  height: 20px;
+  transform-origin: top right;
+  transform: translateZ(-1px) rotateZ(-45deg);
+}
+
+.challenge01 .number .zero {
+  position: relative;
+  background-color: transparent;
+  box-shadow: #0000005e 2px 1px 6px;
+  border: 20px solid white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
 /** Challenge 02 - Hover effect on hamburger icon **/
 .challenge02 {
   background-color: #b050bd;
