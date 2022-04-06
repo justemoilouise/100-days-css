@@ -1,311 +1,3 @@
-/** #66 - Radio Button **/
-.challenge66 {
-  background-color: #353b44;
-}
-
-.challenge66 .radioButton {
-  width: 32px;
-  height: 32px;
-  margin: 32px auto;
-  border-radius: 32px;
-  border: 2px solid #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-.challenge66 .radioButton.active {
-  background-color: #ffffff;
-}
-
-.challenge66 .inner {
-  display: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  background-color: #20d31d;
-  transition: display 4ms ease;
-}
-
-.challenge66 .inner.active {
-  display: block;
-}
-
-.challenge66 .ray {
-  display: none;
-  position: absolute;
-  color: #ffffff;
-  transition: all 8ms ease;
-}
-
-.challenge66 .ray.active {
-  display: block;
-}
-
-.challenge66 .ray0 {
-  left: 40px;
-  transform: scale(1.25);
-}
-
-.challenge66 .ray180 {
-  right: 40px;
-  transform: scale(1.2);
-}
-
-.challenge66 .ray90 {
-  bottom: 35px;
-  transform: scale(1.25) rotate(90deg);
-}
-
-.challenge66 .ray270 {
-  top: 35px;
-  transform: scale(1.25) rotate(90deg);
-}
-
-.challenge66 .ray45 {
-  left: 32px;
-  bottom: 28px;
-  transform: scale(1.25) rotate(-45deg);
-}
-
-.challenge66 .ray135 {
-  right: 32px;
-  bottom: 28px;
-  transform: scale(1.25) rotate(45deg);
-}
-
-.challenge66 .ray225 {
-  left: 32px;
-  top: 28px;
-  transform: scale(1.25) rotate(45deg);
-}
-
-.challenge66 .ray315 {
-  right: 32px;
-  top: 28px;
-  transform: scale(1.25) rotate(-45deg);
-}
-
-/** #70 - Calendar **/
-.challenge70 {
-  background-color: coral;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.challenge70 .block {
-  width: calc(50% - 8px);
-  cursor: pointer;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 4px solid coral;
-  transition: all 0.3s ease;
-}
-
-.challenge70 .labelDay {
-  font-size: 16px;
-  margin-top: 16px;
-  transition: font-size 0.25s ease;
-}
-
-.challenge70 .labelDate {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  transition: font-size 0.25s ease;
-}
-
-.challenge70 .block:hover .labelDay {
-  font-size: 14px;
-}
-
-.challenge70 .block:hover .labelDate {
-  font-size: 44px;
-}
-
-.challenge70 .block:hover {
-  border-color: rgb(43, 42, 42);
-  box-shadow: inset 2px 2px 4px rgba(43, 42, 42, 0.9);
-}
-
-/** Challenge 78 - Hover shadow and scale effect **/
-.challenge78 {
-  background-color: steelblue;
-  flex-direction: column;
-  padding: 16px 0;
-}
-
-.challenge78 .block {
-  background-color: white;
-  margin: 16px auto;
-  padding: 16px;
-  width: 25%;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.5s ease;
-}
-
-.challenge78 .block:hover {
-  transform: scale(1.1);
-}
-
-.challenge78 .block1:hover {
-  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
-  transform: scale(1.1);
-}
-
-.challenge78 .block2:hover {
-  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.4);
-  transform: scale(1.1);
-}
-
-.challenge78 .block3:hover {
-  box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.4);
-  transform: scale(1.1);
-}
-
-/** Challenge 74 - Hover ripple effect **/
-.challenge74 {
-  background-color: darkolivegreen;
-}
-
-.challenge74 .numberBlock {
-  position: relative;
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  margin: 16px;
-  cursor: pointer;
-  background-color: unset;
-  border: 1px solid white;
-  border-radius: 50px;
-  outline: none;
-  transition: all 0.5s ease-out;
-}
-
-.challenge74 .numberBlock:hover {
-  background-color: rgb(119, 150, 65);
-}
-
-.challenge74 .numberBlock.active span.text {
-  color: darkolivegreen;
-}
-
-.challenge74 .numberBlock span.text {
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  font-weight: 550;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.challenge74 .numberBlock .rippleBackground {
-  background-color: white;
-  /* position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: all 0.5s ease-out;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  top: 0px;
-  left: 0px; */
-}
-
-/** Challenge 82 - Button flip **/
-.challenge82 {
-  border: none;
-  position: absolute;
-}
-
-.challenge82 .block {
-  margin: 8px auto;
-  padding: 16px 24px;
-  border-radius: 100px;
-  border: 2px solid white;
-  background-color: white;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.5s ease;
-  width: 60px;
-  text-align: center;
-}
-
-.challenge82 .block.front,
-.challenge82 .block.back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 5px;
-  left: 25px;
-}
-
-.challenge82 .block.front {
-  z-index: 2;
-}
-
-.challenge82 .block.back {
-  background-color: #20d31d;
-  color: white;
-}
-
-.challenge82 .block:hover {
-  cursor: pointer;
-}
-
-/** Challenge 64 - Hover effect **/
-.challenge64 {
-  display: block;
-  border: none;
-  padding-top: 16px;
-}
-
-.challenge64 .block {
-  padding: 16px;
-  width: 120px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 1s ease;
-  will-change: transform;
-}
-
-.challenge64 .block.front {
-  background-color: white;
-  color: purple;
-  transform: translate(10px, -60px);
-  
-}
-
-.challenge64 .block.back {
-  background-color: purple;
-  color: white;
-  transform: translate(20px, 10px);
-}
-
-.challenge64 .block.movePurple {
-  background-color: purple;
-  color: white;
-  transform: translate(20px, -45px);
-}
-
-.challenge64 .block.moveWhite {
-  background-color: white;
-  color: purple;
-  transform: translate(10px, 0);
-}
-
 /** Challenge 02 - Hover effect on hamburger icon **/
 .challenge02 {
   background-color: #b050bd;
@@ -322,486 +14,203 @@
   transition: all 0.5s ease;
 }
 
-/** Challenge 40 - Zoom in on image on click **/
-.challenge40 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/** Challenge 04 **/
+.challenge04 {
+  background-color: aquamarine;
+  padding: 48px;
 }
 
-.challenge40 img {
-  object-fit: cover;
-  object-position: center center;
-  cursor: pointer;
-  width: 160px;
-  height: 160px;
-  transition: all 1s ease;
-}
-
-.challenge40 img.zoomIn {
-  transform: translate(160px, 160px) scale(3);
-}
-
-/** Challenge 84 - Book cover **/
-.challenge84 {
-  justify-content: center;
-  align-items: center;
-  background-color: lightgray;
-}
-
-.challenge84 .book {
-  height: 240px;
-  width: 180px;
-  color: white;
-  display: flex;
+.challenge04 .wrapper {
   position: relative;
-  box-shadow: -2px 6px 6px grey;
+  width: 100px;
+  height: 100px;
 }
 
-.challenge84 .book .spine {
-  width: 8px;
-  height: 100%;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border: 1px solid black;
-  background: linear-gradient(to right, black, 10%, rgb(71, 70, 70));
-}
-
-.challenge84 .book .cover {
-  width: 172px;
-  height: 100%;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border: 1px solid black;
-  background: linear-gradient(45deg, black, 15%, rgb(71, 70, 70));
-  box-shadow: inset 4px 0px 3px 0px rgb(22, 22, 22);
-}
-
-.challenge84 .book .cover .title {
-  padding: 10% 5% 0 10%;
-}
-
-.challenge84 .book h1 {
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 32px;
-  line-height: 32px;
-  margin-bottom: 4px;
-}
-
-.challenge84 .book p {
-  color:gray;
-  font-style: italic;
-  font-size: 10px;
-  margin: 0;
-}
-
-.challenge84 .book .bookmark {
-  width: 8px;
-  height: calc(100% + 6px);
-  background-color: rgb(150, 25, 25);
-  position: absolute;
-  top: -2px;
-  right: 24px;
-  border-radius: 2px;
-  box-shadow: -1px 0px 3px black;
-}
-
-/** Challenge 94 - Red tree with branches **/
-.challenge94 {
-  background-color: lightblue;
-  padding: 48px 48px 96px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.challenge94 .tree {
-  display: flex;
-  position: relative;
-  overflow: visible;
-}
-
-.challenge94 .tree .side {
-  width: 80px;
-  height: 180px;
-  position: relative;
-}
-
-.challenge94 .tree .side::after {
-  content: '';
-  background-color: lightblue;
-  position: absolute;
-  top: 0;
-  transform: rotate(20deg);
-  width: 80px;
-  height: 200px;
-}
-
-.challenge94 .tree .left {
-  background-color: rgb(192, 33, 33);
-}
-
-.challenge94 .tree .left::after {
-  transform-origin: top right;
-}
-
-.challenge94 .tree .right {
-  background-color: rgb(199, 71, 71);
-}
-
-.challenge94 .tree .right::after {
-  transform-origin: top left;
-  transform: rotate(-20deg);
-}
-
-/** Challenge 94 - Green tree with branches **/
-.challenge94UsingBorders {
-  background-color: lightyellow;
-  padding: 48px 48px 96px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.challenge94UsingBorders .tree {
-  display: flex;
-  position: relative;
-  overflow: visible;
-}
-
-.challenge94UsingBorders .tree .side {
-  position: relative;
-  border-bottom: 180px solid;
-}
-
-.challenge94UsingBorders .tree .left {
-  border-left: 80px solid transparent;
-  border-bottom-color: seagreen;
-}
-
-.challenge94UsingBorders .tree .right {
-  border-right: 80px solid transparent;
-  border-bottom-color: limegreen;
-}
-
-.challenge94 .tree .branch,
-.challenge94UsingBorders .tree .branch {
-  z-index: 5;
-  width: 4px;
-  background-color: goldenrod;
-  position: absolute;
-  top: 25%;
-  left: calc(50% - 2px);
-}
-
-.challenge94 .tree .b0,
-.challenge94UsingBorders .tree .b0 {
-  height: 180px;
-}
-
-.challenge94 .tree .b0::after,
-.challenge94UsingBorders .tree .b0::after {
-  content: '';
-  background-color: lightsteelblue;
-  width: 60px;
-  height: 4px;
-  position: absolute;
-  bottom: 0;
-  left: -28px;
-}
-
-.challenge94 .tree .leftBranch,
-.challenge94UsingBorders .tree .leftBranch {
-  transform-origin: bottom left;
-  transform: rotate(-45deg);
-}
-
-.challenge94 .tree .b1,
-.challenge94UsingBorders .tree .b1 {
-  height: 15px;
-}
-
-.challenge94 .tree .b2,
-.challenge94UsingBorders .tree .b2 {
-  height: 30px;
-  top: 50%;
-}
-
-.challenge94 .tree .b3,
-.challenge94UsingBorders .tree .b3 {
-  height: 45px;
-  top: 75%;
-}
-
-.challenge94 .tree .rightBranch,
-.challenge94UsingBorders .tree .rightBranch {
-  transform-origin: bottom left;
-  transform: rotate(45deg);
-}
-
-.challenge94 .tree .b4,
-.challenge94UsingBorders .tree .b4 {
-  height: 25px;
-  top: 32%;
-}
-
-.challenge94 .tree .b5,
-.challenge94UsingBorders .tree .b5 {
-  height: 40px;
-  top: 64%;
-}
-
-/** Challenge 43 - Light bulb **/
-.challenge43 {
-  position: relative;
-  flex-direction: column;
-  background-color: darkslategray;
-}
-
-.challenge43 .cap {
-  width: 32px;
-  height: 4px;
-  background-color: lightgray;
-  border-radius: 4px;
-  margin: 2px 0;
-}
-
-.challenge43 .capBase {
-  width: 16px;
-  margin-top: 2px;
-  border-top: 10px solid lightgray;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-}
-
-.challenge43 .bulb {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.challenge43 .bulbTop {
-  background-color: yellow;
-  width: 72px;
-  height: 64px;
+.challenge04 .wrapper .circle {
   border-radius: 100%;
-  box-shadow: 0px -6px 20px 12px rgba(255, 255, 0, 0.45);
-  transition: all 1s ease;
-}
-
-.challenge43 .bulbBottom {
-  width: 32px;
-  margin-top: -12px;
-  margin-bottom: 2px;
-  border-top: 16px solid yellow;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  transition: all 1s ease;
-}
-
-.challenge43 .bulb:hover .bulbTop {
-  background-color: grey;
-  box-shadow: none;
-}
-
-.challenge43 .bulb:hover .bulbBottom {
-  border-top-color: grey;
-}
-
-/** Challenge 47 - Pixel board **/
-.challenge47 {
-  background-color: rgb(230, 76, 76);
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 644px;
-}
-
-.challenge47 .pixel {
-  border: 1px solid rgb(228, 93, 93);
-  cursor: pointer;
-}
-
-.challenge47 .pixel:hover {
-  background-color: rgba(228, 93, 93, 0.842);
-}
-
-.challenge47 .pixel.active {
-  background-color: white;
-  border-color: white;
-}
-
-.challenge47 .cornerTopLeft {
-  border-top-left-radius: 2px;
-}
-
-.challenge47 .cornerTopRight {
-  border-top-right-radius: 2px;
-}
-
-.challenge47 .cornerBottomLeft {
-  border-bottom-left-radius: 2px;
-}
-
-.challenge47 .cornerBottomRight {
-  border-bottom-right-radius: 2px;
-}
-
-/** Challenge 51 - Timer **/
-.challenge51 {
-  background-color: thistle;
-  flex-direction: column;
-}
-
-.challenge51 .timer {
-  background-color: white;
-  color: purple;
-  text-align: center;
-  border-radius: 4px;
-  letter-spacing: 6px;
-  font-size: 24px;
-  padding: 8px 8px 8px 12px;
-  box-shadow: 2px 2px 4px gray;
-}
-
-.challenge51 .button {
-  margin-top: 16px;
-  cursor: pointer;
-  transition: border 0.25s ease-in-out;
-}
-
-.challenge51 .button.pause {
-  border-left: 6px solid white;
-  border-right: 6px solid white;
-  width: 4px;
-  height: 20px;
-}
-
-.challenge51 .button.play {
-  border-left: 18px solid white;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-/** Challenge 62 - Plans Comparison **/
-.challenge62 {
-  background-color: rosybrown;
-  flex-direction: column;
-}
-
-.challenge62 .cardContainer {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
-
-.challenge62 .cardContainer .card {
-  width: 120px;
-  margin: 16px 6px;
-  box-shadow: 1px 1px 8px gray;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.challenge62 .cardContainer .card:hover {
-  transform: scale(1.1);
-}
-
-.challenge62 .cardContainer .card:hover .header {
-  background-color: rgb(201, 65, 65);
-}
-
-.challenge62 .cardContainer .card:hover .details {
-  color: rgb(201, 65, 65);
-}
-
-.challenge62 .cardContainer .card .header {
-  padding: 8px;
-  text-align: center;
-  color: white;
-  background-color: indianred;
-}
-
-.challenge62 .cardContainer .card .details {
-  padding: 8px;
-  text-align: center;
-  color: rgb(32, 32, 32);
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-}
-
-.challenge62 .cardContainer .card .details p {
-  margin: 16px 0 0;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 900;
-}
-
-.challenge62 .cardContainer .card .details span {
-  margin-bottom: 16px;
-  font-size: 12px;
-}
-
-.challenge62 .cardContainer .textPlaceholder.long {
-  width: 80px;
-}
-
-.challenge62 .cardContainer .textPlaceholder.short {
-  width: 56px;
-}
-
-.challenge62 .featuresContainer {
-  width: 400px;
-  padding: 8px 16px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  color: rgb(32, 32, 32);
-  font-size: 12px;
-  box-shadow: 1px 1px 8px gray;
-}
-
-.challenge62 .featuresContainer .feature {
-  margin: 8px 0;
-  display: grid;
-  grid-template: "a b" auto
-                 "c c" auto / 50% 50%;
-}
-
-.challenge62 .featuresContainer .textPlaceholder {
-  width: 100%;
-  height: 8px;
-}
-
-.challenge62 .featuresContainer .feature .featureLabelMin {
-  grid-area: a;
-}
-
-.challenge62 .featuresContainer .feature .featureLabelMax {
-  grid-area: b;
-  text-align: right;
-}
-
-.challenge62 .featuresContainer .feature .featurePortion {
-  margin-top: 6px;
-  grid-area: c;
-  position: relative;
-}
-
-.challenge62 .featuresContainer .feature .featurePlan {
+  box-shadow: gray 2px 2px 4px;
+  background-color: whitesmoke;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;;
-  height: 8px;
-  background-color: rgb(201, 65, 65);
-  border-radius: 16px;
-  transition: all 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.challenge04 .wrapper .circle.large {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  animation: animateLarge 6s ease 0.2s infinite;
+}
+
+@keyframes animateLarge {
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.challenge04 .wrapper .circle.medium {
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  animation: animateMedium 6s ease 0.6s infinite;
+}
+
+@keyframes animateMedium {
+  40% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.challenge04 .wrapper .circle.small {
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  animation: animateSmall 6s ease 1s infinite;
+}
+
+@keyframes animateSmall {
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+/** Challenge 06 - Social Profile **/
+.challenge06 {
+  background: linear-gradient(45deg, darkseagreen 45%, seagreen 100%);
+  padding: 48px;
+}
+
+.challenge06 .card {
+  box-shadow: #000000a1 2px 2px 4px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.challenge06 .card .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  color: olivedrab;
+  text-align: center;
+}
+
+.challenge06 .card .left button {
+  width: 50%;
+  border: 2px solid olivedrab;
+  border-radius: 24px;
+  padding: 8px 16px;
+  margin-top: 12px; 
+  color: olivedrab;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.challenge06 .card .left button:first-child {
+  margin-top: 28px;
+}
+
+.challenge06 .card .left button:hover {
+  background-color: olivedrab;
+  color: rgb(248, 255, 234);
+}
+
+.challenge06 .card .left h3 {
+  margin-bottom: 0;
+}
+
+.challenge06 .card .left p {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.challenge06 img {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+}
+
+.challenge06 .card .left .wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.challenge06 .card .left .wrapper::before,
+.challenge06 .card .left .wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #6b8e23;
+  border-radius: 100%;
+  transition: all 2s ease;
+}
+
+.challenge06 .card .left .wrapper::before {
+  width: 80px;
+  height: 80px;
+  border-left: 0;
+}
+
+.challenge06 .card .left .wrapper::after {
+  width: 88px;
+  height: 88px;
+  border-right: 0;
+}
+
+.challenge06 .card .left .wrapper:hover::before {
+  transform: translate(-50%, -50%) rotateZ(360deg);
+}
+
+.challenge06 .card .left .wrapper:hover::after {
+  transform: translate(-50%, -50%) rotateZ(-360deg);
+}
+
+.challenge06 .card .right {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 2px;
+}
+
+.challenge06 .card .right .statCard {
+  background-color: olivedrab;
+  color:rgb(248, 255, 234);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge06 .card .right p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge06 .card .right p:first-child {
+  font-size: 24px;
 }
 
 /** Challenge 07 - Sliding sidebar from the back **/
@@ -1080,1101 +489,6 @@
   margin: 0 auto;
 }
 
-/** Challenge 26 - Quotes **/
-.challenge26 {
-  background-color: darkmagenta;
-}
-
-.challenge26 .card {
-  width: 50%;
-  text-align: center;
-  box-shadow: 2px 2px 6px black;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-.challenge26 .card .content {
-  padding: 24px;
-  font-size: 12px;
-  background-color: white;
-  position: relative;
-}
-
-.challenge26 .card .content .marker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  font-size: 14px;
-  padding: 4px;
-  color: white;
-  z-index: 1;
-}
-
-.challenge26 .card .content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 44px;
-  height: 64px;
-  z-index: 0;
-  background-color: rgb(187, 69, 187);
-  transform-origin: top left;
-  transform: rotate(-45deg);
-}
-
-.challenge26 .card .content h3 {
-  margin: 0 0 8px 0;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.challenge26 .card .content p {
-  margin: 0;
-  font-size: 12px;
-}
-
-.challenge26 .card .button {
-  width: 100%;
-  padding: 8px;
-  font-size: 14px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  background-color: rgb(73, 0, 73);
-  transition: all 0.25s ease;
-}
-
-.challenge26 .card .button:hover {
-  background-color: rgb(53, 0, 53);
-}
-
-/** Challenge 32 - Counter **/
-.challenge32 {
-  background: linear-gradient(45deg, cornflowerblue, skyblue);
-  padding: 48px;
-}
-
-.challenge32 .counter {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  font-size: 24px;
-  padding: 4px;
-  border-radius: 100px;
-  width: 40%;
-}
-
-.challenge32 .counter button {
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: inherit;
-  background-color: white;
-  transition: all 0.5s ease;
-}
-
-.challenge32 .counter button.minus {
-  color: rgb(189, 5, 5);
-}
-
-.challenge32 .counter button.minus:hover {
-  color: white;
-  background-color: rgb(189, 5, 5);
-}
-
-.challenge32 .counter button.plus {
-  color: rgb(5,189, 5);
-}
-
-.challenge32 .counter button.plus:hover {
-  color: white;
-  background-color: rgb(5,189, 5);
-}
-
-.challenge32 .counter .count {
-  transition: all 0.5s ease;
-}
-
-/** Challenge 36 - Panel with menu **/
-.challenge36 {
-  background-color: rgb(8, 38, 95);
-  padding: 48px;
-}
-
-.challenge36 .panel {
-  box-shadow: 2px 2px 4px black;
-}
-
-.challenge36 .panel .header {
-  background-color: rgb(32, 89, 196);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-}
-
-.challenge36 .panel .header .iconContainer {
-  padding: 16px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.challenge36 .panel .header .iconContainer.active {
-  background-color: rgb(136, 172, 240);
-}
-
-.challenge36 .panel .header .icon {
-  border-color: lightgray;
-}
-
-.challenge36 .panel .header .iconContainer.active .icon {
-  border-color: white;
-}
-
-.challenge36 .panel .header .icon:hover {
-  border-color: white;
-}
-
-.challenge36 .panel .header .left {
-  display: flex;
-  align-items: center;
-}
-
-.challenge36 .panel .main {
-  background-color: white;
-  padding: 24px;
-}
-
-.challenge36 .panel .main .content {
-  transition: all 0.4s ease;
-}
-
-.challenge36 .panel .content.changeContent {
-  transform: translateY(10px);
-  opacity: 0;
-}
-
-.challenge36 .panel .content .heading {
-  text-align: left;
-}
-
-.challenge36 .panel .content .textPlaceholder.long {
-  width: 280px;
-}
-
-.challenge36 .panel .content .textPlaceholder.short {
-  width: 160px;
-}
-
-.challenge36 .panel .content h3 {
-  margin: 0;
-}
-
-.challenge36 .panel .content .paragraph {
-  margin-top: 16px;
-}
-
-/** Challenge 38 - Zooming in/out element on click **/
-.challenge38 {
-  background-color: midnightblue;
-  display: block;
-  overflow: hidden;
-}
-
-.challenge38 .shape {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 32px);
-  transition: all 0.75s ease;
-  will-change: transform;
-}
-
-.challenge38 .shape .top {
-  border-bottom: 18px solid white;
-  border-left: 32px solid transparent;
-  border-right: 32px solid transparent;
-}
-
-.challenge38 .shape .bottom {
-  border-top: 18px solid white;
-  border-left: 32px solid transparent;
-  border-right: 32px solid transparent;
-}
-
-.challenge38 .shape .middle {
-  position: relative;
-  background-color: white;
-  width: 56px;
-  height: 24px;
-  z-index: 0;
-}
-
-.challenge38 .shape .middle::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: -24px;
-  width: 36px;
-  height: 40px;
-  border-radius: 40px;
-  z-index: 1;
-  background-color: midnightblue;
-}
-
-.challenge38 .shape .middle::after {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: -24px;
-  width: 36px;
-  height: 40px;
-  border-radius: 40px;
-  z-index: 1;
-  background-color: midnightblue;
-}
-
-.challenge38 .shape.inner {
-  background-color: white;
-  transform: scale(0);
-  z-index: 2;
-}
-
-.challenge38 .shape.inner .top {
-  border-bottom-color: midnightblue;
-}
-
-.challenge38 .shape.inner .middle {
-  background-color: midnightblue;
-}
-
-.challenge38 .shape.inner .middle::before {
-  background-color: white;
-}
-
-.challenge38 .shape.inner .middle::after {
-  background-color: white;
-}
-
-.challenge38 .shape.inner .bottom {
-  border-top-color: midnightblue;
-}
-
-#challenge38_shape1.zoomIn {
-  transform: scale(25);
-}
-
-#challenge38_shape2.zoomIn {
-  transform: scale(1);
-}
-
-/** Challenge 39 - Menubar **/
-.challenge39 {
-  background-color: darkolivegreen;
-  padding: 48px;
-  flex-direction: column;
-  color: white;
-}
-
-.challenge39 .menubar {
-  width: 100%;
-  transition: all 1s ease;
-}
-
-.challenge39 .menubar.collapse {
-  opacity: 0;
-}
-
-.challenge39 .menubar ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 12px;
-}
-
-.challenge39 .menubar ul li {
-  text-transform: uppercase;
-  margin: 8px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-
-.challenge39 .menubar ul li:hover {
-  color: lightgray;
-}
-
-.challenge39 .line {
-  width: 100%;
-  margin: 16px;
-  height: 4px;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.challenge39 .line.top.center {
-  transform: translateY(24px);
-}
-
-.challenge39 .line.top.collapse {
-  width: 10%;
-}
-
-.challenge39 .line.bottom.center {
-  transform: translateY(-24px);
-}
-
-.challenge39 .line.bottom.collapse {
-  width: 10%;
-}
-
-/** Challenge 41 - Error pop out **/
-.challenge41 {
-  background-color: darkcyan;
-  padding: 48px 16%;
-}
-
-.challenge41 .popout {
-  background-color: white;
-  text-align: center;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 4px 4px 12px black;
-  transition: all 1s ease;
-}
-
-.challenge41 .popout .content {
-  color: #353b44;
-  margin: auto;
-  padding: 24px 48px;
-}
-
-.challenge41 .popout .content p {
-  margin: 0 12px 4px 12px;
-  font-size: 12px;
-}
-
-.challenge41 .popout .content p.title {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.challenge41 .popout .content .icon {
-  content: "!";
-  margin-bottom: 16px;
-  font-size: 18px;
-  color: white;
-  position: relative;
-}
-
-.challenge41 .popout .content .icon span {
-  position: relative;
-  z-index: 2;
-}
-
-.challenge41 .popout .content .icon::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: calc(50% - 24px);
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
-  border-bottom: 32px solid rgb(238, 59, 59);
-  z-index: 1;
-}
-
-.challenge41 .popout button {
-  border: none;
-  outline: none;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  background-color:rgb(238, 59, 59);
-  width: 100%;
-  cursor: pointer;
-}
-
-/** Challenge 65 - Rotating square to ellipse **/
-.challenge65 {
-  background-color: olivedrab;
-  padding: 48px;
-}
-
-.challenge65 .element {
-  width: 160px;
-  height: 160px;
-  border: 1px solid white;
-  position: absolute;
-  top: calc(50% - 80px);
-  left: calc(50% - 80px);
-  transition: all 3s ease;
-}
-
-/** Challenge 73 - Scrolling text **/
-.challenge73 {
-  background-color: sienna;
-  color: white;
-  text-align: left;
-  text-shadow: 2px 2px 8px black;
-  padding: 56px 48px;
-  word-spacing: 4px;
-  font-size: 32px;
-  font-weight: normal;
-}
-
-.challenge73 .sentence {
-  display: flex;
-  justify-content: flex-start;
-  overflow: hidden;
-  height: 48;
-  width: 70%;
-}
-
-.challenge73 .scrollingText {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.challenge73 .scrollingText span {
-  font-weight: bold;
-  transition: transform 1.5s ease;
-}
-
-.challenge72 {
-  background-color: burlywood;
-  padding: 48px;
-}
-
-/** Challenge 72 - Rotating circles **/
-.challenge72 .container {
-  position: relative;
-  /* perspective: 200px;
-  perspective-origin: center;
-  transform-style: preserve-3d; */
-}
-
-.challenge72 .element {
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  border: 1px solid white;
-  transition: all 3s ease;
-  position: absolute;
-  top: calc(50% - 60px);
-  left: calc(50% - 60px);
-}
-
-/** Challenge 88 - Candle **/
-.challenge88 {
-  background-color: rgb(59, 5, 31);
-  padding: 48px;
-  flex-direction: column;
-}
-
-.challenge88 .body {
-  background-color: white;
-  width: 60px;
-  height: 100px;
-  border-radius: 4px;
-  box-shadow: inset lightgray -8px 0px 4px;
-}
-
-.challenge88 .base {
-  background-color: rebeccapurple;
-  width: 96px;
-  height: 8px;
-  border-radius: 2px;
-}
-
-.challenge88 .wick {
-  background-color: peru;
-  width: 4px;
-  height: 10px;
-}
-
-.challenge88 .fire {
-  background-color: orange;
-  width: 18px;
-  height: 28px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: peru 0px 0px 20px 4px;
-  animation: movingFlames 2.4s cubic-bezier(0, 0, 0.41, 0.55) 0s infinite;
-}
-
-@keyframes movingFlames {
-  0% {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 20px;
-  }
-  25% {
-    border-top-left-radius: 12px 24px;
-    border-top-right-radius: 12px 24px;
-  }
-  50% {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 2px;
-  }
-  75% {
-    border-top-left-radius: 12px 24px;
-    border-top-right-radius: 12px 24px;
-  }
-  100% {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 20px;
-  }
-}
-
-/** Challenge 86 - Pendulum **/
-.challenge86 {
-  background-color: rgb(107, 11, 56);
-  padding: 48px;
-  flex-direction: column;
-}
-
-.challenge86 .bar {
-  width: 50%;
-  height: 4px;
-  border-radius: 8px;
-  background-color: grey;
-}
-
-.challenge86 .body {
-  display: flex;
-}
-
-.challenge86 .body .pendulum {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform-origin: top center;
-}
-
-.challenge86 .body .pendulum .string {
-  width: 1px;
-  height: 72px;
-  background-color: white;
-}
-
-.challenge86 .body .pendulum .ball {
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  background-color: white;
-}
-
-.challenge86 .body .pendulum.left {
-  animation: moveLeftPendulum 1s ease;
-  animation-fill-mode: forwards;
-}
-
-.challenge86 .body .pendulum.right {
-  animation: moveRightPendulum 1s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes moveLeftPendulum {
-  50% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes moveRightPendulum {
-  50% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-/** Challenge 86 - Pendulum **/
-.challenge80 {
-  overflow: hidden;
-}
-
-.challenge80 .column {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: width 0.5s ease;
-}
-
-.challenge80 .column:nth-child(1),
-.challenge80 .column:nth-child(3) {
-  background-color: plum;
-}
-
-.challenge80 .column:nth-child(2),
-.challenge80 .column:nth-child(4) {
-  background-color: purple;
-}
-
-.challenge80 .column p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
-  transition: opacity 0.5s ease;
-  opacity: 0;
-}
-
-.challenge80 .column.active {
-  width: 55%;
-}
-
-.challenge80 .column.inactive{
-  width: 15%;
-}
-
-.challenge80 .column.active p {
-  opacity: 1;
-}
-
-/** Challenge 77 - Moving ball **/
-.challenge77 {
-  padding: 72px 48px;
-  background-color: darkslategray;
-}
-
-.challenge77 .wrapper {
-  width: 100%;
-  animation: moveBall 2s ease 0.5s infinite;
-}
-
-@keyframes moveBall {
-  50% {
-    transform: translateX(calc(100% - 36px));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.challenge77 .wrapper .ball {
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  background-color: whitesmoke;
-  position: relative;
-}
-
-.challenge77 .ball::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -22px;
-  width: 40px;
-  height: 36px;
-  border-top-left-radius: 100%;
-  border-bottom-left-radius: 100%;
-  background-color: rgba(245, 245, 245, 0.6);
-  box-shadow: rgba(245, 245, 245, 0.6) -8px 0 2px;
-  transform-origin: center right;
-  transform: scaleX(0);
-  animation: moveBallShadowLeft 2s ease 0.5s infinite;
-}
-
-@keyframes moveBallShadowLeft {
-  10% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-.challenge77 .ball::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 22px;
-  width: 40px;
-  height: 36px;
-  border-top-right-radius: 100%;
-  border-bottom-right-radius: 100%;
-  background-color: rgba(245, 245, 245, 0.6);
-  box-shadow: rgba(245, 245, 245, 0.6) 8px 0 2px;
-  transform-origin: center left;
-  transform: scaleX(0);
-  animation: moveBallShadowRight 2s ease 1.6s infinite;
-}
-
-@keyframes moveBallShadowRight {
-  10% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-/** Challenge 76 - Input field **/
-.challenge76 {
-  background-color: slategray;
-}
-
-.challenge76 input {
-  border: none;
-  outline: none;
-  text-align: center;
-  font-size: 16px;
-  padding: 16px 32px;
-  box-shadow: 1px 1px 2px black;
-}
-
-/** Challenge 69 - Blinking eye **/
-.challenge69 {
-  background-color: darkgray;
-}
-
-.challenge69 .wrapper {
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  position: relative;
-  min-width: 475px;
-  max-width: 475px;
-  width: 100%;
-}
-
-.challenge69 .eye {
-  background-color: lightgray;
-  width: 50%;
-  height: 100px;
-  border-radius: 100%;
-  position: relative;
-}
-
-.challenge69 .eye::before {
-  content: '';
-  border-right: 42px solid lightgray;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  transform: translateY(-50%);
-}
-
-.challenge69 .eye::after {
-  content: '';
-  border-left: 42px solid lightgray;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
-}
-
-.challenge69 .eye .inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.challenge69 .eye .inner .iris {
-  width: 112px;
-  height: 112px;
-  border-radius: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: moveIris 5s ease 0.25s infinite;
-}
-
-.challenge69 .eye .inner .iris .pupil {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: slategrey;
-}
-
-@keyframes moveIris {
-  25% {
-    transform: translate(-12px, 12px);
-  }
-  50% {
-    transform: translate(20px, 24px);
-  }
-  64% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.challenge69 .eyelid {
-  background-color: darkgray;
-  width: 100%;
-  height: 50px;
-  z-index: 1;
-  position: relative;
-}
-
-.challenge69 .eyelid.top {
-  animation: blinkTop 1s ease 0.2s infinite;
-}
-
-@keyframes blinkTop {
-  20% {
-    transform: translateY(100%);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.challenge69 .eyelid.bottom {
-  animation: blinkBottom 1s ease 0.2s infinite;
-}
-
-@keyframes blinkBottom {
-  20% {
-    transform: translateY(-100%);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/** Challenge 04 **/
-.challenge04 {
-  background-color: aquamarine;
-  padding: 48px;
-}
-
-.challenge04 .wrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
-.challenge04 .wrapper .circle {
-  border-radius: 100%;
-  box-shadow: gray 2px 2px 4px;
-  background-color: whitesmoke;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.challenge04 .wrapper .circle.large {
-  width: 100px;
-  height: 100px;
-  z-index: 1;
-  animation: animateLarge 6s ease 0.2s infinite;
-}
-
-@keyframes animateLarge {
-  50% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
-
-.challenge04 .wrapper .circle.medium {
-  width: 60px;
-  height: 60px;
-  z-index: 2;
-  animation: animateMedium 6s ease 0.6s infinite;
-}
-
-@keyframes animateMedium {
-  40% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  60% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
-
-.challenge04 .wrapper .circle.small {
-  width: 20px;
-  height: 20px;
-  z-index: 3;
-  animation: animateSmall 6s ease 1s infinite;
-}
-
-@keyframes animateSmall {
-  30% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  40% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
-
-/** Challenge 06 - Social Profile **/
-.challenge06 {
-  background: linear-gradient(45deg, darkseagreen 45%, seagreen 100%);
-  padding: 48px;
-}
-
-.challenge06 .card {
-  box-shadow: #000000a1 2px 2px 4px;
-  background-color: whitesmoke;
-  border-radius: 8px;
-  width: 80%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.challenge06 .card .left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 0;
-  color: olivedrab;
-  text-align: center;
-}
-
-.challenge06 .card .left button {
-  width: 50%;
-  border: 2px solid olivedrab;
-  border-radius: 24px;
-  padding: 8px 16px;
-  margin-top: 12px; 
-  color: olivedrab;
-  background-color: transparent;
-  transition: all 0.4s ease;
-}
-
-.challenge06 .card .left button:first-child {
-  margin-top: 28px;
-}
-
-.challenge06 .card .left button:hover {
-  background-color: olivedrab;
-  color: rgb(248, 255, 234);
-}
-
-.challenge06 .card .left h3 {
-  margin-bottom: 0;
-}
-
-.challenge06 .card .left p {
-  margin-top: 0;
-  font-size: 12px;
-}
-
-.challenge06 img {
-  width: 72px;
-  height: 72px;
-  border-radius: 100%;
-}
-
-.challenge06 .card .left .wrapper {
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 8px;
-  border: none;
-}
-
-.challenge06 .card .left .wrapper::before,
-.challenge06 .card .left .wrapper::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid #6b8e23;
-  border-radius: 100%;
-  transition: all 2s ease;
-}
-
-.challenge06 .card .left .wrapper::before {
-  width: 80px;
-  height: 80px;
-  border-left: 0;
-}
-
-.challenge06 .card .left .wrapper::after {
-  width: 88px;
-  height: 88px;
-  border-right: 0;
-}
-
-.challenge06 .card .left .wrapper:hover::before {
-  transform: translate(-50%, -50%) rotateZ(360deg);
-}
-
-.challenge06 .card .left .wrapper:hover::after {
-  transform: translate(-50%, -50%) rotateZ(-360deg);
-}
-
-.challenge06 .card .right {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-row-gap: 2px;
-}
-
-.challenge06 .card .right .statCard {
-  background-color: olivedrab;
-  color:rgb(248, 255, 234);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.challenge06 .card .right p {
-  margin: 0;
-  font-size: 12px;
-}
-
-.challenge06 .card .right p:first-child {
-  font-size: 24px;
-}
-
 /** Challenge 13 **/
 .challenge13 {
   overflow: hidden;
@@ -2372,6 +686,94 @@
   transform: translateY(0);
 }
 
+/** Challenge21 - Pacman **/
+.challenge21 {
+  background-color: rgb(54, 10, 5);
+  padding: 64px;
+  overflow: hidden;
+}
+
+.challenge21 .pacman {
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  background-color: gold;
+  position: relative;
+  z-index: 0;
+}
+
+.challenge21 .pacman::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: rgb(54, 10, 5);
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 50%;
+  animation: movePacmanEye 0.7s ease 0.2s infinite;
+}
+
+@keyframes movePacmanEye {
+  50% {
+    transform: translate(-4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.challenge21 .pacman::after {
+  content: '';
+  background-color: rgb(54, 10, 5);
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: scaleY(0);
+  z-index: 1;
+  border-right: 54px solid rgb(54, 10, 5);
+  border-top: 28px solid gold;
+  border-bottom: 28px solid gold;
+  border-radius: 100%;
+  animation: movePacmanMouth 0.7s ease 0.2s infinite;
+}
+
+@keyframes movePacmanMouth {
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.challenge21 .food {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: 2;
+}
+
+.challenge21 .food .circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: gold;
+  margin: 0 16px;
+  animation: animateFood 1.2s linear 0s infinite;
+}
+
+@keyframes animateFood {
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
 /** Challenge 23 - "Collect moment not things" **/
 .challenge23 {
   background-color: rgb(235, 91, 75);
@@ -2505,160 +907,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-/** Challenge 29 - Input with suggestions **/
-.challenge29 {
-  background-color: rgb(133, 45, 35);
-  padding: 64px;
-}
-
-.challenge29 .wrapper {
-  width: 80%;
-  position: relative;
-  box-shadow: 1px 1px 6px black;
-}
-
-.challenge29 .wrapper::after {
-  content: '';
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid rgb(128, 31, 20);
-  z-index: 1;
-}
-
-.challenge29 .wrapper input {
-  position: relative;
-  outline: none;
-  border: none;
-  border-radius: none;
-  background-color: white;
-  color: rgb(128, 31, 20);
-  padding: 12px;
-  font-size: 14px;
-  width: 100%;
-  z-index: 1;
-}
-
-.challenge29 .wrapper .container {
-  position: absolute;
-  background-color: white;
-  width: calc(100% - 24px);
-  margin-top: 2px;
-  padding: 6px 12px;
-  box-shadow: 1px 1px 6px black;
-  font-size: 14px;
-  color: lightslategrey;
-  visibility: hidden;
-}
-
-.challenge29 .wrapper .container.visible {
-  visibility: visible;
-}
-
-.challenge29 .wrapper .container div {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.challenge29 .wrapper .container div:hover {
-  color: rgb(128, 31, 20);
-}
-
-.challenge29 .wrapper .container .challenge29_container_input {
-  font-weight: bold;
-  font-style: italic;
-}
-
-/** Challenge21 - Pacman **/
-.challenge21 {
-  background-color: rgb(54, 10, 5);
-  padding: 64px;
-  overflow: hidden;
-}
-
-.challenge21 .pacman {
-  width: 96px;
-  height: 96px;
-  border-radius: 100%;
-  background-color: gold;
-  position: relative;
-  z-index: 0;
-}
-
-.challenge21 .pacman::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  background-color: rgb(54, 10, 5);
-  position: absolute;
-  z-index: 2;
-  top: 16px;
-  left: 50%;
-  animation: movePacmanEye 0.7s ease 0.2s infinite;
-}
-
-@keyframes movePacmanEye {
-  50% {
-    transform: translate(-4px, -4px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-.challenge21 .pacman::after {
-  content: '';
-  background-color: rgb(54, 10, 5);
-  position: absolute;
-  left: 50%;
-  top: 20px;
-  transform: scaleY(0);
-  z-index: 1;
-  border-right: 54px solid rgb(54, 10, 5);
-  border-top: 28px solid gold;
-  border-bottom: 28px solid gold;
-  border-radius: 100%;
-  animation: movePacmanMouth 0.7s ease 0.2s infinite;
-}
-
-@keyframes movePacmanMouth {
-  50% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(0);
-  }
-}
-
-.challenge21 .food {
-  display: flex;
-  position: absolute;
-  overflow: hidden;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-  z-index: 2;
-}
-
-.challenge21 .food .circle {
-  width: 14px;
-  height: 14px;
-  border-radius: 100%;
-  background-color: gold;
-  margin: 0 16px;
-  animation: animateFood 1.2s linear 0s infinite;
-}
-
-@keyframes animateFood {
-  100% {
-    transform: translateX(-300%);
   }
 }
 
@@ -2819,6 +1067,196 @@
   transition-delay: 0.6s;
 }
 
+/** Challenge 26 - Quotes **/
+.challenge26 {
+  background-color: darkmagenta;
+}
+
+.challenge26 .card {
+  width: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 6px black;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.challenge26 .card .content {
+  padding: 24px;
+  font-size: 12px;
+  background-color: white;
+  position: relative;
+}
+
+.challenge26 .card .content .marker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  padding: 4px;
+  color: white;
+  z-index: 1;
+}
+
+.challenge26 .card .content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 64px;
+  z-index: 0;
+  background-color: rgb(187, 69, 187);
+  transform-origin: top left;
+  transform: rotate(-45deg);
+}
+
+.challenge26 .card .content h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.challenge26 .card .content p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge26 .card .button {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(73, 0, 73);
+  transition: all 0.25s ease;
+}
+
+.challenge26 .card .button:hover {
+  background-color: rgb(53, 0, 53);
+}
+
+/** Challenge 29 - Input with suggestions **/
+.challenge29 {
+  background-color: rgb(133, 45, 35);
+  padding: 64px;
+}
+
+.challenge29 .wrapper {
+  width: 80%;
+  position: relative;
+  box-shadow: 1px 1px 6px black;
+}
+
+.challenge29 .wrapper::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgb(128, 31, 20);
+  z-index: 1;
+}
+
+.challenge29 .wrapper input {
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: none;
+  background-color: white;
+  color: rgb(128, 31, 20);
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  z-index: 1;
+}
+
+.challenge29 .wrapper .container {
+  position: absolute;
+  background-color: white;
+  width: calc(100% - 24px);
+  margin-top: 2px;
+  padding: 6px 12px;
+  box-shadow: 1px 1px 6px black;
+  font-size: 14px;
+  color: lightslategrey;
+  visibility: hidden;
+}
+
+.challenge29 .wrapper .container.visible {
+  visibility: visible;
+}
+
+.challenge29 .wrapper .container div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.challenge29 .wrapper .container div:hover {
+  color: rgb(128, 31, 20);
+}
+
+.challenge29 .wrapper .container .challenge29_container_input {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/** Challenge 32 - Counter **/
+.challenge32 {
+  background: linear-gradient(45deg, cornflowerblue, skyblue);
+  padding: 48px;
+}
+
+.challenge32 .counter {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 24px;
+  padding: 4px;
+  border-radius: 100px;
+  width: 40%;
+}
+
+.challenge32 .counter button {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.challenge32 .counter button.minus {
+  color: rgb(189, 5, 5);
+}
+
+.challenge32 .counter button.minus:hover {
+  color: white;
+  background-color: rgb(189, 5, 5);
+}
+
+.challenge32 .counter button.plus {
+  color: rgb(5,189, 5);
+}
+
+.challenge32 .counter button.plus:hover {
+  color: white;
+  background-color: rgb(5,189, 5);
+}
+
+.challenge32 .counter .count {
+  transition: all 0.5s ease;
+}
+
 /** Challenge 33 - Sky **/
 .challenge33 {
   background-color: skyblue;
@@ -2917,6 +1355,86 @@
   }
 }
 
+/** Challenge 36 - Panel with menu **/
+.challenge36 {
+  background-color: rgb(8, 38, 95);
+  padding: 48px;
+}
+
+.challenge36 .panel {
+  box-shadow: 2px 2px 4px black;
+}
+
+.challenge36 .panel .header {
+  background-color: rgb(32, 89, 196);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.challenge36 .panel .header .iconContainer {
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge36 .panel .header .iconContainer.active {
+  background-color: rgb(136, 172, 240);
+}
+
+.challenge36 .panel .header .icon {
+  border-color: lightgray;
+}
+
+.challenge36 .panel .header .iconContainer.active .icon {
+  border-color: white;
+}
+
+.challenge36 .panel .header .icon:hover {
+  border-color: white;
+}
+
+.challenge36 .panel .header .left {
+  display: flex;
+  align-items: center;
+}
+
+.challenge36 .panel .main {
+  background-color: white;
+  padding: 24px;
+}
+
+.challenge36 .panel .main .content {
+  transition: all 0.4s ease;
+}
+
+.challenge36 .panel .content.changeContent {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.challenge36 .panel .content .heading {
+  text-align: left;
+}
+
+.challenge36 .panel .content .textPlaceholder.long {
+  width: 280px;
+}
+
+.challenge36 .panel .content .textPlaceholder.short {
+  width: 160px;
+}
+
+.challenge36 .panel .content h3 {
+  margin: 0;
+}
+
+.challenge36 .panel .content .paragraph {
+  margin-top: 16px;
+}
+
 /** Challenge 37 - Revolving cards **/
 .challenge37 {
   background-color: rgb(49, 150, 190);
@@ -3007,6 +1525,348 @@
   }
 }
 
+/** Challenge 38 - Zooming in/out element on click **/
+.challenge38 {
+  background-color: midnightblue;
+  display: block;
+  overflow: hidden;
+}
+
+.challenge38 .shape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 32px);
+  transition: all 0.75s ease;
+  will-change: transform;
+}
+
+.challenge38 .shape .top {
+  border-bottom: 18px solid white;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+}
+
+.challenge38 .shape .bottom {
+  border-top: 18px solid white;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+}
+
+.challenge38 .shape .middle {
+  position: relative;
+  background-color: white;
+  width: 56px;
+  height: 24px;
+  z-index: 0;
+}
+
+.challenge38 .shape .middle::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -24px;
+  width: 36px;
+  height: 40px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: midnightblue;
+}
+
+.challenge38 .shape .middle::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -24px;
+  width: 36px;
+  height: 40px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: midnightblue;
+}
+
+.challenge38 .shape.inner {
+  background-color: white;
+  transform: scale(0);
+  z-index: 2;
+}
+
+.challenge38 .shape.inner .top {
+  border-bottom-color: midnightblue;
+}
+
+.challenge38 .shape.inner .middle {
+  background-color: midnightblue;
+}
+
+.challenge38 .shape.inner .middle::before {
+  background-color: white;
+}
+
+.challenge38 .shape.inner .middle::after {
+  background-color: white;
+}
+
+.challenge38 .shape.inner .bottom {
+  border-top-color: midnightblue;
+}
+
+#challenge38_shape1.zoomIn {
+  transform: scale(25);
+}
+
+#challenge38_shape2.zoomIn {
+  transform: scale(1);
+}
+
+/** Challenge 39 - Menubar **/
+.challenge39 {
+  background-color: darkolivegreen;
+  padding: 48px;
+  flex-direction: column;
+  color: white;
+}
+
+.challenge39 .menubar {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.challenge39 .menubar.collapse {
+  opacity: 0;
+}
+
+.challenge39 .menubar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.challenge39 .menubar ul li {
+  text-transform: uppercase;
+  margin: 8px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.challenge39 .menubar ul li:hover {
+  color: lightgray;
+}
+
+.challenge39 .line {
+  width: 100%;
+  margin: 16px;
+  height: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge39 .line.top.center {
+  transform: translateY(24px);
+}
+
+.challenge39 .line.top.collapse {
+  width: 10%;
+}
+
+.challenge39 .line.bottom.center {
+  transform: translateY(-24px);
+}
+
+.challenge39 .line.bottom.collapse {
+  width: 10%;
+}
+
+/** Challenge 40 - Zoom in on image on click **/
+.challenge40 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.challenge40 img {
+  object-fit: cover;
+  object-position: center center;
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  transition: all 1s ease;
+}
+
+.challenge40 img.zoomIn {
+  transform: translate(160px, 160px) scale(3);
+}
+
+/** Challenge 41 - Error pop out **/
+.challenge41 {
+  background-color: darkcyan;
+  padding: 48px 16%;
+}
+
+.challenge41 .popout {
+  background-color: white;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 4px 4px 12px black;
+  transition: all 1s ease;
+}
+
+.challenge41 .popout .content {
+  color: #353b44;
+  margin: auto;
+  padding: 24px 48px;
+}
+
+.challenge41 .popout .content p {
+  margin: 0 12px 4px 12px;
+  font-size: 12px;
+}
+
+.challenge41 .popout .content p.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.challenge41 .popout .content .icon {
+  content: "!";
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: white;
+  position: relative;
+}
+
+.challenge41 .popout .content .icon span {
+  position: relative;
+  z-index: 2;
+}
+
+.challenge41 .popout .content .icon::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 24px);
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 32px solid rgb(238, 59, 59);
+  z-index: 1;
+}
+
+.challenge41 .popout button {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  background-color:rgb(238, 59, 59);
+  width: 100%;
+  cursor: pointer;
+}
+/** Challenge 43 - Light bulb **/
+.challenge43 {
+  position: relative;
+  flex-direction: column;
+  background-color: darkslategray;
+}
+
+.challenge43 .cap {
+  width: 32px;
+  height: 4px;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.challenge43 .capBase {
+  width: 16px;
+  margin-top: 2px;
+  border-top: 10px solid lightgray;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.challenge43 .bulb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.challenge43 .bulbTop {
+  background-color: yellow;
+  width: 72px;
+  height: 64px;
+  border-radius: 100%;
+  box-shadow: 0px -6px 20px 12px rgba(255, 255, 0, 0.45);
+  transition: all 1s ease;
+}
+
+.challenge43 .bulbBottom {
+  width: 32px;
+  margin-top: -12px;
+  margin-bottom: 2px;
+  border-top: 16px solid yellow;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  transition: all 1s ease;
+}
+
+.challenge43 .bulb:hover .bulbTop {
+  background-color: grey;
+  box-shadow: none;
+}
+
+.challenge43 .bulb:hover .bulbBottom {
+  border-top-color: grey;
+}
+
+/** Challenge 47 - Pixel board **/
+.challenge47 {
+  background-color: rgb(230, 76, 76);
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 644px;
+}
+
+.challenge47 .pixel {
+  border: 1px solid rgb(228, 93, 93);
+  cursor: pointer;
+}
+
+.challenge47 .pixel:hover {
+  background-color: rgba(228, 93, 93, 0.842);
+}
+
+.challenge47 .pixel.active {
+  background-color: white;
+  border-color: white;
+}
+
+.challenge47 .cornerTopLeft {
+  border-top-left-radius: 2px;
+}
+
+.challenge47 .cornerTopRight {
+  border-top-right-radius: 2px;
+}
+
+.challenge47 .cornerBottomLeft {
+  border-bottom-left-radius: 2px;
+}
+
+.challenge47 .cornerBottomRight {
+  border-bottom-right-radius: 2px;
+}
+
 /** Challenge49 - Sparkling circle **/
 .challenge49 {
   background-color: darkslateblue;
@@ -3041,6 +1901,595 @@
     transform: translate(-50%, -50%) scale(1.8);
     opacity: 0;
   }
+}
+
+/** Challenge 51 - Timer **/
+.challenge51 {
+  background-color: thistle;
+  flex-direction: column;
+}
+
+.challenge51 .timer {
+  background-color: white;
+  color: purple;
+  text-align: center;
+  border-radius: 4px;
+  letter-spacing: 6px;
+  font-size: 24px;
+  padding: 8px 8px 8px 12px;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.challenge51 .button {
+  margin-top: 16px;
+  cursor: pointer;
+  transition: border 0.25s ease-in-out;
+}
+
+.challenge51 .button.pause {
+  border-left: 6px solid white;
+  border-right: 6px solid white;
+  width: 4px;
+  height: 20px;
+}
+
+.challenge51 .button.play {
+  border-left: 18px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/** Challenge 62 - Plans Comparison **/
+.challenge62 {
+  background-color: rosybrown;
+  flex-direction: column;
+}
+
+.challenge62 .cardContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.challenge62 .cardContainer .card {
+  width: 120px;
+  margin: 16px 6px;
+  box-shadow: 1px 1px 8px gray;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.challenge62 .cardContainer .card:hover {
+  transform: scale(1.1);
+}
+
+.challenge62 .cardContainer .card:hover .header {
+  background-color: rgb(201, 65, 65);
+}
+
+.challenge62 .cardContainer .card:hover .details {
+  color: rgb(201, 65, 65);
+}
+
+.challenge62 .cardContainer .card .header {
+  padding: 8px;
+  text-align: center;
+  color: white;
+  background-color: indianred;
+}
+
+.challenge62 .cardContainer .card .details {
+  padding: 8px;
+  text-align: center;
+  color: rgb(32, 32, 32);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.challenge62 .cardContainer .card .details p {
+  margin: 16px 0 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+.challenge62 .cardContainer .card .details span {
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.challenge62 .cardContainer .textPlaceholder.long {
+  width: 80px;
+}
+
+.challenge62 .cardContainer .textPlaceholder.short {
+  width: 56px;
+}
+
+.challenge62 .featuresContainer {
+  width: 400px;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: rgb(32, 32, 32);
+  font-size: 12px;
+  box-shadow: 1px 1px 8px gray;
+}
+
+.challenge62 .featuresContainer .feature {
+  margin: 8px 0;
+  display: grid;
+  grid-template: "a b" auto
+                 "c c" auto / 50% 50%;
+}
+
+.challenge62 .featuresContainer .textPlaceholder {
+  width: 100%;
+  height: 8px;
+}
+
+.challenge62 .featuresContainer .feature .featureLabelMin {
+  grid-area: a;
+}
+
+.challenge62 .featuresContainer .feature .featureLabelMax {
+  grid-area: b;
+  text-align: right;
+}
+
+.challenge62 .featuresContainer .feature .featurePortion {
+  margin-top: 6px;
+  grid-area: c;
+  position: relative;
+}
+
+.challenge62 .featuresContainer .feature .featurePlan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;;
+  height: 8px;
+  background-color: rgb(201, 65, 65);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/** Challenge 64 - Hover effect **/
+.challenge64 {
+  display: block;
+  border: none;
+  padding-top: 16px;
+}
+
+.challenge64 .block {
+  padding: 16px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 1s ease;
+  will-change: transform;
+}
+
+.challenge64 .block.front {
+  background-color: white;
+  color: purple;
+  transform: translate(10px, -60px);
+  
+}
+
+.challenge64 .block.back {
+  background-color: purple;
+  color: white;
+  transform: translate(20px, 10px);
+}
+
+.challenge64 .block.movePurple {
+  background-color: purple;
+  color: white;
+  transform: translate(20px, -45px);
+}
+
+.challenge64 .block.moveWhite {
+  background-color: white;
+  color: purple;
+  transform: translate(10px, 0);
+}
+
+/** Challenge 65 - Rotating square to ellipse **/
+.challenge65 {
+  background-color: olivedrab;
+  padding: 48px;
+}
+
+.challenge65 .element {
+  width: 160px;
+  height: 160px;
+  border: 1px solid white;
+  position: absolute;
+  top: calc(50% - 80px);
+  left: calc(50% - 80px);
+  transition: all 3s ease;
+}
+
+/** #66 - Radio Button **/
+.challenge66 {
+  background-color: #353b44;
+}
+
+.challenge66 .radioButton {
+  width: 32px;
+  height: 32px;
+  margin: 32px auto;
+  border-radius: 32px;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.challenge66 .radioButton.active {
+  background-color: #ffffff;
+}
+
+.challenge66 .inner {
+  display: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: #20d31d;
+  transition: display 4ms ease;
+}
+
+.challenge66 .inner.active {
+  display: block;
+}
+
+.challenge66 .ray {
+  display: none;
+  position: absolute;
+  color: #ffffff;
+  transition: all 8ms ease;
+}
+
+.challenge66 .ray.active {
+  display: block;
+}
+
+.challenge66 .ray0 {
+  left: 40px;
+  transform: scale(1.25);
+}
+
+.challenge66 .ray180 {
+  right: 40px;
+  transform: scale(1.2);
+}
+
+.challenge66 .ray90 {
+  bottom: 35px;
+  transform: scale(1.25) rotate(90deg);
+}
+
+.challenge66 .ray270 {
+  top: 35px;
+  transform: scale(1.25) rotate(90deg);
+}
+
+.challenge66 .ray45 {
+  left: 32px;
+  bottom: 28px;
+  transform: scale(1.25) rotate(-45deg);
+}
+
+.challenge66 .ray135 {
+  right: 32px;
+  bottom: 28px;
+  transform: scale(1.25) rotate(45deg);
+}
+
+.challenge66 .ray225 {
+  left: 32px;
+  top: 28px;
+  transform: scale(1.25) rotate(45deg);
+}
+
+.challenge66 .ray315 {
+  right: 32px;
+  top: 28px;
+  transform: scale(1.25) rotate(-45deg);
+}
+
+/** Challenge 69 - Blinking eye **/
+.challenge69 {
+  background-color: darkgray;
+}
+
+.challenge69 .wrapper {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  min-width: 475px;
+  max-width: 475px;
+  width: 100%;
+}
+
+.challenge69 .eye {
+  background-color: lightgray;
+  width: 50%;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+}
+
+.challenge69 .eye::before {
+  content: '';
+  border-right: 42px solid lightgray;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+.challenge69 .eye::after {
+  content: '';
+  border-left: 42px solid lightgray;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.challenge69 .eye .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge69 .eye .inner .iris {
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveIris 5s ease 0.25s infinite;
+}
+
+.challenge69 .eye .inner .iris .pupil {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: slategrey;
+}
+
+@keyframes moveIris {
+  25% {
+    transform: translate(-12px, 12px);
+  }
+  50% {
+    transform: translate(20px, 24px);
+  }
+  64% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.challenge69 .eyelid {
+  background-color: darkgray;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.challenge69 .eyelid.top {
+  animation: blinkTop 1s ease 0.2s infinite;
+}
+
+@keyframes blinkTop {
+  20% {
+    transform: translateY(100%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.challenge69 .eyelid.bottom {
+  animation: blinkBottom 1s ease 0.2s infinite;
+}
+
+@keyframes blinkBottom {
+  20% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/** #70 - Calendar **/
+.challenge70 {
+  background-color: coral;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.challenge70 .block {
+  width: calc(50% - 8px);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 4px solid coral;
+  transition: all 0.3s ease;
+}
+
+.challenge70 .labelDay {
+  font-size: 16px;
+  margin-top: 16px;
+  transition: font-size 0.25s ease;
+}
+
+.challenge70 .labelDate {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition: font-size 0.25s ease;
+}
+
+.challenge70 .block:hover .labelDay {
+  font-size: 14px;
+}
+
+.challenge70 .block:hover .labelDate {
+  font-size: 44px;
+}
+
+.challenge70 .block:hover {
+  border-color: rgb(43, 42, 42);
+  box-shadow: inset 2px 2px 4px rgba(43, 42, 42, 0.9);
+}
+
+/** Challenge 72 - Rotating circles **/
+.challenge72 {
+  background-color: burlywood;
+  padding: 48px;
+}
+
+.challenge72 .container {
+  position: relative;
+  /* perspective: 200px;
+  perspective-origin: center;
+  transform-style: preserve-3d; */
+}
+
+.challenge72 .element {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 1px solid white;
+  transition: all 3s ease;
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+}
+
+/** Challenge 73 - Scrolling text **/
+.challenge73 {
+  background-color: sienna;
+  color: white;
+  text-align: left;
+  text-shadow: 2px 2px 8px black;
+  padding: 56px 48px;
+  word-spacing: 4px;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.challenge73 .sentence {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  height: 48;
+  width: 70%;
+}
+
+.challenge73 .scrollingText {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.challenge73 .scrollingText span {
+  font-weight: bold;
+  transition: transform 1.5s ease;
+}
+
+/** Challenge 74 - Hover ripple effect **/
+.challenge74 {
+  background-color: darkolivegreen;
+}
+
+.challenge74 .numberBlock {
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 16px;
+  cursor: pointer;
+  background-color: unset;
+  border: 1px solid white;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.5s ease-out;
+}
+
+.challenge74 .numberBlock:hover {
+  background-color: rgb(119, 150, 65);
+}
+
+.challenge74 .numberBlock.active span.text {
+  color: darkolivegreen;
+}
+
+.challenge74 .numberBlock span.text {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  font-weight: 550;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.challenge74 .numberBlock .rippleBackground {
+  background-color: white;
+  /* position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.5s ease-out;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px; */
 }
 
 /** Rotating... **/
@@ -3101,6 +2550,556 @@
   100% {
     transform: rotate(0deg) rotateY(360deg);
   }
+}
+
+/** Challenge 76 - Input field **/
+.challenge76 {
+  background-color: slategray;
+}
+
+.challenge76 input {
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 32px;
+  box-shadow: 1px 1px 2px black;
+}
+
+/** Challenge 77 - Moving ball **/
+.challenge77 {
+  padding: 72px 48px;
+  background-color: darkslategray;
+}
+
+.challenge77 .wrapper {
+  width: 100%;
+  animation: moveBall 2s ease 0.5s infinite;
+}
+
+@keyframes moveBall {
+  50% {
+    transform: translateX(calc(100% - 36px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.challenge77 .wrapper .ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.challenge77 .ball::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -22px;
+  width: 40px;
+  height: 36px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  background-color: rgba(245, 245, 245, 0.6);
+  box-shadow: rgba(245, 245, 245, 0.6) -8px 0 2px;
+  transform-origin: center right;
+  transform: scaleX(0);
+  animation: moveBallShadowLeft 2s ease 0.5s infinite;
+}
+
+@keyframes moveBallShadowLeft {
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.challenge77 .ball::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 40px;
+  height: 36px;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: rgba(245, 245, 245, 0.6);
+  box-shadow: rgba(245, 245, 245, 0.6) 8px 0 2px;
+  transform-origin: center left;
+  transform: scaleX(0);
+  animation: moveBallShadowRight 2s ease 1.6s infinite;
+}
+
+@keyframes moveBallShadowRight {
+  10% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/** Challenge 78 - Hover shadow and scale effect **/
+.challenge78 {
+  background-color: steelblue;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+.challenge78 .block {
+  background-color: white;
+  margin: 16px auto;
+  padding: 16px;
+  width: 25%;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.challenge78 .block:hover {
+  transform: scale(1.1);
+}
+
+.challenge78 .block1:hover {
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.challenge78 .block2:hover {
+  box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.challenge78 .block3:hover {
+  box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+/** Challenge 80 **/
+.challenge80 {
+  overflow: hidden;
+}
+
+.challenge80 .column {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: width 0.5s ease;
+}
+
+.challenge80 .column:nth-child(1),
+.challenge80 .column:nth-child(3) {
+  background-color: plum;
+}
+
+.challenge80 .column:nth-child(2),
+.challenge80 .column:nth-child(4) {
+  background-color: purple;
+}
+
+.challenge80 .column p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.challenge80 .column.active {
+  width: 55%;
+}
+
+.challenge80 .column.inactive{
+  width: 15%;
+}
+
+.challenge80 .column.active p {
+  opacity: 1;
+}
+
+/** Challenge 82 - Button flip **/
+.challenge82 {
+  border: none;
+  position: absolute;
+}
+
+.challenge82 .block {
+  margin: 8px auto;
+  padding: 16px 24px;
+  border-radius: 100px;
+  border: 2px solid white;
+  background-color: white;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.5s ease;
+  width: 60px;
+  text-align: center;
+}
+
+.challenge82 .block.front,
+.challenge82 .block.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+
+.challenge82 .block.front {
+  z-index: 2;
+}
+
+.challenge82 .block.back {
+  background-color: #20d31d;
+  color: white;
+}
+
+.challenge82 .block:hover {
+  cursor: pointer;
+}
+
+/** Challenge 84 - Book cover **/
+.challenge84 {
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.challenge84 .book {
+  height: 240px;
+  width: 180px;
+  color: white;
+  display: flex;
+  position: relative;
+  box-shadow: -2px 6px 6px grey;
+}
+
+.challenge84 .book .spine {
+  width: 8px;
+  height: 100%;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border: 1px solid black;
+  background: linear-gradient(to right, black, 10%, rgb(71, 70, 70));
+}
+
+.challenge84 .book .cover {
+  width: 172px;
+  height: 100%;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid black;
+  background: linear-gradient(45deg, black, 15%, rgb(71, 70, 70));
+  box-shadow: inset 4px 0px 3px 0px rgb(22, 22, 22);
+}
+
+.challenge84 .book .cover .title {
+  padding: 10% 5% 0 10%;
+}
+
+.challenge84 .book h1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+
+.challenge84 .book p {
+  color:gray;
+  font-style: italic;
+  font-size: 10px;
+  margin: 0;
+}
+
+.challenge84 .book .bookmark {
+  width: 8px;
+  height: calc(100% + 6px);
+  background-color: rgb(150, 25, 25);
+  position: absolute;
+  top: -2px;
+  right: 24px;
+  border-radius: 2px;
+  box-shadow: -1px 0px 3px black;
+}
+
+/** Challenge 86 - Pendulum **/
+.challenge86 {
+  background-color: rgb(107, 11, 56);
+  padding: 48px;
+  flex-direction: column;
+}
+
+.challenge86 .bar {
+  width: 50%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: grey;
+}
+
+.challenge86 .body {
+  display: flex;
+}
+
+.challenge86 .body .pendulum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+}
+
+.challenge86 .body .pendulum .string {
+  width: 1px;
+  height: 72px;
+  background-color: white;
+}
+
+.challenge86 .body .pendulum .ball {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.challenge86 .body .pendulum.left {
+  animation: moveLeftPendulum 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.challenge86 .body .pendulum.right {
+  animation: moveRightPendulum 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftPendulum {
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes moveRightPendulum {
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/** Challenge 88 - Candle **/
+.challenge88 {
+  background-color: rgb(59, 5, 31);
+  padding: 48px;
+  flex-direction: column;
+}
+
+.challenge88 .body {
+  background-color: white;
+  width: 60px;
+  height: 100px;
+  border-radius: 4px;
+  box-shadow: inset lightgray -8px 0px 4px;
+}
+
+.challenge88 .base {
+  background-color: rebeccapurple;
+  width: 96px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.challenge88 .wick {
+  background-color: peru;
+  width: 4px;
+  height: 10px;
+}
+
+.challenge88 .fire {
+  background-color: orange;
+  width: 18px;
+  height: 28px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: peru 0px 0px 20px 4px;
+  animation: movingFlames 2.4s cubic-bezier(0, 0, 0.41, 0.55) 0s infinite;
+}
+
+@keyframes movingFlames {
+  0% {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 20px;
+  }
+  25% {
+    border-top-left-radius: 12px 24px;
+    border-top-right-radius: 12px 24px;
+  }
+  50% {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 2px;
+  }
+  75% {
+    border-top-left-radius: 12px 24px;
+    border-top-right-radius: 12px 24px;
+  }
+  100% {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 20px;
+  }
+}
+
+/** Challenge 94 - Red tree with branches **/
+.challenge94 {
+  background-color: lightblue;
+  padding: 48px 48px 96px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.challenge94 .tree {
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.challenge94 .tree .side {
+  width: 80px;
+  height: 180px;
+  position: relative;
+}
+
+.challenge94 .tree .side::after {
+  content: '';
+  background-color: lightblue;
+  position: absolute;
+  top: 0;
+  transform: rotate(20deg);
+  width: 80px;
+  height: 200px;
+}
+
+.challenge94 .tree .left {
+  background-color: rgb(192, 33, 33);
+}
+
+.challenge94 .tree .left::after {
+  transform-origin: top right;
+}
+
+.challenge94 .tree .right {
+  background-color: rgb(199, 71, 71);
+}
+
+.challenge94 .tree .right::after {
+  transform-origin: top left;
+  transform: rotate(-20deg);
+}
+
+/** Challenge 94 - Green tree with branches **/
+.challenge94UsingBorders {
+  background-color: lightyellow;
+  padding: 48px 48px 96px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.challenge94UsingBorders .tree {
+  display: flex;
+  position: relative;
+  overflow: visible;
+}
+
+.challenge94UsingBorders .tree .side {
+  position: relative;
+  border-bottom: 180px solid;
+}
+
+.challenge94UsingBorders .tree .left {
+  border-left: 80px solid transparent;
+  border-bottom-color: seagreen;
+}
+
+.challenge94UsingBorders .tree .right {
+  border-right: 80px solid transparent;
+  border-bottom-color: limegreen;
+}
+
+.challenge94 .tree .branch,
+.challenge94UsingBorders .tree .branch {
+  z-index: 5;
+  width: 4px;
+  background-color: goldenrod;
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 2px);
+}
+
+.challenge94 .tree .b0,
+.challenge94UsingBorders .tree .b0 {
+  height: 180px;
+}
+
+.challenge94 .tree .b0::after,
+.challenge94UsingBorders .tree .b0::after {
+  content: '';
+  background-color: lightsteelblue;
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: -28px;
+}
+
+.challenge94 .tree .leftBranch,
+.challenge94UsingBorders .tree .leftBranch {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+}
+
+.challenge94 .tree .b1,
+.challenge94UsingBorders .tree .b1 {
+  height: 15px;
+}
+
+.challenge94 .tree .b2,
+.challenge94UsingBorders .tree .b2 {
+  height: 30px;
+  top: 50%;
+}
+
+.challenge94 .tree .b3,
+.challenge94UsingBorders .tree .b3 {
+  height: 45px;
+  top: 75%;
+}
+
+.challenge94 .tree .rightBranch,
+.challenge94UsingBorders .tree .rightBranch {
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+
+.challenge94 .tree .b4,
+.challenge94UsingBorders .tree .b4 {
+  height: 25px;
+  top: 32%;
+}
+
+.challenge94 .tree .b5,
+.challenge94UsingBorders .tree .b5 {
+  height: 40px;
+  top: 64%;
 }
 
 /** Challenge 95 - Pig **/
@@ -3170,6 +3169,7 @@
   position: absolute;
   bottom: 40px;
   left: calc(50% - 30px);
+  z-index: 2;
 }
 
 .challenge95 .pig .face .nose::before {
