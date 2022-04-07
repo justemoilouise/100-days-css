@@ -63,17 +63,19 @@
 
 /** Challenge 02 - Hover effect on hamburger icon **/
 .challenge02 {
-  background-color: #b050bd;
+  background-color: #28a286;
   flex-direction: column;
   padding: 16px 0px;
   cursor: pointer;
 }
 
 .challenge02 .block {
-  width: 24px;
-  height: 4px;
-  margin: 2px auto;
+  width: 56px;
+  height: 8px;
+  border-radius: 2px;
+  margin: 4px auto;
   background-color: white;
+  box-shadow: #282626 0px 1px 2px;
   transition: all 0.5s ease;
 }
 
@@ -131,7 +133,7 @@
 
 /** Challenge 04 **/
 .challenge04 {
-  background-color: aquamarine;
+  background-color: rgb(230, 93, 93);
   padding: 48px;
 }
 
@@ -2885,6 +2887,7 @@
   justify-content: center;
   align-items: center;
   background-color: lightgray;
+  padding: 24px;
 }
 
 .challenge84 .book {

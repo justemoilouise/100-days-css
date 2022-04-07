@@ -1,64 +1,3 @@
-/** #66 - Radio Button **/
-export function challenge66() {
-  let challenge = document.getElementById("challenge66");
-  challenge.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    if (evt.currentTarget.classList.contains("active")) {
-      [].forEach.call(evt.currentTarget.children, function(el) {
-        el.classList.remove("active");
-      });
-      evt.currentTarget.classList.remove("active");
-    } else {
-      [].forEach.call(evt.currentTarget.children, function(el) {
-        el.classList.add("active");
-        if(el.classList.contains("ray")) {
-          setTimeout(function() {
-            el.classList.remove("active");
-          }, 300);
-        }
-      });
-      evt.currentTarget.classList.add("active");
-    }
-  });
-}
-
-export function challenge82() {
-  let challenge = document.getElementById("challenge82");
-  challenge.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    [].forEach.call(evt.currentTarget.children, function(el) {
-      if (el.classList.contains("active")) {
-        el.classList.remove("active");
-        el.style = "transform: rotateX(180deg)";
-      } else {
-        el.classList.add("active");
-        el.style = null;
-      }
-    });
-  });
-}
-
-export function challenge64() {
-  let challenge = document.getElementById("challenge64");
-  let blockFront = findElementByClass(challenge.children, "front");
-  let blockBack = findElementByClass(challenge.children, "back");
-
-  challenge.addEventListener("mouseover", function(evt) {
-    evt.preventDefault();
-
-    blockFront.classList.add("movePurple");
-    blockBack.classList.add("moveWhite");
-  });
-  challenge.addEventListener("mouseout", function(evt) {
-    evt.preventDefault();
-
-    blockFront.classList.remove("movePurple");
-    blockBack.classList.remove("moveWhite");
-  });
-}
-
 export function challenge02() {
   let challenge = document.getElementById("challenge02");
   let blockTop = findElementByClass(challenge.children, "top");
@@ -70,8 +9,8 @@ export function challenge02() {
 
     if(challenge.classList.contains("active")) {
       blockMiddle.style = null;
-      blockTop.style = "transform: translateY(10px);";
-      blockBottom.style = "transform: translateY(-10px);";
+      blockTop.style = "transform: translateY(20px);";
+      blockBottom.style = "transform: translateY(-20px);";
 
       challenge.classList.remove("active");
       setTimeout(function() {
@@ -79,16 +18,353 @@ export function challenge02() {
         blockBottom.style = null;
       }, 200);
     } else {
-      blockTop.style = "transform: translateY(10px);";
-      blockBottom.style = "transform: translateY(-10px);";
+      blockTop.style = "transform: translateY(20px);";
+      blockBottom.style = "transform: translateY(-20px);";
 
       challenge.classList.add("active");
       setTimeout(function() {
         blockMiddle.style = "transform: rotate(-45deg);";
-        blockTop.style = "transform: translateY(8px) rotate(45deg);";
-        blockBottom.style = "transform: translateY(-8px) rotate(45deg)";
+        blockTop.style = "transform: translateY(16px) rotate(45deg);";
+        blockBottom.style = "transform: translateY(-16px) rotate(45deg)";
       }, 200);
     }
+  });
+}
+
+export function challenge07() {
+  let challenge = document.getElementById("challenge07");
+
+  let sidebar = findElementByClass(challenge.children, "sidebar");
+  let mainPanel = findElementByClass(challenge.children, "mainPanel");
+
+  const header = findElementByClass(mainPanel.children, "header");
+  let searchbar = findElementByClass(header.children, "searchBar");
+
+  const sidebarTop = `top: calc(50% - ${sidebar.clientHeight / 2}px)`;
+  sidebar.style = sidebarTop;
+
+  let leftIcon = document.getElementById("challenge07_headerLeftIcon");
+  leftIcon.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if(leftIcon.classList.contains("active")) {
+      leftIcon.classList.remove("active");
+      mainPanel.style = null;
+      sidebar.style = sidebarTop;
+    } else {
+      leftIcon.classList.add("active");
+      mainPanel.style = "transform: translateX(150px)";
+      sidebar.style = `${sidebarTop}; transform: translateX(-16px)`;
+    }
+  });
+
+  let rightIcon = document.getElementById("challenge07_headerRightIcon");
+  rightIcon.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if(rightIcon.classList.contains("active")) {
+      rightIcon.classList.remove("active");
+      searchbar.value = '';
+      searchbar.style = null;
+    } else {
+      rightIcon.classList.add("active");
+      searchbar.style = "opacity: 1; transform: translateX(-96px); z-index: 2;"
+    }
+  });
+}
+
+export function challenge12() {
+  let challenge = document.getElementById("challenge12");
+
+  let tooltip = findElementByClass(challenge.children, "tooltip");
+  let highlight = document.getElementById("challenge12_highlight");
+
+  const left = tooltip.offsetLeft + (highlight.offsetLeft + (highlight.offsetWidth/2)) - (tooltip.offsetWidth/2);
+  tooltip.style = `left: ${left}px`;
+
+  function addTooltipClass(evt) {
+    evt.preventDefault();
+
+    tooltip.classList.add("active");
+  }
+
+  function removeTooltipClass(evt) {
+    evt.preventDefault();
+
+    tooltip.classList.remove("active");
+  }
+
+  tooltip.addEventListener("mouseover", addTooltipClass);
+  tooltip.addEventListener("mouseout", removeTooltipClass);
+  highlight.addEventListener("mouseover", addTooltipClass);
+  highlight.addEventListener("mouseout", removeTooltipClass);
+}
+
+export function challenge13() {
+  let challenge = document.getElementById("challenge13");
+  let overlayChildren = challenge.getElementsByClassName("overlay");
+
+  const imageChildren = challenge.getElementsByClassName("imageWrapper");
+  [].forEach.call(imageChildren, function(node) {
+    node.addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      [].forEach.call(overlayChildren, function(overlayNode) {
+        overlayNode.classList.add('visible');
+      });
+    });
+  });
+
+  const closeBtn = document.getElementById("challenge13_close");
+  closeBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    closeBtn.classList.remove('visible');
+    [].forEach.call(overlayChildren, function(overlayNode) {
+      overlayNode.classList.remove('visible');
+    });
+  });
+}
+
+export function challenge25() {
+  let challenge = document.getElementById("challenge25");
+
+  function addClass() {
+    [].forEach.call(challenge.children, function(node) {
+      node.classList.add("turn");
+    });
+  }
+
+  function removeClass() {
+    [].forEach.call(challenge.children, function(node) {
+      node.classList.remove("turn");
+    });
+  }
+
+  challenge.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    if(challenge.classList.contains("switch")) {
+      removeClass();
+      challenge.classList.remove("switch");
+    } else {
+      addClass();
+      challenge.classList.add("switch");
+    }
+  });
+}
+
+export function challenge26() {
+  const contentArray = [
+    {
+      header: "The couch",
+      content: "If you want to grow, get outside your comfort zone."
+    },
+    {
+      header: "Failing is learning",
+      content: "Pick yourself up, dust yourself off, and start again."
+    },
+    {
+      header: "Flowers and rainbows",
+      content: "Always be yourself, unless you can be a unicorn."
+    },
+  ];
+
+  let challenge = document.getElementById("challenge26");
+  let card = findElementByClass(challenge.children, "card");
+  let button = findElementByClass(card.children, "button");
+
+  function setCardContent() {
+    let content = findElementByClass(card.children, "content");
+  
+    const currentIndex = parseInt(
+      findElementByClass(content.children, "marker").textContent || "0",
+      10);
+    const newContent = contentArray[currentIndex % 3];
+    [].forEach.call(content.children, function(el) {
+      switch(el.tagName) {
+        case "DIV": // marker
+          el.textContent = (currentIndex + 1) > 3 ? 1 : currentIndex + 1;
+          break
+        case "H3": // heading
+          el.textContent = newContent.header;
+          break;
+        case "P": // content
+          el.textContent = newContent.content;
+          break;
+        default: break;
+      }
+    });
+  }
+
+  button.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    card.classList.remove("zoomInFadeIn");
+    card.classList.add("zoomInFadeOut");
+
+    setTimeout(function() {
+      card.classList.add("zeroScale");
+      setCardContent();
+    }, 500);
+
+    setTimeout(function() {
+      card.classList.remove("zeroScale");
+      card.classList.remove("zoomInFadeOut");
+      card.classList.add("zoomInFadeIn");
+    }, 600);
+  });
+
+  setCardContent();
+}
+
+export function challenge29() {
+  let challengeContainerInput = document.getElementsByClassName("challenge29_container_input");
+  let challengeContainer = document.getElementById("challenge29_container");
+  let challengeInput = document.getElementById("challenge29_input");
+
+  challengeInput.addEventListener('keyup', function(evt) {
+    const currentValue = evt.currentTarget.value;
+
+    if(currentValue) {
+      [].forEach.call(challengeContainerInput, function(node) {
+        node.textContent = currentValue;
+      });
+      challengeContainer.classList.add("visible");
+    } else {
+      challengeContainer.classList.remove("visible");
+    }
+  });
+}
+
+export function challenge32() {
+  let challenge = document.getElementById("challenge32");
+  let counter = findElementByClass(challenge.children, "counter");
+  let countNode = findElementByClass(counter.children, "count");
+
+  function animateSetNewValue(value) {
+    countNode.classList.add("zoomInFadeOut");
+    setTimeout(function() {
+      countNode.textContent = value;
+      countNode.classList.remove("zoomInFadeOut");
+    }, 250);
+  }
+
+  let btnMinus = findElementByClass(counter.children, "minus");
+  btnMinus.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    animateSetNewValue(parseInt(countNode.textContent, 10) - 1);
+  });
+
+  let btnPlus = findElementByClass(counter.children, "plus");
+  btnPlus.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    animateSetNewValue(parseInt(countNode.textContent, 10) + 1);
+  });
+}
+
+export function challenge36() {
+  let challenge = document.getElementById("challenge36");
+  let panel = findElementByClass(challenge.children, "panel");
+  let main = findElementByClass(panel.children, "main");
+  let content = findElementByClass(main.children, "content");
+  let heading = findElementByClass(content.children, "heading");
+  let menus = document.getElementById("challenge36_menus");
+
+  let currentActiveMenu = [].filter.call(menus.children, function(menu) {
+    return menu.getAttribute("data-header");
+  })[0];
+  
+  [].forEach.call(menus.children, function(menu) {
+    menu.addEventListener("click", function(evt) {
+      evt.preventDefault();
+
+      if(currentActiveMenu) {
+        currentActiveMenu.classList.remove("active");
+      }
+
+      currentActiveMenu = menu;
+      menu.classList.add("active");
+      content.classList.add("changeContent");
+
+      setTimeout(function() {
+        heading.textContent = menu.getAttribute("data-header");
+        content.classList.remove("changeContent");
+      }, 400);
+    });
+  });
+}
+
+export function challenge37() {
+  let challenge = document.getElementById('challenge37_wrapper');
+
+  let textPlaceholderNode = document.createElement("div");
+  textPlaceholderNode.classList.add("textPlaceholder");
+
+  Array.from({length: 3}, () => {
+    let node = document.createElement("div");
+    node.classList.add("card");
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+    node.appendChild(textPlaceholderNode.cloneNode());
+
+    challenge.appendChild(node);
+  });
+}
+
+export function challenge38() {
+  let shape1 = document.getElementById("challenge38_shape1");
+  let shape2 = document.getElementById("challenge38_shape2");
+
+  shape1.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    shape1.classList.add("zoomIn");
+    shape2.classList.add("zoomIn");
+  });
+
+  shape2.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    shape1.classList.remove("zoomIn");
+    shape2.classList.remove("zoomIn");
+  });
+}
+
+export function challenge39() {
+  let challenge = document.getElementById("challenge39");
+
+  function restyle() {
+    [].forEach.call(challenge.children, function(el) {
+      if(el.classList.contains("line")) {
+        if(el.classList.contains("collapse")) {
+          el.classList.remove("center");
+          setTimeout(function() {
+            el.classList.remove("collapse");
+          }, 1000);
+        } else {
+          el.classList.add("collapse");
+          setTimeout(function() {
+            el.classList.add("center");
+          }, 1000);
+        }
+      } else if(el.classList.contains("menubar")) {
+        el.classList.contains("collapse")
+        ? setTimeout(function() {
+          el.classList.remove("collapse");
+        }, 1000)
+        : el.classList.add("collapse");
+      }
+    });
+  }
+
+  [].forEach.call(challenge.children, function(el) {
+    el.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      restyle();
+    });
   });
 }
 
@@ -123,24 +399,15 @@ export function challenge40() {
   });
 }
 
-export function challenge74() {
-  let challenge = document.getElementById("challenge74");
+export function challenge41() {
+  let challenge = document.getElementById("challenge41");
+  let popout = findElementByClass(challenge.children, "popout");
 
-  [].forEach.call(challenge.children, function(el) {
-    el.addEventListener("click", function(evt) {
-      evt.preventDefault;
+  let btn = document.getElementById("challenge41_button");
+  btn.addEventListener("click", function(evt) {
+    evt.preventDefault();
 
-      let currentActiveEl = findElementByClass(challenge.children, "active");
-      if(currentActiveEl) {
-        const currentBackgroundEl = findElementByClass(currentActiveEl.children, "rippleBackground");
-        currentBackgroundEl.classList.remove("rippleEffect");
-        currentActiveEl.classList.remove("active");
-      }
-
-      const backgroundEl = findElementByClass(el.children, "rippleBackground");
-      backgroundEl.classList.add("rippleEffect")
-      el.classList.add("active");
-    });
+    popout.classList.add("zeroScale");
   });
 }
 
@@ -186,6 +453,37 @@ export function challenge47() {
 
       challenge.appendChild(child);
   }
+}
+
+export function challenge49() {
+  let challenge = document.getElementById('challenge49');
+  let circle = document.getElementById('challenge49_circle');
+
+  function moveCircle(evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+
+    let boundingRect = circle.getBoundingClientRect();
+    let x = evt.x - boundingRect.x;
+    let y = evt.y - boundingRect.y;
+
+    circle.animate([
+      { transform: `translate(${x}px, ${y}px)` }
+    ], {
+      duration: 500,
+      fill: 'forwards'
+    });
+  }
+
+  challenge.addEventListener('mousemove', throttle(moveCircle, 100));
+  challenge.addEventListener('mouseleave', debounce(function() {
+    circle.animate([
+      { transform: `translate(0, 0)` }
+    ], {
+      duration: 500,
+      fill: 'forwards'
+    });
+  }, 250));
 }
 
 export function challenge51() {
@@ -261,260 +559,22 @@ export function challenge62() {
   });
 }
 
-export function challenge07() {
-  let challenge = document.getElementById("challenge07");
+export function challenge64() {
+  let challenge = document.getElementById("challenge64");
+  let blockFront = findElementByClass(challenge.children, "front");
+  let blockBack = findElementByClass(challenge.children, "back");
 
-  let sidebar = findElementByClass(challenge.children, "sidebar");
-  let mainPanel = findElementByClass(challenge.children, "mainPanel");
-
-  const header = findElementByClass(mainPanel.children, "header");
-  let searchbar = findElementByClass(header.children, "searchBar");
-
-  const sidebarTop = `top: calc(50% - ${sidebar.clientHeight / 2}px)`;
-  sidebar.style = sidebarTop;
-
-  let leftIcon = document.getElementById("challenge07_headerLeftIcon");
-  leftIcon.addEventListener("click", function(evt) {
+  challenge.addEventListener("mouseover", function(evt) {
     evt.preventDefault();
 
-    if(leftIcon.classList.contains("active")) {
-      leftIcon.classList.remove("active");
-      mainPanel.style = null;
-      sidebar.style = sidebarTop;
-    } else {
-      leftIcon.classList.add("active");
-      mainPanel.style = "transform: translateX(150px)";
-      sidebar.style = `${sidebarTop}; transform: translateX(-16px)`;
-    }
+    blockFront.classList.add("movePurple");
+    blockBack.classList.add("moveWhite");
   });
-
-  let rightIcon = document.getElementById("challenge07_headerRightIcon");
-  rightIcon.addEventListener("click", function(evt) {
+  challenge.addEventListener("mouseout", function(evt) {
     evt.preventDefault();
 
-    if(rightIcon.classList.contains("active")) {
-      rightIcon.classList.remove("active");
-      searchbar.value = '';
-      searchbar.style = null;
-    } else {
-      rightIcon.classList.add("active");
-      searchbar.style = "opacity: 1; transform: translateX(-96px); z-index: 2;"
-    }
-  });
-}
-
-export function challenge12() {
-  let challenge = document.getElementById("challenge12");
-
-  let tooltip = findElementByClass(challenge.children, "tooltip");
-  let highlight = document.getElementById("challenge12_highlight");
-
-  const left = tooltip.offsetLeft + (highlight.offsetLeft + (highlight.offsetWidth/2)) - (tooltip.offsetWidth/2);
-  tooltip.style = `left: ${left}px`;
-
-  function addTooltipClass(evt) {
-    evt.preventDefault();
-
-    tooltip.classList.add("active");
-  }
-
-  function removeTooltipClass(evt) {
-    evt.preventDefault();
-
-    tooltip.classList.remove("active");
-  }
-
-  tooltip.addEventListener("mouseover", addTooltipClass);
-  tooltip.addEventListener("mouseout", removeTooltipClass);
-  highlight.addEventListener("mouseover", addTooltipClass);
-  highlight.addEventListener("mouseout", removeTooltipClass);
-}
-
-export function challenge26() {
-  const contentArray = [
-    {
-      header: "The couch",
-      content: "If you want to grow, get outside your comfort zone."
-    },
-    {
-      header: "Failing is learning",
-      content: "Pick yourself up, dust yourself off, and start again."
-    },
-    {
-      header: "Flowers and rainbows",
-      content: "Always be yourself, unless you can be a unicorn."
-    },
-  ];
-
-  let challenge = document.getElementById("challenge26");
-  let card = findElementByClass(challenge.children, "card");
-  let button = findElementByClass(card.children, "button");
-
-  function setCardContent() {
-    let content = findElementByClass(card.children, "content");
-  
-    const currentIndex = parseInt(
-      findElementByClass(content.children, "marker").textContent || "0",
-      10);
-    const newContent = contentArray[currentIndex % 3];
-    [].forEach.call(content.children, function(el) {
-      switch(el.tagName) {
-        case "DIV": // marker
-          el.textContent = (currentIndex + 1) > 3 ? 1 : currentIndex + 1;
-          break
-        case "H3": // heading
-          el.textContent = newContent.header;
-          break;
-        case "P": // content
-          el.textContent = newContent.content;
-          break;
-        default: break;
-      }
-    });
-  }
-
-  button.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    card.classList.remove("zoomInFadeIn");
-    card.classList.add("zoomInFadeOut");
-
-    setTimeout(function() {
-      card.classList.add("zeroScale");
-      setCardContent();
-    }, 500);
-
-    setTimeout(function() {
-      card.classList.remove("zeroScale");
-      card.classList.remove("zoomInFadeOut");
-      card.classList.add("zoomInFadeIn");
-    }, 600);
-  });
-
-  setCardContent();
-}
-
-export function challenge32() {
-  let challenge = document.getElementById("challenge32");
-  let counter = findElementByClass(challenge.children, "counter");
-  let countNode = findElementByClass(counter.children, "count");
-
-  function animateSetNewValue(value) {
-    countNode.classList.add("zoomInFadeOut");
-    setTimeout(function() {
-      countNode.textContent = value;
-      countNode.classList.remove("zoomInFadeOut");
-    }, 250);
-  }
-
-  let btnMinus = findElementByClass(counter.children, "minus");
-  btnMinus.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    animateSetNewValue(parseInt(countNode.textContent, 10) - 1);
-  });
-
-  let btnPlus = findElementByClass(counter.children, "plus");
-  btnPlus.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    animateSetNewValue(parseInt(countNode.textContent, 10) + 1);
-  });
-}
-
-export function challenge36() {
-  let challenge = document.getElementById("challenge36");
-  let panel = findElementByClass(challenge.children, "panel");
-  let main = findElementByClass(panel.children, "main");
-  let content = findElementByClass(main.children, "content");
-  let heading = findElementByClass(content.children, "heading");
-  let menus = document.getElementById("challenge36_menus");
-
-  let currentActiveMenu = [].filter.call(menus.children, function(menu) {
-    return menu.getAttribute("data-header");
-  })[0];
-  
-  [].forEach.call(menus.children, function(menu) {
-    menu.addEventListener("click", function(evt) {
-      evt.preventDefault();
-
-      if(currentActiveMenu) {
-        currentActiveMenu.classList.remove("active");
-      }
-
-      currentActiveMenu = menu;
-      menu.classList.add("active");
-      content.classList.add("changeContent");
-
-      setTimeout(function() {
-        heading.textContent = menu.getAttribute("data-header");
-        content.classList.remove("changeContent");
-      }, 400);
-    });
-  });
-}
-
-export function challenge38() {
-  let shape1 = document.getElementById("challenge38_shape1");
-  let shape2 = document.getElementById("challenge38_shape2");
-
-  shape1.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    shape1.classList.add("zoomIn");
-    shape2.classList.add("zoomIn");
-  });
-
-  shape2.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    shape1.classList.remove("zoomIn");
-    shape2.classList.remove("zoomIn");
-  });
-}
-
-export function challenge39() {
-  let challenge = document.getElementById("challenge39");
-
-  function restyle() {
-    [].forEach.call(challenge.children, function(el) {
-      if(el.classList.contains("line")) {
-        if(el.classList.contains("collapse")) {
-          el.classList.remove("center");
-          setTimeout(function() {
-            el.classList.remove("collapse");
-          }, 1000);
-        } else {
-          el.classList.add("collapse");
-          setTimeout(function() {
-            el.classList.add("center");
-          }, 1000);
-        }
-      } else if(el.classList.contains("menubar")) {
-        el.classList.contains("collapse")
-        ? setTimeout(function() {
-          el.classList.remove("collapse");
-        }, 1000)
-        : el.classList.add("collapse");
-      }
-    });
-  }
-
-  [].forEach.call(challenge.children, function(el) {
-    el.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      restyle();
-    });
-  });
-}
-
-export function challenge41() {
-  let challenge = document.getElementById("challenge41");
-  let popout = findElementByClass(challenge.children, "popout");
-
-  let btn = document.getElementById("challenge41_button");
-  btn.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    popout.classList.add("zeroScale");
+    blockFront.classList.remove("movePurple");
+    blockBack.classList.remove("moveWhite");
   });
 }
 
@@ -548,6 +608,30 @@ export function challenge65() {
   }
 
   setInterval(animate, 3000);
+}
+
+export function challenge66() {
+  let challenge = document.getElementById("challenge66");
+  challenge.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if (evt.currentTarget.classList.contains("active")) {
+      [].forEach.call(evt.currentTarget.children, function(el) {
+        el.classList.remove("active");
+      });
+      evt.currentTarget.classList.remove("active");
+    } else {
+      [].forEach.call(evt.currentTarget.children, function(el) {
+        el.classList.add("active");
+        if(el.classList.contains("ray")) {
+          setTimeout(function() {
+            el.classList.remove("active");
+          }, 300);
+        }
+      });
+      evt.currentTarget.classList.add("active");
+    }
+  });
 }
 
 // export function challenge73() {
@@ -607,41 +691,25 @@ export function challenge65() {
 //   setInterval(animate, 3000);
 // }
 
-export function challenge86() {
-  let challenge = document.getElementById("challenge86");
+export function challenge74() {
+  let challenge = document.getElementById("challenge74");
 
-  const count = 5;
-  Array.from({length: count}, (val, index) => {
-    let pendulumString = document.createElement("div");
-    pendulumString.classList.add('string');
-    let pendulumBall = document.createElement("div");
-    pendulumBall.classList.add('ball');
+  [].forEach.call(challenge.children, function(el) {
+    el.addEventListener("click", function(evt) {
+      evt.preventDefault;
 
-    let node = document.createElement("div");
-    node.classList.add("pendulum");
-    node.appendChild(pendulumString);
-    node.appendChild(pendulumBall);
+      let currentActiveEl = findElementByClass(challenge.children, "active");
+      if(currentActiveEl) {
+        const currentBackgroundEl = findElementByClass(currentActiveEl.children, "rippleBackground");
+        currentBackgroundEl.classList.remove("rippleEffect");
+        currentActiveEl.classList.remove("active");
+      }
 
-    if(index === 0) {
-      node.id = "challenge86_left";
-    } else if(index === count - 1) {
-      node.id = "challenge86_right";
-    }
-    challenge.appendChild(node);
+      const backgroundEl = findElementByClass(el.children, "rippleBackground");
+      backgroundEl.classList.add("rippleEffect")
+      el.classList.add("active");
+    });
   });
-
-  setInterval(function() {
-    let left = document.getElementById("challenge86_left");
-    let right = document.getElementById("challenge86_right");
-
-    if(left.classList.contains('left')) {
-      left.classList.remove('left');
-      right.classList.add('right');
-    } else {
-      right.classList.remove('right');
-      left.classList.add('left');
-    }
-  }, 900);
 }
 
 export function challenge80() {
@@ -679,127 +747,58 @@ export function challenge80() {
   });
 }
 
-export function challenge13() {
-  let challenge = document.getElementById("challenge13");
-  let overlayChildren = challenge.getElementsByClassName("overlay");
-
-  const imageChildren = challenge.getElementsByClassName("imageWrapper");
-  [].forEach.call(imageChildren, function(node) {
-    node.addEventListener('click', function(evt) {
-      evt.preventDefault();
-
-      [].forEach.call(overlayChildren, function(overlayNode) {
-        overlayNode.classList.add('visible');
-      });
-    });
-  });
-
-  const closeBtn = document.getElementById("challenge13_close");
-  closeBtn.addEventListener('click', function(evt) {
+export function challenge82() {
+  let challenge = document.getElementById("challenge82");
+  challenge.addEventListener("click", function(evt) {
     evt.preventDefault();
 
-    closeBtn.classList.remove('visible');
-    [].forEach.call(overlayChildren, function(overlayNode) {
-      overlayNode.classList.remove('visible');
+    [].forEach.call(evt.currentTarget.children, function(el) {
+      if (el.classList.contains("active")) {
+        el.classList.remove("active");
+        el.style = "transform: rotateX(180deg)";
+      } else {
+        el.classList.add("active");
+        el.style = null;
+      }
     });
   });
 }
 
-export function challenge29() {
-  let challengeContainerInput = document.getElementsByClassName("challenge29_container_input");
-  let challengeContainer = document.getElementById("challenge29_container");
-  let challengeInput = document.getElementById("challenge29_input");
+export function challenge86() {
+  let challenge = document.getElementById("challenge86");
 
-  challengeInput.addEventListener('keyup', function(evt) {
-    const currentValue = evt.currentTarget.value;
+  const count = 5;
+  Array.from({length: count}, (val, index) => {
+    let pendulumString = document.createElement("div");
+    pendulumString.classList.add('string');
+    let pendulumBall = document.createElement("div");
+    pendulumBall.classList.add('ball');
 
-    if(currentValue) {
-      [].forEach.call(challengeContainerInput, function(node) {
-        node.textContent = currentValue;
-      });
-      challengeContainer.classList.add("visible");
-    } else {
-      challengeContainer.classList.remove("visible");
-    }
-  });
-}
-
-export function challenge25() {
-  let challenge = document.getElementById("challenge25");
-
-  function addClass() {
-    [].forEach.call(challenge.children, function(node) {
-      node.classList.add("turn");
-    });
-  }
-
-  function removeClass() {
-    [].forEach.call(challenge.children, function(node) {
-      node.classList.remove("turn");
-    });
-  }
-
-  challenge.addEventListener('click', function(evt) {
-    evt.preventDefault();
-
-    if(challenge.classList.contains("switch")) {
-      removeClass();
-      challenge.classList.remove("switch");
-    } else {
-      addClass();
-      challenge.classList.add("switch");
-    }
-  });
-}
-
-export function challenge37() {
-  let challenge = document.getElementById('challenge37_wrapper');
-
-  let textPlaceholderNode = document.createElement("div");
-  textPlaceholderNode.classList.add("textPlaceholder");
-
-  Array.from({length: 3}, () => {
     let node = document.createElement("div");
-    node.classList.add("card");
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
+    node.classList.add("pendulum");
+    node.appendChild(pendulumString);
+    node.appendChild(pendulumBall);
 
+    if(index === 0) {
+      node.id = "challenge86_left";
+    } else if(index === count - 1) {
+      node.id = "challenge86_right";
+    }
     challenge.appendChild(node);
   });
-}
 
-export function challenge49() {
-  let challenge = document.getElementById('challenge49');
-  let circle = document.getElementById('challenge49_circle');
+  setInterval(function() {
+    let left = document.getElementById("challenge86_left");
+    let right = document.getElementById("challenge86_right");
 
-  function moveCircle(evt) {
-    evt.preventDefault();
-    evt.stopPropagation();
-
-    let boundingRect = circle.getBoundingClientRect();
-    let x = evt.x - boundingRect.x;
-    let y = evt.y - boundingRect.y;
-
-    circle.animate([
-      { transform: `translate(${x}px, ${y}px)` }
-    ], {
-      duration: 500,
-      fill: 'forwards'
-    });
-  }
-
-  challenge.addEventListener('mousemove', throttle(moveCircle, 100));
-  challenge.addEventListener('mouseleave', debounce(function() {
-    circle.animate([
-      { transform: `translate(0, 0)` }
-    ], {
-      duration: 500,
-      fill: 'forwards'
-    });
-  }, 250));
+    if(left.classList.contains('left')) {
+      left.classList.remove('left');
+      right.classList.add('right');
+    } else {
+      right.classList.remove('right');
+      left.classList.add('left');
+    }
+  }, 900);
 }
 
 export function challenge99() {
