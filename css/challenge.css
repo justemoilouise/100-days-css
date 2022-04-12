@@ -96,8 +96,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column-reverse;
-  opacity: 0;
-  animation: animateContainer 3.8s ease 100ms infinite forwards;
+  animation: animateContainer 4s ease infinite forwards;
 }
 
 @keyframes animateContainer {
@@ -151,21 +150,9 @@
   border-right: 48px solid transparent;
   border-bottom: 68px solid white;
   width: fit-content;
-  margin: 16px auto 0;
+  margin: 0 auto;
   position: relative;
-  animation: animatePyramidFront 3.8s var(--animation-timing) 200ms infinite;
-}
-
-.challenge03 .container .pyramid::after {
-  content: '';
-  border-bottom: 68px solid rgb(202, 197, 197);
-  border-right: 36px solid transparent;
-  width: fit-content;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  transform: skewX(24deg) translateX(16px);
-  animation: animatePyramidSide 3.8s var(--animation-timing) 200ms infinite;
+  animation: animatePyramidFront 4s var(--animation-timing) infinite;
 }
 
 @keyframes animatePyramidFront {
@@ -180,6 +167,18 @@
   }
 }
 
+.challenge03 .container .pyramid::before {
+  content: '';
+  border-bottom: 68px solid rgb(202, 197, 197);
+  border-right: 36px solid transparent;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: skewX(24deg) translateX(16px);
+  animation: animatePyramidSide 4s var(--animation-timing) infinite;
+}
+
 @keyframes animatePyramidSide {
   0% {
     border-bottom-color: rgb(202, 197, 197);
@@ -189,6 +188,31 @@
   }
   100% {
     border-bottom-color: white;
+  }
+}
+
+.challenge03 .container .pyramid::after {
+  content: '';
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 32px solid rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  position: absolute;
+  top: 68px;
+  left: -52px;
+  transform-origin: top center;
+  animation: animatePyramidShadow 4s var(--animation-timing) infinite;
+}
+
+@keyframes animatePyramidShadow {
+  0% {
+    transform: skewX(88deg);
+  }
+  30% {
+    transform: skewX(80deg);
+  }
+  100% {
+    transform: skewX(-88deg);
   }
 }
 
