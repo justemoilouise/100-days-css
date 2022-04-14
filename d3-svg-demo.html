@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path { 
+	stroke: steelblue;
+	stroke-width: 3;
+	fill: none;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+</style>
+<body>
+
+<!-- load the d3.js library -->	
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+<script>
+
+var tooltip = d3.select("body")
+.append("div")
+.style("position", "absolute")
+.style("z-index", "10")
+.style("visibility", "hidden")
+.text("a simple tooltip");
+
+const data = [
+  { date: "Wed, 14 Aug 2019 00:00:00 GMT", close: 2.9254177545691844 },
+  { date: "Wed, 28 Aug 2019 00:00:00 GMT", close: 2.8956143512450847 },
+  { date: "Fri, 30 Aug 2019 00:00:00 GMT", close: 2.8878846468949795 },
+  { date: "Mon, 02 Sep 2019 00:00:00 GMT", close: 2.893494826736734 },
+];
+data.forEach(d => (d.date = new Date(d.date)));
+
+// Set the dimensions of the canvas / graph
+var	margin = {top: 30, right: 20, bottom: 30, left: 50},
+	width = 600 - margin.left - margin.right,
+	height = 370 - margin.top - margin.bottom;
+
+// Set the ranges
+const x = d3
+  .scaleLinear()
+  .domain(d3.extent(data, d => d.date))
+  .range([0, width]);
+const y = d3
+  .scaleLinear()
+  .domain(d3.extent(data, d => d.close))
+  .range([height, 0]);
+
+// Define the line
+var	valueline = d3.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.close); });
+    
+// Adds the svg canvas
+var	svg = d3.select("body")
+	.append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// Add the valueline path.
+svg.append("path")		
+		.attr("class", "line")
+		.attr("d", valueline(data));
+
+// draw the scatterplot
+	svg.selectAll("dot")									// provides a suitable grouping for the svg elements that will be added
+		.data(data)											// associates the range of data to the group of elements
+	.enter().append("circle")								// adds a circle for each data point
+		.attr("r", 5)										// with a radius of 3.5 pixels
+		.attr("cx", function(d) { return x(d.date); })		// at an appropriate x coordinate 
+		.attr("cy", function(d) { return y(d.close); }) 	// and an appropriate y coordinate
+    .on("mouseover", function(d){
+        tooltip.text(d.date);
+        return tooltip.style("visibility", "visible");
+        })
+    .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+    .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+
+</script>
+</body>

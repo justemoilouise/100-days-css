@@ -31,6 +31,96 @@ export function challenge02() {
   });
 }
 
+export function challenge05() {
+  const chartData = {
+    views: [
+      { day: 0, value: 458 },
+      { day: 1, value: 812 },
+      { day: 2, value: 746 },
+      { day: 3, value: 877 },
+      { day: 4, value: 517 },
+      { day: 5, value: 434 },
+      { day: 6, value: 768 },
+    ],
+    purchases: [
+      { day: 0, value: 26 },
+      { day: 1, value: 41 },
+      { day: 2, value: 22 },
+      { day: 3, value: 36 },
+      { day: 4, value: 25 },
+      { day: 5, value: 13 },
+      { day: 6, value: 20 },
+    ],
+  };
+
+  let challenge = document.getElementById("challenge05_lineChart");
+
+  const chartRect = challenge.getBoundingClientRect();
+  
+  /** Views Line */
+  const viewsX = d3
+    .scaleLinear()
+    .domain(d3.extent(chartData.views, d => d.day))
+    .range([0, chartRect.width]);
+  const viewsY = d3
+    .scaleLinear()
+    .domain(d3.extent(chartData.views, d => d.value))
+    .range([chartRect.height, 0]);
+
+  const viewsValueline = d3
+    .line(chartData.views)
+    .x(d => viewsX(d.day))
+    .y(d => viewsY(d.value));
+
+  d3.select("#challenge05_lineChart")
+    .append("svg")
+    .attr("width", chartRect.width)
+    .attr("height", chartRect.height)
+    .append("g")
+    .append("path")
+    .attr("class", "dataLine viewsLine")
+    .attr("d", viewsValueline(chartData.views))
+    .selectAll("dot")
+    .data(chartData.views)
+    .enter()
+    .append("circle")
+    .attr("r", 5)
+    .attr("cx", d => d.day)
+    .attr("cy", d => d.value);
+  
+  /** Purchases Line */
+  const purchasesX = d3
+    .scaleLinear()
+    .domain(d3.extent(chartData.purchases, d => d.day))
+    .range([0, chartRect.width]);
+  const purchasesY = d3
+    .scaleLinear()
+    .domain(d3.extent(chartData.purchases, d => d.value))
+    .range([chartRect.height, 0]);
+
+  // create line generator
+  const purchasesValueline = d3
+    .line(chartData.purchases)
+    .x(d => purchasesX(d.day))
+    .y(d => purchasesY(d.value));
+
+    d3.select("#challenge05_lineChart")
+    .append("svg")
+    .attr("width", chartRect.width)
+    .attr("height", chartRect.height)
+    .append("g")
+    .append("path")
+    .attr("class", "dataLine purchasesLine")
+    .attr("d", purchasesValueline(chartData.purchases))
+    .selectAll("dot")
+    .data(chartData.purchases)
+    .enter()
+    .append("circle")
+    .attr("r", 5)
+    .attr("cx", d => d.day)
+    .attr("cy", d => d.value);
+}
+
 export function challenge07() {
   let challenge = document.getElementById("challenge07");
 

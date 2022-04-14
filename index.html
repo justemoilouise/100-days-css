@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/challenge.css" />
   <script type="module" src="./js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 <body>
   <h1 class="heading">100 Days CSS Challenge by <a href="https://100dayscss.com/">https://100dayscss.com/</a></h1>
@@ -41,7 +42,7 @@
       </div>
     </div>
 
-    <div class="challengeCard cetner challenge05" title="Challenge #05">
+    <div class="challengeCard cetner challenge05" id="challenge05" title="Challenge #05">
       <div class="container">
         <div class="content header">
           <div>
@@ -61,12 +62,12 @@
         </div>
         <div class="content graph">
           <div class="legend">
-            <div class="viewsLine line"></div>
+            <div class="viewsLine dataLine line"></div>
             <span>Views</span>
-            <div class="purchasesLine line"></div>
+            <div class="purchasesLine dataLine line"></div>
             <span>Purchases</span>
           </div>
-          <div class="lineChart">
+          <div class="lineChart" id="challenge05_lineChart">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>

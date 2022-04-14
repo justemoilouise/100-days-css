@@ -332,14 +332,21 @@
   background-color: #FFF;
 }
 
-.challenge05 .container .graph .viewsLine {
+.challenge05 .container .graph .dataLine {
   height: 4px;
+  stroke-width: 2;
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+.challenge05 .container .graph .viewsLine {
   background-color: rgb(237, 70, 19);
+  stroke: rgb(237, 70, 19);
 }
 
 .challenge05 .container .graph .purchasesLine {
-  height: 4px;
   background-color: rgb(19, 146, 237);
+  stroke: rgb(19, 146, 237);
 }
 
 .challenge05 .container .graph .legend {
@@ -358,14 +365,27 @@
   border-radius: 4px;
 }
 
+.challenge05 .container .graph .lineChart {
+  position: relative;
+}
+
 .challenge05 .container .graph .lineChart .line {
   width: 100%;
   height: 1px;
   background-color: lightgray;
+  position: relative;
+  z-index: 0;
 }
 
-.challenge05 .container .graph .lineChart .line:not(:last-child) {
-  margin-bottom: 48px;
+.challenge05 .container .graph .lineChart > svg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.challenge05 .container .graph .lineChart .line:not(:first-child) {
+  margin-top: 48px;
 }
 
 .challenge05 .container .graph .labels {
