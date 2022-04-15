@@ -569,11 +569,10 @@
 .challenge07 {
   background-color: darkslateblue;
   color: white;
-  padding: 48px;
+  padding: 56px;
   display: block;
   position: relative;
   overflow: hidden;
-  min-height: 344px;
 }
 
 .challenge07 .sidebar {
@@ -764,6 +763,20 @@
 
 .challenge07 .mainPanel .body .item.notification p.content {
   font-size: 16px;
+}
+
+/** Challenge 08 - Blobs **/
+.challenge08 {
+  background-color: #000;
+  padding: 96px 48px;
+}
+
+.challenge08 .element {
+  margin: auto;
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+  background-color: #FFF;
 }
 
 /** Challenge 12 - Quote with tooltip **/
