@@ -56,47 +56,52 @@ export function challenge05() {
   let challenge = document.getElementById("challenge05_lineChart");
 
   const chartRect = challenge.getBoundingClientRect();
+  const width = chartRect.width - 16;
+  const height = chartRect.height - 16;
   
   /** Views Line */
   const viewsX = d3
     .scaleLinear()
     .domain(d3.extent(chartData.views, d => d.day))
-    .range([0, chartRect.width]);
+    .range([0, width]);
   const viewsY = d3
     .scaleLinear()
     .domain(d3.extent(chartData.views, d => d.value))
-    .range([chartRect.height, 0]);
+    .range([height, 0]);
 
   const viewsValueline = d3
     .line(chartData.views)
     .x(d => viewsX(d.day))
     .y(d => viewsY(d.value));
 
-  d3.select("#challenge05_lineChart")
+  const viewsSvg = d3.select("#challenge05_lineChart")
     .append("svg")
-    .attr("width", chartRect.width)
-    .attr("height", chartRect.height)
-    .append("g")
-    .append("path")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g");
+  
+  viewsSvg.append("path")
     .attr("class", "dataLine viewsLine")
-    .attr("d", viewsValueline(chartData.views))
-    .selectAll("dot")
+    .attr("d", viewsValueline(chartData.views));
+  
+  viewsSvg.selectAll("dot")
     .data(chartData.views)
     .enter()
     .append("circle")
-    .attr("r", 5)
-    .attr("cx", d => d.day)
-    .attr("cy", d => d.value);
+    .attr("r", 3)
+    .attr("cx", d => viewsX(d.day))
+    .attr("cy", d => viewsY(d.value))
+    .attr("class", "viewsCircle");
   
   /** Purchases Line */
   const purchasesX = d3
     .scaleLinear()
     .domain(d3.extent(chartData.purchases, d => d.day))
-    .range([0, chartRect.width]);
+    .range([0, width]);
   const purchasesY = d3
     .scaleLinear()
     .domain(d3.extent(chartData.purchases, d => d.value))
-    .range([chartRect.height, 0]);
+    .range([height, 0]);
 
   // create line generator
   const purchasesValueline = d3
@@ -104,21 +109,25 @@ export function challenge05() {
     .x(d => purchasesX(d.day))
     .y(d => purchasesY(d.value));
 
-    d3.select("#challenge05_lineChart")
+  const purchasesSvg = d3.select("#challenge05_lineChart")
     .append("svg")
-    .attr("width", chartRect.width)
-    .attr("height", chartRect.height)
+    .attr("width", width)
+    .attr("height", height)
     .append("g")
-    .append("path")
+    .attr("transform", "translate(8px, 8px)");
+
+  purchasesSvg.append("path")
     .attr("class", "dataLine purchasesLine")
-    .attr("d", purchasesValueline(chartData.purchases))
-    .selectAll("dot")
+    .attr("d", purchasesValueline(chartData.purchases));
+
+  purchasesSvg.selectAll("dot")
     .data(chartData.purchases)
     .enter()
     .append("circle")
-    .attr("r", 5)
-    .attr("cx", d => d.day)
-    .attr("cy", d => d.value);
+    .attr("r", 3)
+    .attr("cx", d => purchasesX(d.day))
+    .attr("cy", d => purchasesY(d.value))
+    .attr("class", "purchasesCircle");
 }
 
 export function challenge07() {

@@ -339,9 +339,17 @@
   shape-rendering: crispEdges;
 }
 
+.challenge05 .container .graph .viewsCircle {
+  fill: rgb(237, 70, 19);
+}
+
 .challenge05 .container .graph .viewsLine {
   background-color: rgb(237, 70, 19);
   stroke: rgb(237, 70, 19);
+}
+
+.challenge05 .container .graph .purchasesCircle {
+  fill: rgb(19, 146, 237);
 }
 
 .challenge05 .container .graph .purchasesLine {
@@ -382,6 +390,8 @@
   z-index: 1;
   top: 0;
   left: 0;
+  padding: 8px;
+  overflow: visible;
 }
 
 .challenge05 .container .graph .lineChart .line:not(:first-child) {
