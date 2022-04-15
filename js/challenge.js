@@ -54,80 +54,80 @@ export function challenge05() {
   };
 
   let challenge = document.getElementById("challenge05_lineChart");
+  let tooltip = document.getElementById("challenge05_tooltip");
 
   const chartRect = challenge.getBoundingClientRect();
   const width = chartRect.width - 16;
   const height = chartRect.height - 16;
-  
-  /** Views Line */
-  const viewsX = d3
+
+  const x = (data) => d3
     .scaleLinear()
-    .domain(d3.extent(chartData.views, d => d.day))
+    .domain(d3.extent(data, d => d.day))
     .range([0, width]);
-  const viewsY = d3
+  const y = (data) => d3
     .scaleLinear()
-    .domain(d3.extent(chartData.views, d => d.value))
+    .domain(d3.extent(data, d => d.value))
     .range([height, 0]);
-
-  const viewsValueline = d3
-    .line(chartData.views)
-    .x(d => viewsX(d.day))
-    .y(d => viewsY(d.value));
-
-  const viewsSvg = d3.select("#challenge05_lineChart")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g");
+  const valueLine = (data) => d3
+    .line()
+    .x(d => x(data)(d.day))
+    .y(d => y(data)(d.value))
   
-  viewsSvg.append("path")
-    .attr("class", "dataLine viewsLine")
-    .attr("d", viewsValueline(chartData.views));
-  
-  viewsSvg.selectAll("dot")
-    .data(chartData.views)
-    .enter()
-    .append("circle")
-    .attr("r", 3)
-    .attr("cx", d => viewsX(d.day))
-    .attr("cy", d => viewsY(d.value))
-    .attr("class", "viewsCircle");
-  
-  /** Purchases Line */
-  const purchasesX = d3
-    .scaleLinear()
-    .domain(d3.extent(chartData.purchases, d => d.day))
-    .range([0, width]);
-  const purchasesY = d3
-    .scaleLinear()
-    .domain(d3.extent(chartData.purchases, d => d.value))
-    .range([height, 0]);
+  const onMouseOver = (color) => {
+    return (d) => {
+      tooltip.innerText = d.srcElement.__data__.value;
 
-  // create line generator
-  const purchasesValueline = d3
-    .line(chartData.purchases)
-    .x(d => purchasesX(d.day))
-    .y(d => purchasesY(d.value));
+      const boundingRect = tooltip.getBoundingClientRect();
+      const coordX = d.x - boundingRect.x - (boundingRect.width / 2);
+      const coordY = d.screenY - boundingRect.bottom - (boundingRect.height / 2);
 
-  const purchasesSvg = d3.select("#challenge05_lineChart")
+      tooltip.style.setProperty("--tooltipColor", color);
+      tooltip.style.left = `${coordX}px`;
+      tooltip.style.top = `${coordY}px`;
+      tooltip.classList.add("show");
+    };
+  };
+  const onMouseOut = () => {
+    tooltip.classList.remove("show");
+    tooltip.style = undefined;
+  };
+
+  const svg = d3.select("#challenge05_lineChart")
     .append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")
     .attr("transform", "translate(8px, 8px)");
+  
+  const viewsG = svg.append("g");
+  viewsG.append("path")
+    .attr("class", "dataLine viewsLine")
+    .attr("d", valueLine(chartData.views)(chartData.views));
+  viewsG.selectAll("dot")
+    .data(chartData.views)
+    .enter()
+    .append("circle")
+    .attr("r", 3)
+    .attr("cx", d => x(chartData.views)(d.day))
+    .attr("cy", d => y(chartData.views)(d.value))
+    .attr("class", "dataCircle viewsCircle")
+    .on("mouseover", onMouseOver("rgb(237, 70, 19)"))
+    .on("mouseout", onMouseOut);
 
-  purchasesSvg.append("path")
+  const purchasesG = svg.append("g");
+  purchasesG.append("path")
     .attr("class", "dataLine purchasesLine")
-    .attr("d", purchasesValueline(chartData.purchases));
-
-  purchasesSvg.selectAll("dot")
+    .attr("d", valueLine(chartData.purchases)(chartData.purchases));
+  purchasesG.selectAll("dot")
     .data(chartData.purchases)
     .enter()
     .append("circle")
     .attr("r", 3)
-    .attr("cx", d => purchasesX(d.day))
-    .attr("cy", d => purchasesY(d.value))
-    .attr("class", "purchasesCircle");
+    .attr("cx", d => x(chartData.purchases)(d.day))
+    .attr("cy", d => y(chartData.purchases)(d.value))
+    .attr("class", "dataCircle purchasesCircle")
+    .on("mouseover", onMouseOver("rgb(19, 146, 237)"))
+    .on("mouseout", onMouseOut);
 }
 
 export function challenge07() {

@@ -296,6 +296,10 @@
 .challenge05 {
   background-color: #16a080;
   padding: 48px;
+
+  --viewsColor: rgb(237, 70, 19);
+  --purchasesColor: rgb(19, 146, 237);
+  --tooltipColor: transparent;
 }
 
 .challenge05 .container {
@@ -339,22 +343,26 @@
   shape-rendering: crispEdges;
 }
 
+.challenge05 .container .graph .dataCircle {
+  cursor: pointer;
+}
+
 .challenge05 .container .graph .viewsCircle {
-  fill: rgb(237, 70, 19);
+  fill: var(--viewsColor);
 }
 
 .challenge05 .container .graph .viewsLine {
-  background-color: rgb(237, 70, 19);
-  stroke: rgb(237, 70, 19);
+  background-color: var(--viewsColor);
+  stroke: var(--viewsColor);
 }
 
 .challenge05 .container .graph .purchasesCircle {
-  fill: rgb(19, 146, 237);
+  fill: var(--purchasesColor);
 }
 
 .challenge05 .container .graph .purchasesLine {
-  background-color: rgb(19, 146, 237);
-  stroke: rgb(19, 146, 237);
+  background-color: var(--purchasesColor);
+  stroke: var(--purchasesColor);
 }
 
 .challenge05 .container .graph .legend {
@@ -385,6 +393,10 @@
   z-index: 0;
 }
 
+.challenge05 .container .graph .lineChart .line:not(:first-child) {
+  margin-top: 48px;
+}
+
 .challenge05 .container .graph .lineChart > svg {
   position: absolute;
   z-index: 1;
@@ -394,8 +406,31 @@
   overflow: visible;
 }
 
-.challenge05 .container .graph .lineChart .line:not(:first-child) {
-  margin-top: 48px;
+.challenge05 .container .graph .lineChart .tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #FFF;
+  font-size: x-small;
+  transform-origin: center bottom;
+  background-color: var(--tooltipColor);
+}
+
+.challenge05 .container .graph .lineChart .tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: calc(50% - 4px);
+  margin: 0 auto;
+  border-top: 4px solid var(--tooltipColor);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.challenge05 .container .graph .lineChart .tooltip.show {
+  visibility: visible;
 }
 
 .challenge05 .container .graph .labels {

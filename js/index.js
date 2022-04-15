@@ -1,44 +1,44 @@
 import {
-  challenge66, challenge82,challenge64,
-  challenge02, challenge40, challenge74,
-  challenge47, challenge51, challenge62,
-  challenge07, challenge12, challenge26,
-  challenge32, challenge36, challenge38,
-  challenge39, challenge41, challenge65,
-  challenge86, challenge80, challenge13,
-  challenge29, challenge25, challenge49,
-  challenge99, challenge05,
+  challenge02, challenge05, challenge07,
+  challenge12, challenge13, challenge25,
+  challenge26, challenge29, challenge32,
+  challenge36, challenge38, challenge39,
+  challenge40, challenge41, challenge47,
+  challenge49, challenge51, challenge62,
+  challenge64, challenge65, challenge66,
+  challenge74, challenge80, challenge82,
+  challenge86, challenge99, 
   // challenge73, challenge72, challenge37
 } from "./challenge.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-  challenge05();
-  challenge66();
-  challenge82();
-  challenge64();
   challenge02();
-  challenge40();
-  challenge74();
-  challenge47();
-  challenge51();
-  challenge62();
+  challenge05();
   challenge07();
   challenge12();
+  challenge13();
+  challenge25();
   challenge26();
+  challenge29();
   challenge32();
   challenge36();
+  // challenge37();
   challenge38();
   challenge39();
+  challenge40();
   challenge41();
-  challenge65();
-  // challenge73();
-  // challenge72();
-  challenge86();
-  challenge80();
-  challenge13();
-  challenge29();
-  challenge25();
-  // challenge37();
+  challenge47();
   challenge49();
+  challenge51();
+  challenge62();
+  challenge64();
+  challenge65();
+  challenge66();
+  // challenge72();
+  // challenge73();
+  challenge74();
+  challenge80();
+  challenge82();
+  challenge86();
   challenge99();
 });
