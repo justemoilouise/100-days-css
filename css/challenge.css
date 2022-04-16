@@ -911,6 +911,60 @@
   }
 }
 
+/** Challenge 09 - Weather card **/
+.challenge09 {
+  background-color: wheat;
+  padding: 48px;
+}
+
+.challenge09 .card {
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: rgb(66, 64, 64) 1px 4px 6px;
+}
+
+.challenge09 .card .textContent {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  font-size: small;
+}
+
+.challenge09 .card .textContent .temperature {
+  font-size: 40px;
+}
+
+.challenge09 .card .textContent .day {
+  text-align: right;
+}
+
+.challenge09 .card .textContent .dayTemp {
+  text-align: right;
+  font-weight: 800;
+}
+
+.challenge09 .card .animationContent {
+  background-color: rgb(18, 24, 115);
+  padding-top: 48px;
+  position: relative;
+}
+
+.challenge09 .card .animationContent .moon {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  margin-left: 48px;
+  background-color: rgb(246, 235, 172);
+  box-shadow: rgb(250, 233, 138) 0px 0px 20px;
+}
+
+.challenge09 .card .animationContent .mountains {
+  padding-top: 64px;
+}
+
 /** Challenge 12 - Quote with tooltip **/
 .challenge12 {
   padding: 56px 48px;
