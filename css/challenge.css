@@ -919,6 +919,7 @@
 
 .challenge09 .card {
   overflow: hidden;
+  position: relative;
   background-color: #FFF;
   border-radius: 4px;
   box-shadow: rgb(66, 64, 64) 1px 4px 6px;
@@ -947,9 +948,14 @@
 }
 
 .challenge09 .card .animationContent {
+  --contentHeight: 240px;
+  --contentWidth: 356px;
+
+  height: var(--contentHeight);
+  position: relative;
+  overflow: hidden;
   background-color: #1A2238;
   padding-top: 48px;
-  position: relative;
 }
 
 .challenge09 .card .animationContent .moon {
@@ -959,10 +965,67 @@
   margin-left: 48px;
   background-color: rgb(246, 235, 172);
   box-shadow: rgb(250, 233, 138) 0px 0px 20px;
+  animation: animateMoon 0.8s ease 0.1s forwards;
+}
+
+@keyframes animateMoon {
+  0% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .challenge09 .card .animationContent .mountains {
-  padding-top: 64px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.challenge09 .card .animationContent .rain {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.challenge09 .card .animationContent .rain .drop {
+  background-color: skyblue;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 12px 24px;
+  border-top-right-radius: 12px 24px;
+  transform-origin: bottom center;
+
+  --dropTransformRotate: rotateZ(28deg);
+}
+
+.challenge09 .card .animationContent .rain .drop1 {
+  --dropHeight: 16px;
+  --dropTransformXStart: 320px;
+  --dropTransformXEnd: 224px;
+
+  height: var(--dropHeight);
+  width: 10px;
+
+  animation: animateRainDrop 1s linear infinite forwards;
+}
+
+@keyframes animateRainDrop {
+  0% {
+    transform: translate(var(--dropTransformXStart), calc(var(--dropHeight) * -1)) var(--dropTransformRotate);
+  }
+  90% {
+    transform: translate(var(--dropTransformXEnd), calc(var(--contentHeight) + calc(var(--dropHeight) * 2))) var(--dropTransformRotate);
+  }
+  100% {
+    transform:
+      translate(var(--dropTransformXEnd), calc(var(--contentHeight) + calc(var(--dropHeight) * 2)))
+      scale(2, 0.2);
+  }
 }
 
 /** Challenge 12 - Quote with tooltip **/
