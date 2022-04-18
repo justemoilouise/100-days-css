@@ -947,7 +947,7 @@
 }
 
 .challenge09 .card .animationContent {
-  background-color: rgb(18, 24, 115);
+  background-color: #1A2238;
   padding-top: 48px;
   position: relative;
 }
@@ -967,7 +967,7 @@
 
 /** Challenge 12 - Quote with tooltip **/
 .challenge12 {
-  padding: 56px 48px;
+  padding: 108px 48px 48px;
   background-color: darkorchid;
   color: white;
   font-size: 24px;
