@@ -1171,9 +1171,68 @@
   }
 }
 
+/** Challenge 10 - Watch **/
+.challenge10 {
+  background-color: rgb(65, 65, 65);
+  padding: 48px;
+}
+
+.challenge10 .watch {
+  margin: 0 auto;
+  background-color: #000;
+  width: 256px;
+  height: 256px;
+  border-radius: 100%;
+  border: 8px solid rgb(93, 90, 90);
+}
+
+.challenge10 .watch .content {
+  margin: auto;
+  border: 3px dotted white;
+  border-radius: 100%;
+  width: 216px;
+  height: 216px;
+  color: white;
+  font-size: small;
+  flex-direction: column;
+}
+
+.challenge10 .watch .content div {
+  width: 50%;
+  text-align: center;
+}
+
+.challenge10 .watch .content .time {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.challenge10 .watch .content .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.challenge10 .watch .content .stats .heart {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  object-fit: contain;
+  animation: animateHeart 0.8s linear infinite;
+}
+
+@keyframes animateHeart {
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /** Challenge 12 - Quote with tooltip **/
 .challenge12 {
-  padding: 108px 48px 48px;
+  padding: 96px 48px;
   background-color: darkorchid;
   color: white;
   font-size: 24px;
