@@ -1184,6 +1184,47 @@
   height: 256px;
   border-radius: 100%;
   border: 8px solid rgb(93, 90, 90);
+  position: relative;
+}
+
+.challenge10 .watch .circularProgress {
+  position: absolute;
+  transform: rotateZ(-90deg);
+}
+
+@keyframes flipCircularProgress {
+  0% {
+    transform: rotateZ(-90deg);
+  }
+}
+
+.challenge10 .watch .circularProgress circle {
+  --circumference: calc(2 * 3.14 * 120);
+
+  stroke-dasharray: var(--circumference);
+  stroke-dashoffset: var(--circumference);
+  animation: animateCircularProgress 2s linear infinite;
+  transform-origin: 50%;
+}
+
+@keyframes animateCircularProgress {
+  0% {
+    stroke-dashoffset: 753.6
+  }
+  49.999% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotateX(180deg);
+  }
+  99.999% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+    stroke-dashoffset: 753.6;
+  }
 }
 
 .challenge10 .watch .content {
@@ -1214,8 +1255,8 @@
 }
 
 .challenge10 .watch .content .stats .heart {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   margin-right: 2px;
   object-fit: contain;
   animation: animateHeart 0.8s linear infinite;
