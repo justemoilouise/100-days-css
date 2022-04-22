@@ -228,20 +228,8 @@ export function challenge13() {
 export function challenge14() {
   let challenge = document.getElementById("challenge14");
 
-  function mouseEventHandler(evt) {
-    evt.preventDefault();
-
-    [].forEach.call(challenge.children, function(el) {
-      if(el.classList.contains("active")) {
-        el.classList.remove("active");
-      } else {
-        el.classList.add("active");
-      }
-    });
-  }
-
-  challenge.addEventListener("mouseover", mouseEventHandler);
-  challenge.addEventListener("mouseout", mouseEventHandler);
+  challenge.addEventListener("mouseover", childrenClasslistMouseEventHandler(challenge.children, "rotateX"));
+  challenge.addEventListener("mouseout", childrenClasslistMouseEventHandler(challenge.children, "rotateX"));
 }
 
 export function challenge25() {
@@ -867,19 +855,7 @@ export function challenge80() {
 
 export function challenge82() {
   let challenge = document.getElementById("challenge82");
-  challenge.addEventListener("click", function(evt) {
-    evt.preventDefault();
-
-    [].forEach.call(evt.currentTarget.children, function(el) {
-      if (el.classList.contains("active")) {
-        el.classList.remove("active");
-        el.style = "transform: rotateX(180deg)";
-      } else {
-        el.classList.add("active");
-        el.style = null;
-      }
-    });
-  });
+  challenge.addEventListener("click", childrenClasslistMouseEventHandler(challenge.children, "rotateX"));
 }
 
 export function challenge86() {
@@ -937,6 +913,20 @@ function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
     return el.classList.contains(className);
   });
+}
+
+function childrenClasslistMouseEventHandler(arr, className) {
+  return evt => {
+    evt.preventDefault();
+
+    [].forEach.call(arr, function(el) {
+      if (el.classList.contains(className)) {
+        el.classList.remove(className);
+      } else {
+        el.classList.add(className);
+      }
+    });
+  }
 }
 
 const debounce = (func, delay) => {

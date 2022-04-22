@@ -87,3 +87,7 @@ main {
   border-radius: 16px;
   background-color: lightgray;
 }
+
+.rotateX {
+  transform: rotateX(180deg);
+}
