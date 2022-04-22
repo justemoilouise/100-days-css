@@ -179,7 +179,7 @@ export function challenge12() {
   let highlight = document.getElementById("challenge12_highlight");
 
   const left = tooltip.offsetLeft + (highlight.offsetLeft + (highlight.offsetWidth/2)) - (tooltip.offsetWidth/2);
-  tooltip.style = `left: ${left}px`;
+  tooltip.style = `left: ${left + 24}px`;
 
   function addTooltipClass(evt) {
     evt.preventDefault();
@@ -223,6 +223,25 @@ export function challenge13() {
       overlayNode.classList.remove('visible');
     });
   });
+}
+
+export function challenge14() {
+  let challenge = document.getElementById("challenge14");
+
+  function mouseEventHandler(evt) {
+    evt.preventDefault();
+
+    [].forEach.call(challenge.children, function(el) {
+      if(el.classList.contains("active")) {
+        el.classList.remove("active");
+      } else {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  challenge.addEventListener("mouseover", mouseEventHandler);
+  challenge.addEventListener("mouseout", mouseEventHandler);
 }
 
 export function challenge25() {
