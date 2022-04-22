@@ -1257,15 +1257,71 @@
   flex-direction: column-reverse;
 }
 
-.challenge11 .boots {
-  width: 100%;
-  padding-top: 96px;
-}
-
 .challenge11 .platform {
   width: 100%;
-  height: 40%;
+  height: 30%;
   background-color: #000;
+}
+
+.challenge11 .boots {
+  width: 100%;
+  padding-top: 80px;
+  position: relative;
+}
+
+.challenge11 .boots img {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  transform-origin: center -50%;
+
+  --animateBootTimingFunction: cubic-bezier(0, 0, 0.47, 0.69);
+}
+
+.challenge11 .boots img.right {
+  animation: animateRightBoot 1.8s var(--animateBootTimingFunction) infinite;
+}
+
+@keyframes animateRightBoot {
+  0% {
+    transform: rotate(25deg) translateY(0);
+  }
+  25% {
+    transform: rotate(0deg) translateY(-8px);
+  }
+  50% {
+    transform: rotate(-25deg) translateY(-2px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    transform: rotate(25deg) translateY(0);
+  }
+}
+
+.challenge11 .boots img.left {
+  animation: animateLeftBoot 1.8s var(--animateBootTimingFunction) infinite;
+}
+
+@keyframes animateLeftBoot {
+  0% {
+    transform: rotate(-25deg) translateY(-2px);
+  }
+  25% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(25deg) translateY(0);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-8px);
+  }
+  100% {
+    transform: rotate(-25deg) translateY(-2px);
+  }
 }
 
 /** Challenge 12 - Quote with tooltip **/
