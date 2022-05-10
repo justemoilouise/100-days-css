@@ -1620,6 +1620,26 @@
   top: calc(50% - 100px);
   left: calc(50% - 180px);
   transition: transform 1.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.challenge14 .card .wrapper {
+  width: 150px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.challenge14 .card .bicycle line {
+  animation: animateBicyclePath 2.5s linear infinite;
+}
+
+@keyframes animateBicyclePath {
+  100% {
+    stroke-dashoffset: 150px;
+  }
 }
 
 /** Challenge21 - Pacman **/
