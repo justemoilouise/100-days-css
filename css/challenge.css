@@ -1677,6 +1677,42 @@
   }
 }
 
+/** Challenge15 - File upload **/
+.challenge15 {
+  padding: 40px;
+  background: linear-gradient(45deg, rgb(67, 180, 255), rgb(107, 255, 107));
+}
+
+.challenge15 .card {
+  width: 60%;
+  border-radius: 4px;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF;
+  box-shadow: #000 3px 3px 10px;
+}
+
+.challenge15 .card .progressBar {
+  width: 100%;
+  height: 2px;
+  background-color: lightgray;
+}
+
+.challenge15 .card .uploadInput {
+  margin: 2em auto;
+}
+
+.challenge15 .card .uploadButton {
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  background-color: #0ac007;
+  color: #FFF;
+  border: none;
+  box-shadow: #059803 0px 2px 2px;
+}
+
 /** Challenge21 - Pacman **/
 .challenge21 {
   background-color: rgb(54, 10, 5);
