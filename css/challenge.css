@@ -1626,19 +1626,54 @@
   flex-direction: column;
 }
 
-.challenge14 .card .wrapper {
+.challenge14 .card .pathWrapper {
   width: 150px;
   height: fit-content;
   overflow: hidden;
 }
 
-.challenge14 .card .bicycle line {
-  animation: animateBicyclePath 2.5s linear infinite;
+.challenge14 .card .vehiclePath line {
+  animation: animatePath 2s linear infinite;
 }
 
-@keyframes animateBicyclePath {
+@keyframes animatePath {
   100% {
     stroke-dashoffset: 150px;
+  }
+}
+
+.challenge14 .card .bicycle {
+  transform-origin: bottom;
+  animation: animateBicycle 0.8s linear infinite;
+}
+
+@keyframes animateBicycle {
+  50% {
+    transform: scaleY(0.9);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.challenge14 .card .pathWrapper.helicopterPathWrapper {
+  position: absolute;
+  z-index: 0;
+  left: calc(50% - 75px);
+}
+
+.challenge14 .card:not(.rotateX) .helicopter {
+  z-index: 1;
+  transform-origin: top;
+  animation: animateHelicopter 1s linear infinite;
+}
+
+@keyframes animateHelicopter {
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
