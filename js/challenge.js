@@ -232,6 +232,42 @@ export function challenge14() {
   challenge.addEventListener("mouseout", childrenClasslistMouseEventHandler(challenge.children, "rotateX"));
 }
 
+export function challenge15() {
+  let challenge = document.getElementById("challenge15");
+  let input = document.getElementById("challenge15_input");
+  let content = document.getElementById("challenge15_content");
+  let icon = document.getElementById("challenge15_icon");
+  let button = document.getElementById("challenge15_button");
+
+  let selectedFile = undefined;
+
+  input.addEventListener("change", e => {
+    e.preventDefault();
+
+    selectedFile = input.files[0];
+    if(!selectedFile) {
+      content.style = 'display: none';
+      icon.style = 'display: block';
+    } else {
+      icon.style = 'display: none';
+      content.style = 'display: block';
+      content.textContent = selectedFile.name;
+    }
+  });
+  
+  button.addEventListener("click", e => {
+    e.preventDefault();
+
+    if(selectedFile) {
+      challenge.classList.add("animate");
+
+      setTimeout(() => {
+        button.textContent = 'DONE';
+      }, 1900);
+    }
+  });
+}
+
 export function challenge25() {
   let challenge = document.getElementById("challenge25");
 

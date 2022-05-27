@@ -369,14 +369,18 @@
     </div>
 
     <div class="challengeCard flex center challenge15" title="Challenge #15">
-      <div class="card">
+      <div id="challenge15" class="card">
         <p>Drop file to upload</p>
         <div class="progressBar"></div>
-        <div id="challenge15_uploadInputContainer" class="uploadInputContainer">
-          <img src="/assets/file-upload.svg" class="icon" />
-          <input id="challenge15_uploadInput" type="file" class="input" />
+        <div class="uploadInputContainer">
+          <div class="content">
+            <img id="challenge15_icon" src="/assets/file-upload.svg" class="icon" />
+            <span id="challenge15_content"class="content" style="display: none;"></span>
+          </div>
+          <input id="challenge15_input" type="file" class="input" />
+          <img src="/assets/loading.svg" class="loading" />
         </div>
-        <button class="uploadButton">Upload file</button>
+        <button id="challenge15_button" class="uploadButton">Upload file</button>
       </div>
     </div>
 

@@ -1698,12 +1698,32 @@
   width: 100%;
   height: 2px;
   background-color: lightgray;
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge15 .card .progressBar::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #0ac007;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 2s;
+}
+
+.challenge15 .card.animate .progressBar::after {
+  transform: translateX(0);
 }
 
 .challenge15 .card .uploadInputContainer {
   margin: 2em auto;
-  width: fit-content;
-  padding: 1em 1.5em;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
   border: 1px dashed lightgray;
   position: relative;
 }
@@ -1713,8 +1733,12 @@
   width: 56px;
 }
 
+.challenge15 .card .uploadInputContainer .content {
+  font-size: small;
+  text-align: center;
+}
+
 .challenge15 .card .uploadInputContainer .input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -1723,13 +1747,45 @@
   opacity: 0;
 }
 
+.challenge15 .card.animate .uploadInputContainer {
+  border: none;
+}
+
+.challenge15 .card.animate .uploadInputContainer *:not(.loading) {
+  display: none;
+}
+
+.challenge15 .card .uploadInputContainer .loading {
+  display: none;
+  object-fit: contain;
+  width: 80px;
+}
+
+.challenge15 .card.animate .uploadInputContainer .loading {
+  display: block;
+  animation: animateLoading 2s ease-out forwards;
+}
+
+@keyframes animateLoading {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 .challenge15 .card .uploadButton {
-  padding: 1em 2em;
+  width: 116px;
+  text-align: center;
+  padding: 1em;
   border-radius: 4px;
   background-color: #0ac007;
   color: #FFF;
   border: none;
-  box-shadow: #059803 0px 2px 2px;
+  box-shadow: #059803 0px 0px 4px;
+  cursor: pointer;
+}
+
+.challenge15 .card .uploadButton:hover {
+  box-shadow: #059803 0px 0px 4px 1px;
 }
 
 /** Challenge21 - Pacman **/
