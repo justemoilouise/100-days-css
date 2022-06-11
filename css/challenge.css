@@ -1853,6 +1853,20 @@
   }
 }
 
+/** Challenge17 **/
+.challenge17 {
+  background-image: linear-gradient(45deg, #FFF 40%, #000 40%, #000 50%, #FFF 50%, #FFF 90%, #000 90%, #000 100%);
+  background-size: 24px 24px;
+}
+
+.challenge17 .container {
+  width: 240px;
+  height: 240px;
+  border-radius: 4px;
+  background-color: rgb(50, 48, 48);
+  box-shadow: rgb(64, 64, 64) 2px 2px 4px;
+}
+
 /** Challenge21 - Pacman **/
 .challenge21 {
   background-color: rgb(54, 10, 5);
