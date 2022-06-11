@@ -1856,7 +1856,7 @@
 /** Challenge17 **/
 .challenge17 {
   background-image: linear-gradient(45deg, #FFF 40%, #000 40%, #000 50%, #FFF 50%, #FFF 90%, #000 90%, #000 100%);
-  background-size: 24px 24px;
+  background-size: 32px 32px;
 }
 
 .challenge17 .container {
@@ -1864,8 +1864,74 @@
   height: 240px;
   border-radius: 4px;
   background-color: rgb(50, 48, 48);
-  box-shadow: rgb(64, 64, 64) 2px 2px 4px;
+  box-shadow: rgb(64, 64, 64) 2px 2px 8px;
+  position: relative;
 }
+
+.challenge17 .container .a {
+  position: relative;
+  z-index: 0;
+  width: 28px;
+  height: 112px;
+  background-color: rgb(222, 222, 222);
+  transform: translate(140px, 50%) skewX(30deg);
+}
+
+.challenge17 .container .a::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(222, 222, 222);
+  top: calc(100% - 26px);
+  right: 0;
+  width: 96px;
+  height: 26px;
+}
+
+.challenge17 .container .b {
+  position: relative;
+  background-color: rgb(176, 176, 176);
+  width: 114px;
+  height: 28px;
+  transform: translate(82px, calc(50% + 42px)) skewX(344deg);
+}
+
+.challenge17 .container .b::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(176, 176, 176);
+  left: 0;
+  bottom: 0;
+  height: 96px;
+  width: 24px;
+}
+
+.challenge17 .container .c {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(240, 240, 240);
+  width: 24px;
+  height: 118px;
+  transform: translate(81px, -73px) rotate(40deg) skew(20deg, 20deg);
+}
+
+.challenge17 .container .d {
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  width: 20px;
+  height: 64px;
+  transform: translate(119.5px, -180px) skewX(30deg);
+}
+
+/* .challenge17 .container .c::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 80px;
+  transform: translate(42px, -28px) rotate(92deg)
+} */
 
 /** Challenge21 - Pacman **/
 .challenge21 {
