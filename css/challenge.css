@@ -1799,6 +1799,7 @@
   height: 96px;
   border-radius: 100%;
   background-color: #FFF;
+  transform-origin: center center;
   transform: translateY(-400%);
   animation: animateMainElement 2.5s ease-in-out infinite;
   position: relative;
@@ -1814,10 +1815,10 @@
   50% {
     transform: translateY(0) scale(0);
   }
-  75% {
+  70% {
     transform: translateY(0) scale(1);
   }
-  80% {
+  75% {
     transform: translateY(0) scale(1);
   }
   100% {
@@ -1843,11 +1844,11 @@
   50% {
     transform: scale(0);
   }
-  78% {
+  72% {
     transform: scale(1.2);
     opacity: 0.5;
   }
-  80% {
+  76% {
     opacity: 0;
   }
 }
