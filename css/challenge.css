@@ -1950,6 +1950,7 @@
   z-index: 0;
   position: absolute;
   display: flex;
+  transition: transform 600ms ease-out;
 }
 
 .challenge19 .backgroundWrapper .bgPurple {
@@ -1963,7 +1964,7 @@
 }
 
 .challenge19 .backgroundWrapper .bgGreen {
-  background-color: rgb(41, 254, 173);
+  background-color: rgb(18, 222, 96);
   flex: 1;
 }
 
@@ -1995,7 +1996,7 @@
   background-color: #FFF;
   position: absolute;
   z-index: 1;
-  transform: translateX(-150%);
+  transition: transform 600ms ease-out;
 }
 
 /** Challenge21 - Pacman **/

@@ -268,6 +268,26 @@ export function challenge15() {
   });
 }
 
+export function challenge19() {
+  let challenge = document.getElementById("challenge19");
+  let marker = document.getElementById("challenge19_marker");
+  let elementWrapper = document.getElementById("challenge19_outline");
+  let background = document.getElementById("challenge19_background");
+
+  const MARKER_FACTOR = 150;
+
+  [].forEach.call(elementWrapper.children, function(el, index) {
+    if(!el.classList.contains("marker")) {
+      el.addEventListener("click", e => {
+        e.preventDefault();
+  
+        background.style = `transform: translateX(${challenge.getBoundingClientRect().width * index * -1}px)`;
+        marker.style = `transform: translateX(${MARKER_FACTOR * (index - 1)}%)`;
+      });
+    }
+  });
+}
+
 export function challenge25() {
   let challenge = document.getElementById("challenge25");
 
