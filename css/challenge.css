@@ -1938,6 +1938,66 @@
    background-color: rgb(176, 176, 176);
 }
 
+/** Challenge19 **/
+.challenge19 {
+  overflow: hidden;
+  position: relative;
+}
+
+.challenge19 .backgroundWrapper {
+  width: 300%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  display: flex;
+}
+
+.challenge19 .backgroundWrapper .bgPurple {
+  background-color: rgb(130, 10, 130);
+  flex: 1;
+}
+
+.challenge19 .backgroundWrapper .bgBlue {
+  background-color: rgb(69, 129, 248);
+  flex: 1;
+}
+
+.challenge19 .backgroundWrapper .bgGreen {
+  background-color: rgb(41, 254, 173);
+  flex: 1;
+}
+
+.challenge19 .elementWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge19 .elementWrapper .circleOutline {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+  cursor: pointer;
+}
+
+.challenge19 .elementWrapper .circleOutline:not(:first-child) {
+  margin-left: 8px;
+}
+
+.challenge19 .elementWrapper .marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #FFF;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-150%);
+}
+
 /** Challenge21 - Pacman **/
 .challenge21 {
   background-color: rgb(54, 10, 5);
