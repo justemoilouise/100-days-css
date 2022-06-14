@@ -2087,6 +2087,65 @@
   }
 }
 
+/** Challenge 22 - Fitness tracker **/
+.challenge22 {
+  display: block;
+  padding: 48px 96px;
+  background-color: rgb(3, 3, 82);
+}
+
+.challenge22 .headingContainer {
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(207, 207, 207);
+  margin: 0 auto 16px;
+}
+
+.challenge22 .headingContainer .heading {
+  margin-top: -8px;
+  font-weight: 800;
+  font-size: x-large;
+  color: #FFF;
+}
+
+.challenge22 .chartContainer .chart {
+  text-align: center;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: rgb(2, 0, 48);
+  flex-direction: column;
+}
+
+.challenge22 .chartContainer .chart p {
+  margin: 0;
+}
+
+.challenge22 .chartContainer .chart .value {
+  color: #FFF;
+}
+
+.challenge22 .chartContainer .chart .unit {
+  color: rgb(207, 207, 207);
+  font-size: small;
+}
+
+.challenge22 .chartContainer .chartKcal {
+  border-width: 16px;
+  width: 120px;
+  height: 120px;
+  margin: 16px auto;
+}
+
+.challenge22 .chartContainer .chartKcal .value {
+  font-size: xx-large;
+}
+
+.challenge22 .chartContainer .chartStepsDistance {
+  border-width: 12px;
+  width: 100px;
+  height: 100px;
+}
+
 /** Challenge 23 - "Collect moment not things" **/
 .challenge23 {
   background-color: rgb(235, 91, 75);

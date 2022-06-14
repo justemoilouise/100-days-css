@@ -43,6 +43,11 @@ main {
   align-items: center;
 }
 
+.centerAlignSpaceBetweenContent {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .rippleBackground {
   position: absolute;
   border-radius: 50%;
