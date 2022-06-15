@@ -288,6 +288,20 @@ export function challenge19() {
   });
 }
 
+export function challenge24() {
+  let challenge = document.getElementById("challenge24");
+
+  challenge.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if(challenge.classList.contains("done")) {
+      challenge.classList.remove("done");
+    } else {
+      challenge.classList.add("done");
+    }
+  });
+}
+
 export function challenge25() {
   let challenge = document.getElementById("challenge25");
 
