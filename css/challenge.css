@@ -1971,6 +1971,7 @@
 .challenge19 .elementWrapper {
   position: relative;
   width: 100%;
+  padding: 120px 96px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -2282,11 +2283,36 @@
   }
 }
 
+/** Challenge 24 - Finish button **/
+.challenge24 {
+  padding: 96px;
+  background-color: #57D895;
+}
+
+.challenge24 .button {
+  padding: 12px;
+  width: 208px;
+  height: fit-content;
+  letter-spacing: 1.3px;
+  font-weight: 100;
+  font-size: large;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 48px;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.challenge24 .button:hover {
+  background-color: #3fa470;
+}
+
 /** Challenge 25 - "Map" **/
 .challenge25 {
   background: linear-gradient(-45deg, cornflowerblue 0%, skyblue 50%, cornflowerblue 100%);
   padding: 64px;
-  height: 200px;
 }
 
 .challenge25 .map {
