@@ -1619,7 +1619,7 @@
   position: absolute;
   top: calc(50% - 100px);
   left: calc(50% - 180px);
-  transition: transform 1.2s ease;
+  transition: transform 1s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1662,13 +1662,13 @@
   left: calc(50% - 75px);
 }
 
-.challenge14 .card:not(.rotateX) img {
+.challenge14 .card:not(.rotateX) * {
   opacity: 1;
-  transition: opacity 0.4s ease-in;
+  transition: opacity 0.6s ease-in;
   transition-delay: 0.2s;
 }
 
-.challenge14 .card.rotateX img {
+.challenge14 .card.rotateX * {
   opacity: 0;
 }
 
