@@ -1802,11 +1802,25 @@
 .challenge16 {
   background-color: skyblue;
   overflow: hidden;
+  flex-direction: column;
+  position: relative;
 }
 
+.challenge16 img,
 .challenge16 .element {
   width: 96px;
   height: 96px;
+}
+
+.challenge16 img.octagon,
+.challenge16 img.triangle {
+  position: absolute;
+  top: calc(50% - 48px);
+  left: calc(50% - 48px);
+  transform: scale(0);
+}
+
+.challenge16 .element {
   border-radius: 100%;
   background-color: #FFF;
   transform-origin: center center;
