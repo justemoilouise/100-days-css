@@ -1808,8 +1808,37 @@
 
 .challenge16 img,
 .challenge16 .element {
+  width: 100px;
+  height: 100px;
+  transform-origin: center center;
+}
+
+.challenge16 .element {
   width: 96px;
   height: 96px;
+  border-radius: 100%;
+  background-color: #FFF;
+  transform: translateY(-400%);
+  animation: animateMainElement 4s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes animateMainElement {
+  15% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0) scale(0);
+  }
+  80% {
+    transform: translateY(0) scale(0);
+  }
+  85% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(400%);
+  }
 }
 
 .challenge16 img.octagon,
@@ -1820,37 +1849,51 @@
   transform: scale(0);
 }
 
-.challenge16 .element {
-  border-radius: 100%;
-  background-color: #FFF;
-  transform-origin: center center;
-  transform: translateY(-400%);
-  animation: animateMainElement 2.5s ease-in-out infinite;
-  position: relative;
+.challenge16 .octagon {
+  animation: animateOctagonElement 4s ease-in-out infinite;
 }
 
-@keyframes animateMainElement {
-  25% {
-    transform: translateY(0);
+@keyframes animateOctagonElement {
+  20% {
+    transform: scale(0);
   }
-  30% {
-    transform: translateY(0) scale(0);
+  25% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1);
   }
   50% {
-    transform: translateY(0) scale(0);
-  }
-  70% {
-    transform: translateY(0) scale(1);
-  }
-  75% {
-    transform: translateY(0) scale(1);
+    transform: scale(0);
   }
   100% {
-    transform: translateY(400%);
+    transform: scale(0);
   }
 }
 
-.challenge16 .element::after {
+.challenge16 .triangle {
+  animation: animateTriangleElement 4s ease-in-out infinite;
+}
+
+@keyframes animateTriangleElement {
+  50% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* .challenge16 .element::after {
   content: '';
   width: 100px;
   height: 100px;
@@ -1875,7 +1918,7 @@
   76% {
     opacity: 0;
   }
-}
+} */
 
 /** Challenge17 **/
 .challenge17 {
