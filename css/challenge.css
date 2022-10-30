@@ -1819,7 +1819,7 @@
   border-radius: 100%;
   background-color: #FFF;
   transform: translateY(-400%);
-  animation: animateMainElement 4s ease-in-out infinite;
+  animation: animateMainElement 3s ease-in-out infinite;
   position: relative;
 }
 
@@ -1836,6 +1836,9 @@
   85% {
     transform: translateY(0) scale(1);
   }
+  90% {
+    transform: translateY(0) scale(1);
+  }
   100% {
     transform: translateY(400%);
   }
@@ -1850,7 +1853,7 @@
 }
 
 .challenge16 .octagon {
-  animation: animateOctagonElement 4s ease-in-out infinite;
+  animation: animateOctagonElement 3s ease-in-out infinite;
 }
 
 @keyframes animateOctagonElement {
@@ -1872,7 +1875,7 @@
 }
 
 .challenge16 .triangle {
-  animation: animateTriangleElement 4s ease-in-out infinite;
+  animation: animateTriangleElement 3s ease-in-out infinite;
 }
 
 @keyframes animateTriangleElement {
@@ -1893,32 +1896,35 @@
   }
 }
 
-/* .challenge16 .element::after {
+.challenge16 .element::after {
   content: '';
   width: 100px;
   height: 100px;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  top: calc(50% - 51px);
+  left: calc(50% - 51px);
   transform: scale(0);
   transform-origin: center center;
   border: 2px solid #FFF;
   border-radius: 100%;
   position: absolute;
-  animation: animateMainElementAfter 2.5s ease-in-out infinite;
+  animation: animateMainElementAfter 3s ease-in-out infinite;
 }
 
 @keyframes animateMainElementAfter {
   50% {
     transform: scale(0);
   }
-  72% {
-    transform: scale(1.2);
-    opacity: 0.5;
+  80% {
+    transform: scale(1);
   }
-  76% {
+  85% {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+  90% {
     opacity: 0;
   }
-} */
+}
 
 /** Challenge17 **/
 .challenge17 {
