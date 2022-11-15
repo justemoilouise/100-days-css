@@ -1819,7 +1819,7 @@
   border-radius: 100%;
   background-color: #FFF;
   transform: translateY(-400%);
-  animation: animateMainElement 3s ease-in-out infinite;
+  animation: animateMainElement 4.5s ease-in-out infinite;
   position: relative;
 }
 
@@ -1853,7 +1853,7 @@
 }
 
 .challenge16 .octagon {
-  animation: animateOctagonElement 3s ease-in-out infinite;
+  animation: animateOctagonElement 4.5s ease-in-out infinite;
 }
 
 @keyframes animateOctagonElement {
@@ -1875,7 +1875,7 @@
 }
 
 .challenge16 .triangle {
-  animation: animateTriangleElement 3s ease-in-out infinite;
+  animation: animateTriangleElement 4.5s ease-in-out infinite;
 }
 
 @keyframes animateTriangleElement {
@@ -1907,21 +1907,19 @@
   border: 2px solid #FFF;
   border-radius: 100%;
   position: absolute;
-  animation: animateMainElementAfter 3s ease-in-out infinite;
+  animation: animateMainElementAfter 4.5s ease-in-out infinite;
 }
 
 @keyframes animateMainElementAfter {
   50% {
     transform: scale(0);
   }
-  80% {
-    transform: scale(1);
-  }
-  85% {
+  88% {
     transform: scale(1.25);
-    opacity: 0.8;
+    opacity: 0.7;
   }
   90% {
+    transform: scale(1.25);
     opacity: 0;
   }
 }
