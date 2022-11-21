@@ -2014,6 +2014,8 @@
   position: relative;
   flex-direction: column;
   height: 480px;
+  overflow: hidden;
+  perspective: 1600px;
 }
 
 .challenge18 .element {
@@ -2023,10 +2025,52 @@
 
 .challenge18 .top {
   background-color: #353434;
+  animation: challenge18AnimateTopElement 3s ease-in-out infinite;
 }
 
 .challenge18 .bottom {
-  background-color: #28d925;
+  background-color: #4fc74d;
+  animation: challenge18AnimateBottomElement 3s ease-in-out infinite;
+}
+
+@keyframes challenge18AnimateTopElement {
+  25% {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: scaleY(2) translateY(10%);
+    z-index: 1;
+  }
+  48% {
+    transform: scaleY(1) translateY(0);
+    z-index: 1;
+  }
+  50% {
+    z-index: 0;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+
+@keyframes challenge18AnimateBottomElement {
+  48% {
+    border-radius: 0;
+    z-index: 0;
+  }
+  50% {
+    z-index: 1;
+    border-radius: 0;
+    transform: scaleY(1) translateY(0);
+  }
+  75% {
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transform: scaleY(2) translateY(-10%);
+  }
+  100% {
+    z-index: 0;
+    border-radius: 0;
+  }
 }
 
 /** Challenge19 **/
