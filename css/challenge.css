@@ -2244,13 +2244,15 @@
   color: #FFF;
 }
 
-.challenge22 .chartContainer > div {
+.challenge22 .chartContainer .contentContainer {
   position: relative;
   margin: 16px auto;
 }
 
-.challenge22 .chartContainer svg {
+.challenge22 .chartContainer .contentContainer svg {
   position: absolute;
+  transform-origin: 50%;
+  transform: rotateZ(-90deg);
 }
 
 .challenge22 .chartContainer .chart {
@@ -2280,6 +2282,20 @@
   height: 120px;
 }
 
+.challenge22 .chartContainer .contentContainer .svgChartKcal circle {
+  --circumference: calc(2 * 3.14 * 68);
+
+  stroke-dasharray: var(--circumference);
+  stroke-dashoffset: var(--circumference);
+  animation: animateSvgChartKcal 2s linear forwards;
+}
+
+@keyframes animateSvgChartKcal {
+  100% {
+    stroke-dashoffset: 88;
+  }
+}
+
 .challenge22 .chartContainer .chartKcal .value {
   font-size: xx-large;
 }
@@ -2289,6 +2305,35 @@
   width: 100px;
   height: 100px;
 }
+
+.challenge22 .chartContainer .contentContainer .svgChartSteps circle,
+.challenge22 .chartContainer .contentContainer .svgChartDistance circle { 
+  --circumference: calc(2 * 3.14 * 56);
+
+  stroke-dasharray: var(--circumference);
+  stroke-dashoffset: var(--circumference);
+}
+
+.challenge22 .chartContainer .contentContainer .svgChartSteps circle {
+  animation: animateSvgChartSteps 2s linear forwards;
+}
+
+@keyframes animateSvgChartSteps {
+  100% {
+    stroke-dashoffset: 112;
+  }
+}
+
+.challenge22 .chartContainer .contentContainer .svgChartDistance circle {
+  animation: animateSvgChartDistance 2s linear forwards;
+}
+
+@keyframes animateSvgChartDistance {
+  100% {
+    stroke-dashoffset: 220;
+  }
+}
+
 
 /** Challenge 23 - "Collect moment not things" **/
 .challenge23 {
