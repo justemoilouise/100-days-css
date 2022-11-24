@@ -2334,7 +2334,6 @@
   }
 }
 
-
 /** Challenge 23 - "Collect moment not things" **/
 .challenge23 {
   background-color: rgb(235, 91, 75);
@@ -2797,6 +2796,48 @@
 
 .challenge26 .card .button:hover {
   background-color: rgb(53, 0, 53);
+}
+
+/** Challenge 27 - To-do list **/
+.challenge27 {
+  padding: 96px;
+  background: linear-gradient(45deg, orange, yellow);
+}
+
+.challenge27 .container {
+  color:rgb(50, 48, 48);
+  background-color: #FFF;
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow: #535353 3px 3px 6px;
+  text-align: center;
+}
+
+.challenge27 .container p {
+  margin: 0;
+  font-size: small;
+}
+
+.challenge27 .container .heading {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.challenge27 .container .row {
+  flex-direction: row;
+}
+
+.challenge27 .container .row:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.challenge27 .container .row .bullet {
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  border: 1px solid rgb(50, 48, 48);
+  margin-left: 16px;
+  cursor: pointer;
 }
 
 /** Challenge 29 - Input with suggestions **/
