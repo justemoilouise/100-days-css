@@ -2825,6 +2825,8 @@
 
 .challenge27 .container .row {
   flex-direction: row;
+  cursor: pointer;
+  transition: 0.8s;
 }
 
 .challenge27 .container .row:not(:last-child) {
@@ -2837,7 +2839,23 @@
   border-radius: 100%;
   border: 1px solid rgb(50, 48, 48);
   margin-left: 16px;
-  cursor: pointer;
+}
+
+.challenge27 .container .row.done {
+  opacity: 0.4;
+}
+
+.challenge27 .container .row.done .bullet {
+  animation: animateRowBullet 0.4s ease-out forwards;
+}
+
+@keyframes animateRowBullet {
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /** Challenge 29 - Input with suggestions **/

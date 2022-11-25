@@ -394,6 +394,23 @@ export function challenge26() {
   setCardContent();
 }
 
+export function challenge27() {
+  let challenge = document.getElementById("challenge27");
+
+  const contentRows = findElementsWithClass(challenge.children[0].children, "row");
+  [].forEach.call(contentRows, function(el) {
+    el.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      if (el.classList.contains("done")) {
+        el.classList.remove("done");
+      } else {
+        el.classList.add("done");
+      }
+    });
+  });
+}
+
 export function challenge29() {
   let challengeContainerInput = document.getElementsByClassName("challenge29_container_input");
   let challengeContainer = document.getElementById("challenge29_container");
@@ -981,6 +998,12 @@ export function challenge99() {
 
 function findElementByClass(arr, className) {
   return [].find.call(arr, function(el) {
+    return el.classList.contains(className);
+  });
+}
+
+function findElementsWithClass(arr, className) {
+  return [].filter.call(arr, function(el) {
     return el.classList.contains(className);
   });
 }

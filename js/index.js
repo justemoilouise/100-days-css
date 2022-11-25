@@ -2,7 +2,8 @@ import {
   challenge02, challenge05, challenge07,
   challenge12, challenge13, challenge14,
   challenge15, challenge19, challenge24,
-  challenge25, challenge26, challenge29,
+  challenge25, challenge26, challenge27,
+  challenge29,
   challenge32, challenge36, challenge38,
   challenge39, challenge40, challenge41,
   challenge47, challenge49, challenge51,
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   challenge25();
   challenge26();
   challenge29();
+  challenge27();
   challenge32();
   challenge36();
   // challenge37();
