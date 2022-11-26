@@ -2833,28 +2833,66 @@
   margin-bottom: 8px;
 }
 
-.challenge27 .container .row .bullet {
-  width: 11px;
-  height: 11px;
+.challenge27 .container .row .marker {
+  margin-left: 16px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.challenge27 .container .row .marker .circle {
+  width: 14px;
+  height: 14px;
   border-radius: 100%;
   border: 1px solid rgb(50, 48, 48);
-  margin-left: 16px;
+}
+
+.challenge27 .container .row .marker img {
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.challenge27 .container .row .marker img svg .path.check {
+  stroke: rgb(50, 48, 48, 0.4);
+  stroke-dashoffset: -100;
 }
 
 .challenge27 .container .row.done {
   opacity: 0.4;
 }
 
-.challenge27 .container .row.done .bullet {
-  animation: animateRowBullet 0.4s ease-out forwards;
+.challenge27 .container .row.done .marker .circle {
+  animation: animateRowMarkerCircle 0.4s ease-out forwards;
 }
 
-@keyframes animateRowBullet {
+@keyframes animateRowMarkerCircle {
   50% {
-    transform: scale(1.3);
+    transform: scale(1.5);
   }
   100% {
     opacity: 0;
+  }
+}
+
+.challenge27 .container .row.done .marker img {
+  animation: animateRowMarkerImg 0.4s ease-out 0.2s forwards;
+}
+
+/* .challenge27 .container .row.done .marker img.animatedSvgCheckMark .path.check {
+  animation: animateRowMarkerImg 0.4s ease-out 0.2s forwards;
+} */
+
+@keyframes animateRowMarkerImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
