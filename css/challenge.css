@@ -1761,7 +1761,8 @@
   border: none;
 }
 
-.challenge15 .card.animate .uploadInputContainer *:not(.loading) {
+.challenge15 .card.animate .uploadInputContainer .content,
+.challenge15 .card.animate .uploadInputContainer .input {
   display: none;
 }
 
@@ -1844,11 +1845,13 @@
   }
 }
 
-.challenge16 img.octagon,
-.challenge16 img.triangle {
+.challenge16 svg.octagon,
+.challenge16 svg.triangle {
   position: absolute;
-  top: calc(50% - 48px);
-  left: calc(50% - 48px);
+  top: calc(50% - 56px);
+  left: calc(50% - 56px);
+  height: 125px;
+  width: 125px;
   transform: scale(0);
 }
 
