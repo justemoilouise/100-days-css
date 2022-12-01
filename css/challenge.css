@@ -2902,6 +2902,7 @@
 }
 
 .challenge28 .bell {
+  margin: 0 8px;
   fill: whitesmoke;
   width: 64px;
   transform-origin: top center;
@@ -2947,6 +2948,89 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.challenge28 .line {
+  overflow: hidden;
+  fill: none;
+  stroke: whitesmoke;
+  stroke-linecap: round;
+  stroke-width: 3;
+  opacity: 0;
+}
+
+.challenge28 .line.left {
+  animation: challenge28AnimateLeftLine 1.4s ease-in infinite;
+}
+
+.challenge28 .line.left.lineLeft1 {
+  animation-delay: 0.6s;
+}
+
+.challenge28 .line.left.lineLeft2 {
+  animation-delay: 0.8s;
+}
+
+.challenge28 .line.left.lineLeft3 {
+  animation-delay: 1s;
+}
+
+@keyframes challenge28AnimateLeftLine {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-48px) scale(1.4);
+  }
+  70% {
+    transform: translateX(-64px) scale(1.8);
+  }
+  90% {
+    transform: translateX(-80px) scale(2);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.challenge28 .line.right {
+  animation: challenge28AnimateRightLine 1.4s ease-in infinite;
+}
+
+.challenge28 .line.right.lineRight1 {
+  animation-delay: 0.6s;
+}
+
+.challenge28 .line.right.lineRight2 {
+  animation-delay: 1s;
+}
+
+.challenge28 .line.right.lineRight3 {
+  animation-delay: 0.8s;
+}
+
+@keyframes challenge28AnimateRightLine {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(48px) scale(1.4);
+  }
+  70% {
+    transform: translateX(64px) scale(1.8);
+  }
+  90% {
+    transform: translateX(80px) scale(2);
+  }
+  100% {
+    opacity: 0;
   }
 }
 
