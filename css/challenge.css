@@ -3260,6 +3260,22 @@
   width: 96px;
 }
 
+.challenge35 .svgCircle .circularProgress {
+  --circumference: calc(2 * 3.14 * 36);
+
+  stroke-dasharray: var(--circumference);
+  stroke-dashoffset: var(--circumference);
+  transform-origin: 50%;
+  transform: rotateZ(-90deg);
+  animation: animateChallenge35CircularProgress 4s linear infinite;
+}
+
+@keyframes animateChallenge35CircularProgress {
+  100% {
+    stroke-dashoffset: -226.8;
+  }
+}
+
 /** Challenge 36 - Panel with menu **/
 .challenge36 {
   background-color: rgb(8, 38, 95);
