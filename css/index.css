@@ -96,22 +96,3 @@ main {
 .rotateX {
   transform: rotateX(180deg);
 }
-
-/* .animatedSvgCheckMark .path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-} */
-
-/* .animatedSvgCheckMark .path.check {
-  stroke-dashoffset: -100;
-  animation: animateSvgCheckMark 0.9s 0.35s ease-in-out forwards;
-} */
-
-/* @keyframes animateSvgCheckMark {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 900;
-  }
-} */
