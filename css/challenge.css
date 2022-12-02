@@ -3267,12 +3267,13 @@
   stroke-dashoffset: var(--circumference);
   transform-origin: 50%;
   transform: rotateZ(-90deg);
-  animation: animateChallenge35CircularProgress 4s linear infinite;
+  animation: animateChallenge35CircularProgress 3.2s linear infinite forwards;
 }
 
 @keyframes animateChallenge35CircularProgress {
   100% {
-    stroke-dashoffset: -226.8;
+    stroke-dashoffset: -226.08;
+    transform: rotateZ(360deg);
   }
 }
 
