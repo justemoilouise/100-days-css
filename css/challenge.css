@@ -3366,7 +3366,7 @@
 .challenge37 .wrapper {
   width: fit-content;
   margin: auto;
-  perspective: 80px;
+  perspective: 100px;
   perspective-origin: center;
   transform-style: preserve-3d;
 }
@@ -3396,19 +3396,19 @@
   z-index: 1;
 }
 
-.challenge37 .card:nth-child(1) {
+.challenge37 .card.card1 {
   transform: translate3d(105%, 0, 20px);
-  animation: revolveCard1 5s ease-out 0.2s infinite;
+  animation: revolveCard1 5s ease-out infinite;
 }
 
-.challenge37 .card:nth-child(2) {
+.challenge37 .card.card2 {
   transform: translate3d(-100%, 0, 0);
-  animation: revolveCard2 5s ease-in 0.2s infinite;
+  animation: revolveCard2 5s ease-in infinite;
 }
 
-.challenge37 .card:nth-child(3) {
+.challenge37 .card.card3 {
   transform: translate3d(0, 0, 0);
-  animation: revolveCard3 5s ease-in-out 0.2s infinite;
+  animation: revolveCard3 5s ease-in-out infinite;
 }
 
 @keyframes revolveCard1 {

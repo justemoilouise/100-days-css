@@ -488,25 +488,6 @@ export function challenge36() {
   });
 }
 
-export function challenge37() {
-  let challenge = document.getElementById('challenge37_wrapper');
-
-  let textPlaceholderNode = document.createElement("div");
-  textPlaceholderNode.classList.add("textPlaceholder");
-
-  Array.from({length: 3}, () => {
-    let node = document.createElement("div");
-    node.classList.add("card");
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-    node.appendChild(textPlaceholderNode.cloneNode());
-
-    challenge.appendChild(node);
-  });
-}
-
 export function challenge38() {
   let shape1 = document.getElementById("challenge38_shape1");
   let shape2 = document.getElementById("challenge38_shape2");
