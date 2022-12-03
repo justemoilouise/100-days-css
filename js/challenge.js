@@ -599,6 +599,10 @@ export function challenge42() {
     circleElement.setAttribute('r', 0.25);
     circleElement.setAttribute('fill', '#FFF');
 
+    if (i % 5 === 0) {
+      circleElement.setAttribute('class', 'animate');
+      circleElement.style = `animation-delay: ${Math.random()}s`;
+    }
     challenge.appendChild(circleElement);
 
     i++;

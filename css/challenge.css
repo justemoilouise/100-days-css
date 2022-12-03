@@ -3703,6 +3703,22 @@
   height: 256px;
 }
 
+.challenge42 .element circle.animate {
+  animation: challenge42AnimateStar 1.8s ease-in-out infinite;
+}
+
+@keyframes challenge42AnimateStar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /** Challenge 43 - Light bulb **/
 .challenge43 {
   position: relative;
