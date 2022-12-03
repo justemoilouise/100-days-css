@@ -585,6 +585,26 @@ export function challenge41() {
   });
 }
 
+export function challenge42() {
+  let challenge = document.getElementById("challenge42");
+
+  let i = 0;
+  while(i < 200) {
+    const circleElement = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    circleElement.setAttribute('cx', Math.random() * 100);
+    circleElement.setAttribute('cy', Math.random() * 100);
+    circleElement.setAttribute('r', 0.25);
+    circleElement.setAttribute('fill', '#FFF');
+
+    challenge.appendChild(circleElement);
+
+    i++;
+  }
+}
+
 export function challenge47() {
   let challenge = document.getElementById("challenge47");
   const pixelWidth = (challenge.clientWidth/20) - 2;

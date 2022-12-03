@@ -3692,6 +3692,17 @@
   width: 100%;
   cursor: pointer;
 }
+
+/** Challenge 42 - Stars **/
+.challenge42 {
+  padding: 24px;
+}
+
+.challenge42 .element {
+  width: 256px;
+  height: 256px;
+}
+
 /** Challenge 43 - Light bulb **/
 .challenge43 {
   position: relative;
