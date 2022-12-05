@@ -601,11 +601,31 @@ export function challenge42() {
 
     if (i % 5 === 0) {
       circleElement.setAttribute('class', 'animate');
-      circleElement.style = `animation-delay: ${Math.random()}s`;
+      circleElement.style = `animation-delay: ${Math.random()}s; animation-duration: ${2 + Math.random()}s;`;
     }
     challenge.appendChild(circleElement);
 
     i++;
+  }
+}
+
+export function challenge44() {
+  let challenge = document.getElementById("challenge44");
+
+  let i = 0;
+  while(i < 50) {
+    const rectElement1 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'rect'
+    );
+    rectElement1.setAttribute('x', i);
+    rectElement1.setAttribute('y', i);
+    rectElement1.setAttribute('width', 100 - (i*2));
+    rectElement1.setAttribute('height', 100 - (i*2));
+    rectElement1.setAttribute('class', 'square');
+    challenge.appendChild(rectElement1);
+
+    i+=2;
   }
 }
 

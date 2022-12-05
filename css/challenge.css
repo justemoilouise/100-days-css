@@ -3704,7 +3704,9 @@
 }
 
 .challenge42 .element circle.animate {
-  animation: challenge42AnimateStar 1.8s ease-in-out infinite;
+  animation-name: challenge42AnimateStar;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes challenge42AnimateStar {
@@ -3776,6 +3778,21 @@
 
 .challenge43 .bulb:hover .bulbBottom {
   border-top-color: grey;
+}
+
+/** Challenge 44 **/
+.challenge44 {
+  padding: 48px;
+  background-color: #232222;
+}
+
+.challenge44 .element {
+  width: 200px;
+}
+
+.challenge44 .element .square {
+  stroke: rgb(243, 241, 241);
+  stroke-width: 0.5;
 }
 
 /** Challenge 47 - Pixel board **/
