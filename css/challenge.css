@@ -3788,11 +3788,33 @@
 
 .challenge44 .element {
   width: 200px;
+  overflow: visible;
 }
 
 .challenge44 .element .square {
   stroke: rgb(243, 241, 241);
   stroke-width: 0.5;
+}
+
+.challenge44 .element.animate .square {
+  transform-origin: center center;
+  animation: challenge44AnimateSquare 5s ease-in-out infinite alternate;
+}
+
+@keyframes challenge44AnimateSquare {
+  0% {
+    transform: rotateZ(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+    opacity: 1;
+  }
 }
 
 /** Challenge 47 - Pixel board **/

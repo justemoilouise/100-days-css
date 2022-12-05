@@ -612,21 +612,25 @@ export function challenge42() {
 export function challenge44() {
   let challenge = document.getElementById("challenge44");
 
-  let i = 0;
+  let i = 10;
   while(i < 50) {
-    const rectElement1 = document.createElementNS(
+    const factor = 100 - (i*2);
+    const rectElement = document.createElementNS(
       'http://www.w3.org/2000/svg',
       'rect'
     );
-    rectElement1.setAttribute('x', i);
-    rectElement1.setAttribute('y', i);
-    rectElement1.setAttribute('width', 100 - (i*2));
-    rectElement1.setAttribute('height', 100 - (i*2));
-    rectElement1.setAttribute('class', 'square');
-    challenge.appendChild(rectElement1);
+    rectElement.setAttribute('x', i);
+    rectElement.setAttribute('y', i);
+    rectElement.setAttribute('width', factor);
+    rectElement.setAttribute('height', factor);
+    rectElement.setAttribute('class', 'square');
+    rectElement.style = `animation-delay: ${factor/100}s;`;
+    challenge.appendChild(rectElement);
 
     i+=2;
   }
+
+  challenge.classList.add('animate');
 }
 
 export function challenge47() {
