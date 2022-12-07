@@ -3823,18 +3823,40 @@
   background-color: skyblue;
 }
 
-.challenge45 .element {
-  padding: 20px 40px;
-  cursor: pointer;
+.challenge45 .hoverElement {
+  width: 176px;
+  height: 72px;
   color: #FFF;
   font-size: larger;
+  text-align: center;
   text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
   border: 1px solid rgb(220, 220, 220);
   transition: background-color 1s ease-out;
 }
 
-.challenge45 .element:hover {
+.challenge45 .hoverElement:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.challenge45 .hoverElement .svgElement {
+  width: 178px;
+  height: 74px;
+  position: absolute;
+  fill: transparent;
+}
+
+.challenge45 .hoverElement .svgElement path {
+  stroke-dasharray: 24px, 504px;
+  stroke-dashoffset: 24px;
+  stroke: #FFF;
+  stroke-width: 4;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.challenge45 .hoverElement:hover .svgElement path {
+  stroke-dashoffset: -504px;
 }
 
 /** Challenge 47 - Pixel board **/
