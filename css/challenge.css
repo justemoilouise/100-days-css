@@ -3002,7 +3002,7 @@
 }
 
 .challenge28 .line.right.lineRight1 {
-  animation-delay: 0.6s;
+  animation-delay: 1s;
 }
 
 .challenge28 .line.right.lineRight2 {
@@ -3010,7 +3010,7 @@
 }
 
 .challenge28 .line.right.lineRight3 {
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 
 @keyframes challenge28AnimateRightLine {
@@ -3815,6 +3815,26 @@
     transform: rotateZ(360deg);
     opacity: 1;
   }
+}
+
+/** Challenge 45 **/
+.challenge45 {
+  padding: 48px;
+  background-color: skyblue;
+}
+
+.challenge45 .element {
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: larger;
+  text-transform: uppercase;
+  border: 1px solid rgb(220, 220, 220);
+  transition: background-color 1s ease-out;
+}
+
+.challenge45 .element:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /** Challenge 47 - Pixel board **/
