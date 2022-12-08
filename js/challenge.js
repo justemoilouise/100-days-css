@@ -633,6 +633,77 @@ export function challenge44() {
   challenge.classList.add('animate');
 }
 
+export function challenge46() {
+  const createSvgElement = () => {
+    const svgElement = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'svg'
+    );
+    svgElement.setAttribute('viewBox', '0 0 96 20');
+    svgElement.setAttribute('class', 'svgElement');
+  
+    const svgCircleElement1 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    svgCircleElement1.setAttribute('cx', 10);
+    svgCircleElement1.setAttribute('cy', 10);
+    svgCircleElement1.setAttribute('r', 8);
+    svgCircleElement1.setAttribute('class', 'svgCircle1');
+  
+    const svgCircleElement2 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    svgCircleElement2.setAttribute('cx', 30);
+    svgCircleElement2.setAttribute('cy', 7);
+    svgCircleElement2.setAttribute('r', 7);
+    svgCircleElement2.setAttribute('class', 'svgCircle2');
+  
+    const svgCircleElement3 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    svgCircleElement3.setAttribute('cx', 50);
+    svgCircleElement3.setAttribute('cy', 6);
+    svgCircleElement3.setAttribute('r', 6);
+    svgCircleElement3.setAttribute('class', 'svgCircle3');
+  
+    const svgCircleElement4 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    svgCircleElement4.setAttribute('cx', 70);
+    svgCircleElement4.setAttribute('cy', 8);
+    svgCircleElement4.setAttribute('r', 5);
+    svgCircleElement4.setAttribute('class', 'svgCircle4');
+  
+    const svgCircleElement5 = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    svgCircleElement5.setAttribute('cx', 90);
+    svgCircleElement5.setAttribute('cy', 12);
+    svgCircleElement5.setAttribute('r', 4);
+    svgCircleElement5.setAttribute('class', 'svgCircle5');
+  
+    svgElement.appendChild(svgCircleElement1);
+    svgElement.appendChild(svgCircleElement2);
+    svgElement.appendChild(svgCircleElement3);
+    svgElement.appendChild(svgCircleElement4);
+    svgElement.appendChild(svgCircleElement5);
+
+    return svgElement;
+  }
+
+  let challenge = document.getElementById('challenge46');
+  Array.from({ length: 10 }).forEach((v, i) => {
+    const svgElement = createSvgElement();
+    svgElement.classList.add(`svgElement${i + 1}`);
+    challenge.appendChild(svgElement);
+  });
+}
+
 export function challenge47() {
   let challenge = document.getElementById("challenge47");
   const pixelWidth = (challenge.clientWidth/20) - 2;

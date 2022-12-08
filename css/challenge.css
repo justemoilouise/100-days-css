@@ -3859,6 +3859,23 @@
   stroke-dashoffset: -504px;
 }
 
+/** Challenge 46 **/
+.challenge46 {
+  padding: 48px;
+  background-color: #13b210;
+  position: relative;
+}
+
+.challenge46 .svgElement {
+  width: 80px;
+  fill: transparent;
+  position: absolute;
+}
+
+.challenge46 .svgElement circle {
+  fill: #FFF;
+}
+
 /** Challenge 47 - Pixel board **/
 .challenge47 {
   background-color: rgb(230, 76, 76);
