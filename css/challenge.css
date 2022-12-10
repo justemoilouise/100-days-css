@@ -3861,9 +3861,23 @@
 
 /** Challenge 46 **/
 .challenge46 {
-  padding: 48px;
+  padding: 64px;
   background-color: #13b210;
+  overflow: hidden;
+}
+
+.challenge46 .wrapperElement {
+  width: 100%;
   position: relative;
+  transform-origin: center center;
+  object-fit: contain;
+  animation: animateChallenge46Wrapper 4s ease-in-out 0.2s infinite alternate;
+}
+
+@keyframes animateChallenge46Wrapper {
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 
 .challenge46 .svgElement {
@@ -3875,6 +3889,34 @@
 
 .challenge46 .svgElement circle {
   fill: #FFF;
+  transform-origin: center center;
+  animation: animateChallenge46SvgCircle 4s ease-in-out 0.2s infinite alternate;
+}
+
+.challenge46 .svgElement circle.svgCircle2 {
+  opacity: 0.9;
+  transform: scale(0.8);
+}
+
+.challenge46 .svgElement circle.svgCircle3 {
+  opacity: 0.8;
+  transform: scale(0.75);
+}
+
+.challenge46 .svgElement circle.svgCircle4 {
+  opacity: 0.7;
+  transform: scale(0.75);
+}
+
+.challenge46 .svgElement circle.svgCircle5 {
+  opacity: 0.6;
+  transform: scale(0.75);
+}
+
+@keyframes animateChallenge46SvgCircle {
+  100% {
+    transform: scale(1);
+  }
 }
 
 /** Challenge 47 - Pixel board **/

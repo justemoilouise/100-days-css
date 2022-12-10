@@ -649,7 +649,6 @@ export function challenge46() {
     svgCircleElement1.setAttribute('cx', 10);
     svgCircleElement1.setAttribute('cy', 10);
     svgCircleElement1.setAttribute('r', 8);
-    svgCircleElement1.setAttribute('class', 'svgCircle1');
   
     const svgCircleElement2 = document.createElementNS(
       'http://www.w3.org/2000/svg',
@@ -700,7 +699,8 @@ export function challenge46() {
   Array.from({ length: 12 }).forEach((v, i) => {
     const svgElement = createSvgElement();
     svgElement.classList.add(`svgElement${i + 1}`);
-    svgElement.style = `transform: translateX(-50%) rotate(${90 + (30*i)}deg)`;
+    svgElement.style = `transform: translateX(-50%) rotate(${90 + (30*i)}deg) translate(-32px, 0px)`;
+
     challenge.appendChild(svgElement);
   });
 }
