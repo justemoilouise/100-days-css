@@ -753,13 +753,12 @@ export function challenge49() {
   let circle = document.getElementById('challenge49_circle');
 
   function moveCircle(evt) {
+    if (evt.target !== challenge) { return; }
     evt.preventDefault();
     evt.stopPropagation();
 
-    let boundingRect = circle.getBoundingClientRect();
-    let x = evt.x - boundingRect.x;
-    let y = evt.y - boundingRect.y;
-
+    let x = evt.offsetX - circle.offsetLeft;
+    let y = evt.offsetY - circle.offsetTop;
     circle.animate([
       { transform: `translate(${x}px, ${y}px)` }
     ], {
@@ -768,7 +767,7 @@ export function challenge49() {
     });
   }
 
-  challenge.addEventListener('mousemove', throttle(moveCircle, 100));
+  challenge.addEventListener('mousemove', moveCircle);
   challenge.addEventListener('mouseleave', debounce(function() {
     circle.animate([
       { transform: `translate(0, 0)` }
