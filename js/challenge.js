@@ -757,8 +757,8 @@ export function challenge49() {
     evt.preventDefault();
     evt.stopPropagation();
 
-    let x = evt.offsetX - circle.offsetLeft;
-    let y = evt.offsetY - circle.offsetTop;
+    let x = evt.offsetX - circle.offsetLeft - (circle.offsetWidth / 2);
+    let y = evt.offsetY - circle.offsetTop - (circle.offsetHeight / 2);
     circle.animate([
       { transform: `translate(${x}px, ${y}px)` }
     ], {
