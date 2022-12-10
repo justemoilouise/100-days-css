@@ -3870,6 +3870,7 @@
   width: 80px;
   fill: transparent;
   position: absolute;
+  transform-origin: right center;
 }
 
 .challenge46 .svgElement circle {

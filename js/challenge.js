@@ -697,9 +697,10 @@ export function challenge46() {
   }
 
   let challenge = document.getElementById('challenge46');
-  Array.from({ length: 10 }).forEach((v, i) => {
+  Array.from({ length: 12 }).forEach((v, i) => {
     const svgElement = createSvgElement();
     svgElement.classList.add(`svgElement${i + 1}`);
+    svgElement.style = `transform: translateX(-50%) rotate(${90 + (30*i)}deg)`;
     challenge.appendChild(svgElement);
   });
 }
