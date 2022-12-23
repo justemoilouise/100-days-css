@@ -3957,7 +3957,54 @@
   border-bottom-right-radius: 2px;
 }
 
-/** Challenge49 - Sparkling circle **/
+/** Challenge 48 **/
+.challenge48 {
+  padding: 80px;
+  background-color: orange;
+  perspective: 1000px;
+}
+
+.challenge48 .box {
+  width: 240px;
+  height: 240px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(50px) rotateX(60deg) rotateZ(45deg);
+}
+
+.challenge48 .box .face {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+}
+
+.challenge48 .box .face.front {
+  transform: translateZ(120px);
+  background-color: white;
+}
+.challenge48 .box .face.back {
+  transform: translateZ(-120px);
+  background-color: whitesmoke;
+}
+.challenge48 .box .face.right {
+  transform: rotateY(90deg) translateZ(120px);
+  background-color: rgb(237, 237, 237);
+}
+.challenge48 .box .face.left {
+  transform: rotateY(-90deg) translateZ(120px);
+  background-color: whitesmoke;
+}
+.challenge48 .box .face.top {
+  transform: rotateX(90deg) translateZ(120px);
+  background-color: whitesmoke;
+}
+.challenge48 .box .face.bottom {
+  transform: rotateX(-90deg) translateZ(120px);
+  background-color: rgb(228, 222, 222);
+}
+
+/** Challenge 49 - Sparkling circle **/
 .challenge49 {
   background-color: darkslateblue;
   cursor: pointer;
