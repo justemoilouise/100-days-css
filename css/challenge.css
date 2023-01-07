@@ -3970,7 +3970,9 @@
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
+  transform-origin: center center;
   transform: translateZ(50px) rotateX(60deg) rotateZ(45deg);
+  transition: transform 2s ease-in-out;
 }
 
 .challenge48 .box .face {
@@ -3978,7 +3980,6 @@
   height: 240px;
   position: absolute;
 }
-
 .challenge48 .box .face.front {
   transform: translateZ(120px);
   background-color: white;
@@ -4039,6 +4040,16 @@
     transform: translate(-50%, -50%) scale(1.8);
     opacity: 0;
   }
+}
+
+/** Challenge 50 - Egg **/
+.challenge50 {
+  padding: 80px;
+  background-color: rgb(164, 61, 198);
+}
+
+.challenge50 .element {
+  width: 240px;
 }
 
 /** Challenge 51 - Timer **/
