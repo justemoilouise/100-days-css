@@ -1,10 +1,6 @@
 <html>
 <head>
   <title>100 Days CSS Challenge</title>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="./css/challenge.css" />
-  <script type="module" src="./js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 <body>
   <h1 class="heading">100 Days CSS Challenge by <a href="https://100dayscss.com/">https://100dayscss.com/</a></h1>
@@ -1225,8 +1221,48 @@
     </div>
   </main>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <!-- resources -->
+  <link
+    rel='preload'
+    as='style'
+    type='text/css'
+    charset='UTF-8'
+    href='./css/index.css'
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <link
+    rel='preload'
+    as='style'
+    type='text/css'
+    charset='UTF-8'
+    href='./css/challenge.css'
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <script type="module" src="./js/index.js" defer></script>
+
+  <!-- 3rd party -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+
+  <link
+    rel='preload'
+    as='style'
+    type='text/css'
+    href='https://fonts.gstatic.com'
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <link
+    rel='preload'
+    as='style'
+    type='text/css'
+    href='https://fonts.googleapis.com/css2?family=Oswald&display=swap'
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <link
+    rel='preload'
+    as='style'
+    type='text/css'
+    href='https://fonts.googleapis.com/css2?family=Poppins&display=swap'
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
 </body>
 </html>
