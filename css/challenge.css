@@ -4046,10 +4046,46 @@
 .challenge50 {
   padding: 80px;
   background-color: rgb(164, 61, 198);
+  overflow: hidden;
 }
 
 .challenge50 .element {
   width: 240px;
+  transform-origin: center bottom;
+  animation: animateChallenge50Element 1.8s ease infinite;
+}
+
+@keyframes animateChallenge50Element {
+  0% {
+    transform: translateY(-200%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  42% {
+    transform: translateY(0) rotateZ(-10deg);
+  }
+  45% {
+    transform: translateY(0) rotateZ(10deg);
+  }
+  48% {
+    transform: translateY(0) rotateZ(-10deg);
+  }
+  51% {
+    transform: translateY(0) rotateZ(10deg);
+  }
+  54% {
+    transform: translateY(0) rotateZ(-10deg);
+  }
+  57% {
+    transform: translateY(0) rotateZ(10deg);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200%);
+  }
 }
 
 /** Challenge 51 - Timer **/
