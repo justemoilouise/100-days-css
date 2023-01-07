@@ -4059,28 +4059,25 @@
   0% {
     transform: translateY(-200%);
   }
-  40% {
-    transform: translateY(0);
+  30% {
+    transform: translateY(0) scaleY(1.1);
+  }
+  36% {
+    transform: translateY(0) scaleY(1);
   }
   42% {
-    transform: translateY(0) rotateZ(-10deg);
-  }
-  45% {
-    transform: translateY(0) rotateZ(10deg);
+    transform: translateY(0) rotateZ(-8deg);
   }
   48% {
-    transform: translateY(0) rotateZ(-10deg);
-  }
-  51% {
-    transform: translateY(0) rotateZ(10deg);
+    transform: translateY(0) rotateZ(8deg);
   }
   54% {
-    transform: translateY(0) rotateZ(-10deg);
-  }
-  57% {
-    transform: translateY(0) rotateZ(10deg);
+    transform: translateY(0) rotateZ(-8deg);
   }
   60% {
+    transform: translateY(0) rotateZ(8deg);
+  }
+  66% {
     transform: translateY(0);
   }
   100% {
