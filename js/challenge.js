@@ -806,6 +806,18 @@ export function challenge51() {
   });
 }
 
+export function challenge52() {
+  let challenge = document.getElementById("challenge52");
+
+  Array.from({ length: 10 }).forEach((v, i) => {
+    const size = 80 + (24 * i);
+    const node = document.createElement("div");
+    node.classList.add("element");
+    node.style = `width: ${size}px; height: ${size}px`;
+    challenge.append(node);
+  });
+}
+
 export function challenge62() {
   let challenge = document.getElementById("challenge62");
 

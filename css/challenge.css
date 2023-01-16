@@ -4121,6 +4121,18 @@
   border-bottom: 10px solid transparent;
 }
 
+/** Challenge 52 **/
+.challenge52 {
+  background-color: #09c506;
+  padding: 120px;
+}
+
+.challenge52 .element {
+  position: absolute;
+  border: 8px dotted #FFF;
+  border-radius: 100%;
+}
+
 /** Challenge 62 - Plans Comparison **/
 .challenge62 {
   background-color: rosybrown;
