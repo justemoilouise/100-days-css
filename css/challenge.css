@@ -4131,6 +4131,17 @@
   position: absolute;
   border: 8px dotted #FFF;
   border-radius: 100%;
+  opacity: 0;
+  animation: animateChallenge52Element 3s ease-in-out infinite alternate;
+}
+
+@keyframes animateChallenge52Element {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /** Challenge 62 - Plans Comparison **/

@@ -813,7 +813,11 @@ export function challenge52() {
     const size = 80 + (24 * i);
     const node = document.createElement("div");
     node.classList.add("element");
-    node.style = `width: ${size}px; height: ${size}px`;
+    node.style = `
+      width: ${size}px;
+      height: ${size}px;
+      animation-delay: ${i * 0.6}s;
+    `;
     challenge.append(node);
   });
 }
