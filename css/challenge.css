@@ -4165,6 +4165,7 @@
   border-radius: 4px;
   background-color: #0dd00a;
   box-shadow: inset #545454 1px 1px 2px;
+  cursor: pointer;
 }
 
 .challenge53 .slider .button {

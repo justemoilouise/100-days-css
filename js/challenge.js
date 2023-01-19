@@ -822,6 +822,28 @@ export function challenge52() {
   });
 }
 
+export function challenge53() {
+  let bar = document.getElementById("challenge53_bar");
+  let btn = document.getElementById("challenge53_btn");
+
+  function moveSliderBtn(offset) {
+    btn.animate([
+      { transform: `translateX(${offset}px)` }
+    ], {
+      duration: 25,
+      fill: 'forwards'
+    });
+  }
+
+  bar.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    evt.stopPropagation();
+
+    const x = evt.offsetX - btn.offsetLeft - (btn.offsetWidth / 2);
+    moveSliderBtn(x);
+  });
+}
+
 export function challenge62() {
   let challenge = document.getElementById("challenge62");
 
