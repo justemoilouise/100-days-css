@@ -4144,6 +4144,57 @@
   }
 }
 
+/** Challenge 53 **/
+.challenge53 {
+  padding: 96px;
+  background-color: #555252;
+}
+
+.challenge53 .slider {
+  width: 100%;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #FFF;
+  box-shadow: #000 0px 4px 8px;
+  position: relative;
+}
+
+.challenge53 .slider .bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #0dd00a;
+  box-shadow: inset #545454 1px 1px 2px;
+}
+
+.challenge53 .slider .button {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: 3px solid #0dd00a;
+  box-shadow: #a3a2a2 0px 0px 6px 1px;
+  background-color: #FFF;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge53 .slider .button .stick {
+  height: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background-color: #b9b5b5;
+  display: inline-flex;
+}
+
+.challenge53 .slider .button .stick:nth-child(2) {
+  height: 16px;
+  margin: 0 2px;
+}
+
 /** Challenge 62 - Plans Comparison **/
 .challenge62 {
   background-color: rosybrown;
