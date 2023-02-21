@@ -4196,6 +4196,37 @@
   margin: 0 2px;
 }
 
+/** Challenge 55 - Thermostat **/
+.challenge55 {
+  padding: 96px;
+  background-color: #353b44;
+}
+
+.challenge55 .container {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  background-color: #e5e5e5;
+  box-shadow: #121212 0px 2px 4px;
+}
+
+.challenge55 .container .content {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-color: #FFF;
+  box-shadow: #a0a0a0 0px 2px 2px;
+  font-size: small;
+  color: gray;
+  flex-direction: column;
+}
+
+.challenge55 .container .content .main {
+  font-size: 48px;
+  color:rgb(130, 10, 130)
+}
+
 /** Challenge 62 - Plans Comparison **/
 .challenge62 {
   background-color: rosybrown;
