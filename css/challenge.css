@@ -4220,11 +4220,56 @@
   font-size: small;
   color: gray;
   flex-direction: column;
+  position: relative;
+  cursor: pointer;
 }
 
 .challenge55 .container .content .main {
   font-size: 48px;
-  color:rgb(130, 10, 130)
+  color:rgb(130, 10, 130);
+  height: 72px;
+  position: relative;
+  transition: all 0.25s;
+}
+
+.challenge55 .container .content .main .el {
+  position: absolute;
+  left: calc(50% - 36px);
+}
+
+.challenge55 .container .content .main .el.right {
+  transform: translateX(60%) scale(0);
+  opacity: 0;
+}
+
+.challenge55 .container .content:hover .main .el.left {
+  animation: animateChallenge55ElToLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes animateChallenge55ElToLeft {
+  40% {
+    transform: translateX(-30%) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-60%) scale(0);
+    opacity: 0;
+  }
+}
+
+.challenge55 .container .content:hover .main .el.right {
+  animation: animateChallenge55ElFromRight 0.5s ease-in-out forwards;
+}
+
+@keyframes animateChallenge55ElFromRight {
+  50% {
+    transform: translateX(30%) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
 }
 
 /** Challenge 62 - Plans Comparison **/
