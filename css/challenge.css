@@ -4229,7 +4229,6 @@
   color:rgb(130, 10, 130);
   height: 72px;
   position: relative;
-  transition: all 0.25s;
 }
 
 .challenge55 .container .content .main .el {
@@ -4243,14 +4242,10 @@
 }
 
 .challenge55 .container .content:hover .main .el.left {
-  animation: animateChallenge55ElToLeft 0.5s ease-in-out forwards;
+  animation: animateChallenge55ElToLeft 1.1s cubic-bezier(0.23, 1, 0.320, 1) forwards;
 }
 
 @keyframes animateChallenge55ElToLeft {
-  40% {
-    transform: translateX(-30%) scale(0.5);
-    opacity: 0.5;
-  }
   100% {
     transform: translateX(-60%) scale(0);
     opacity: 0;
@@ -4258,19 +4253,27 @@
 }
 
 .challenge55 .container .content:hover .main .el.right {
-  animation: animateChallenge55ElFromRight 0.5s ease-in-out forwards;
+  animation: animateChallenge55ElFromRight 1.1s cubic-bezier(0.23, 1, 0.320, 1) forwards;
 }
 
 @keyframes animateChallenge55ElFromRight {
-  50% {
-    transform: translateX(30%) scale(0.5);
-    opacity: 0.5;
-  }
   100% {
     transform: translateX(0) scale(1);
     opacity: 1;
   }
 }
+
+.challenge55 .container .content .hand {
+  width: 16px;
+  height: 2px;
+  background-color: rgb(100, 99, 99);
+  position: absolute;
+  transform: rotateZ(45deg) translate(-62px, 4px);
+}
+
+/* .challenge55 .container .content:hover .hand {
+  
+} */
 
 /** Challenge 62 - Plans Comparison **/
 .challenge62 {
